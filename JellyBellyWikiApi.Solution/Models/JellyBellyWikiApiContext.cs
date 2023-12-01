@@ -14,7 +14,7 @@ namespace JellyBellyWikiApi.Models
     {
       builder.Entity<Bean>()
         .HasData(
-          new Bean { 
+          new Bean
           { 
             BeanId = 1,
             Sku = 1001,
@@ -31,10 +31,7 @@ namespace JellyBellyWikiApi.Models
             Seasonal = false,
             Kosher = true
           }
-          }
-          
         );
     }
-
   }
 }
