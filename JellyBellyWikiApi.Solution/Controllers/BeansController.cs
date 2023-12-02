@@ -4,7 +4,7 @@ using JellyBellyWikiApi.Models;
 
 namespace JellyBellyWikiApi.Controllers
 {
-  [Rout("api/[controller]")]
+  [Route("api/[controller]")]
   [ApiController]
   public class BeansController : ControllerBase
   {
