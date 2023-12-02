@@ -16,8 +16,15 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/beans
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Bean>>> Get()
+    public async Task<ActionResult<IEnumerable<Bean>>> Get(string groupName)
     {
+      IQueryable<Bean> query = _db.Beans.AsQueryable();
+
+      if (groupName != null)
+      {
+        query = query.Where(entry => entry.GroupName == groupName);
+      }
+      
       return await _db.Beans.ToListAsync();
     }
 
