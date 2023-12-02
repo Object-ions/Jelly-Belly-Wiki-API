@@ -13,7 +13,6 @@ namespace JellyBellyWikiApi.Models
         public string BackgroundColor { get; set; }
         public string ImageUrl { get; set; }
         public string Ingredients { get; set; }
-        public string Mixes { get; set; }
         public bool GlutenFree { get; set; }
         public bool SugarFree { get; set; }
         public bool Seasonal { get; set; }
