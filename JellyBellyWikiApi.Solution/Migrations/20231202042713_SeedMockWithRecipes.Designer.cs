@@ -2,6 +2,7 @@
 using JellyBellyWikiApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JellyBellyWikiApi.Migrations
 {
     [DbContext(typeof(JellyBellyWikiApiContext))]
-    partial class JellyBellyWikiApiContextModelSnapshot : ModelSnapshot
+    [Migration("20231202042713_SeedMockWithRecipes")]
+    partial class SeedMockWithRecipes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -79,70 +81,6 @@ namespace JellyBellyWikiApi.Migrations
                             Kosher = true,
                             Seasonal = false,
                             Sku = 1001,
-                            SugarFree = false
-                        },
-                        new
-                        {
-                            BeanId = 2,
-                            BackgroundColor = "#792E27",
-                            ColorGroup = "Brown",
-                            Description = "Say 'cheers' with the flavor of this all-American classic drink.",
-                            FlavorName = "A&W® Root Beer",
-                            GlutenFree = false,
-                            GroupName = "Jelly Belly Official Flavors",
-                            ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/63b9e71d-9866-4044-9af7-7a64a52b0e0e",
-                            Ingredients = "Sugar, Corn Syrup, Modified Food Starch, Contains 2% or less of the following: Natural and Artificial Flavors, Color Added, Vegetable and Fruit Juice (Color), Beeswax, Carnauba Wax, Confectioner's Glaze.",
-                            Kosher = false,
-                            Seasonal = false,
-                            Sku = 1002,
-                            SugarFree = false
-                        },
-                        new
-                        {
-                            BeanId = 3,
-                            BackgroundColor = "#0A9882",
-                            ColorGroup = "Blue",
-                            Description = "A delicious medley of raspberry, blueberry and strawberry flavors.",
-                            FlavorName = "Berry Blue",
-                            GlutenFree = false,
-                            GroupName = "Jelly Belly Official Flavors",
-                            ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/4e65d579-9595-4620-b6c4-a9606df99f3d",
-                            Ingredients = "Sugar, Corn Syrup, Modified Food Starch, Contains 2% or less of the following: Citric Acid, Natural and Artificial Flavor, Color Added, Blue 1, Beeswax, Carnauba Wax, Confectioner's Glaze.",
-                            Kosher = false,
-                            Seasonal = false,
-                            Sku = 1003,
-                            SugarFree = false
-                        },
-                        new
-                        {
-                            BeanId = 4,
-                            BackgroundColor = "#3A7195",
-                            ColorGroup = "Blue",
-                            Description = "Enjoy the taste of fresh-picked blueberries. Deliciously flavored with real blueberry puree.",
-                            FlavorName = "Blueberry",
-                            GlutenFree = false,
-                            GroupName = "Jelly Belly Official Flavors",
-                            ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/a8f085b5-b4ff-4aca-8650-43ad54c80fe4",
-                            Ingredients = "Sugar, Corn Syrup, Modified Food Starch, Blueberry Juice From Puree, Contains 2% or less of the following: Citric Acid, Natural and Artificial Flavor, Color Added, Blue 1 Lake, Beeswax, Carnauba Wax, Confectioner's Glaze.",
-                            Kosher = false,
-                            Seasonal = false,
-                            Sku = 1004,
-                            SugarFree = false
-                        },
-                        new
-                        {
-                            BeanId = 5,
-                            BackgroundColor = "#E3ACBD",
-                            ColorGroup = "Pink",
-                            Description = " ",
-                            FlavorName = "Bubble Gum",
-                            GlutenFree = false,
-                            GroupName = "Jelly Belly Official Flavors",
-                            ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/51474130-73e9-40b7-a8ba-c9eac7be7de4",
-                            Ingredients = "Sugar, Corn Syrup, Modified Food Starch, Contains 2% or less of the following: Artificial Flavor, Color Added, Red 40 Lake, Red 40, Yellow 5 Lake, Beeswax, Carnauba Wax, Confectioner's Glaze.",
-                            Kosher = false,
-                            Seasonal = false,
-                            Sku = 1005,
                             SugarFree = false
                         });
                 });
@@ -218,30 +156,6 @@ namespace JellyBellyWikiApi.Migrations
                             RecipeId = 1,
                             Combination = "Very Cherry + Very Cherry + Coconut + Buttered Popcorn = Cherry Turnover",
                             Name = "Cherry Turnover"
-                        },
-                        new
-                        {
-                            RecipeId = 2,
-                            Combination = "Green Apple + Green Apple + Cinnamon = Apple Pie",
-                            Name = "Apple Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 3,
-                            Combination = "Top Banana + Top Banana + Buttered Popcorn = Banana Bread",
-                            Name = "Banana Bread"
-                        },
-                        new
-                        {
-                            RecipeId = 4,
-                            Combination = "Top Banana + Cream Soda + Coconut = Banana Cream Pie",
-                            Name = "Banana Cream Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 5,
-                            Combination = "Berry Blu + Sunkist Lemon = Berry Lemonade",
-                            Name = "Berry Lemonade"
                         });
                 });
 #pragma warning restore 612, 618

@@ -2,6 +2,7 @@
 using JellyBellyWikiApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JellyBellyWikiApi.Migrations
 {
     [DbContext(typeof(JellyBellyWikiApiContext))]
-    partial class JellyBellyWikiApiContextModelSnapshot : ModelSnapshot
+    [Migration("20231202044838_SeedAllMockData")]
+    partial class SeedAllMockData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,30 +220,6 @@ namespace JellyBellyWikiApi.Migrations
                             RecipeId = 1,
                             Combination = "Very Cherry + Very Cherry + Coconut + Buttered Popcorn = Cherry Turnover",
                             Name = "Cherry Turnover"
-                        },
-                        new
-                        {
-                            RecipeId = 2,
-                            Combination = "Green Apple + Green Apple + Cinnamon = Apple Pie",
-                            Name = "Apple Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 3,
-                            Combination = "Top Banana + Top Banana + Buttered Popcorn = Banana Bread",
-                            Name = "Banana Bread"
-                        },
-                        new
-                        {
-                            RecipeId = 4,
-                            Combination = "Top Banana + Cream Soda + Coconut = Banana Cream Pie",
-                            Name = "Banana Cream Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 5,
-                            Combination = "Berry Blu + Sunkist Lemon = Berry Lemonade",
-                            Name = "Berry Lemonade"
                         });
                 });
 #pragma warning restore 612, 618
