@@ -16,16 +16,51 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/beans
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Bean>>> Get(string groupName)
+    public async Task<ActionResult<IEnumerable<Bean>>> Get(string groupName, string flavorName, string colorGroup, int? sku,  bool? glutenFree, bool? sugarFree, bool? seasonal, bool? kosher)
     {
       IQueryable<Bean> query = _db.Beans.AsQueryable();
 
-      if (groupName != null)
+      if (!string.IsNullOrEmpty(groupName))
       {
-        query = query.Where(entry => entry.GroupName == groupName);
+          query = query.Where(entry => entry.GroupName == groupName);
       }
       
-      return await _db.Beans.ToListAsync();
+      if (!string.IsNullOrEmpty(flavorName))
+      {
+          query = query.Where(entry => entry.FlavorName == flavorName);
+      }
+
+      if (!string.IsNullOrEmpty(colorGroup))
+      {
+          query = query.Where(entry => entry.ColorGroup == colorGroup);
+      }
+
+      if (sku.HasValue)
+      {
+          query = query.Where(entry => entry.Sku == sku.Value);
+      }
+
+      if (glutenFree.HasValue)
+      {
+          query = query.Where(entry => entry.GlutenFree == glutenFree.Value);
+      }
+
+      if (sugarFree.HasValue)
+      {
+          query = query.Where(entry => entry.SugarFree == sugarFree.Value);
+      }
+
+      if (seasonal.HasValue)
+      {
+          query = query.Where(entry => entry.Seasonal == seasonal.Value); // Corrected property name
+      }
+
+      if (kosher.HasValue)
+      {
+          query = query.Where(entry => entry.Kosher == kosher.Value); // Corrected property name
+      }
+
+      return await query.ToListAsync();
     }
 
     // GET: api/Beans/{id}
