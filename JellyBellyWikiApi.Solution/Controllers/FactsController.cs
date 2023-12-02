@@ -22,12 +22,7 @@ namespace JellyBellyWikiApi.Controllers
 
       if (!string.IsNullOrEmpty(title))
       {
-          query = query.Where(entry => entry.Title == title);
-      }
-      
-      if (!string.IsNullOrEmpty(description))
-      {
-          query = query.Where(entry => entry.Description == description);
+        query = query.Where(entry => entry.Title == title);
       }
 
       return await query.ToListAsync();
