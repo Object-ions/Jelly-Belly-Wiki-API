@@ -52,18 +52,18 @@ namespace JellyBellyWikiApi.Controllers
 
       if (seasonal.HasValue)
       {
-          query = query.Where(entry => entry.Seasonal == seasonal.Value); // Corrected property name
+          query = query.Where(entry => entry.Seasonal == seasonal.Value);
       }
 
       if (kosher.HasValue)
       {
-          query = query.Where(entry => entry.Kosher == kosher.Value); // Corrected property name
+          query = query.Where(entry => entry.Kosher == kosher.Value);
       }
 
       return await query.ToListAsync();
     }
 
-    // GET: api/Beans/{id}
+    // GET: api/beans/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<Bean>> GetBean(int id)
     {
