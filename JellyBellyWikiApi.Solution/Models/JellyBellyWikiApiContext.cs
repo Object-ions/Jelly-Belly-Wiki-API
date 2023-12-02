@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using JellyBellyWikiApi.DataSeeding;
+using System.Text.Json;
+using JellyBellyWikiApi.Models;
 
 namespace JellyBellyWikiApi.Models
 {
@@ -16,10 +18,17 @@ namespace JellyBellyWikiApi.Models
     protected override void OnModelCreating(ModelBuilder builder)
     {
       builder.Entity<Bean>()
-      .Property(b => b.Ingredients)
-      .HasConversion(
-        v => string.Join(",", v), 
-        v => v.Split(',', StringSplitOptions.RemoveEmptyEntries));
+        .Property(b => b.Ingredients)
+        .HasConversion(
+            v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null),
+            v => JsonSerializer.Deserialize<string[]>(v, (JsonSerializerOptions)null));
+
+      builder.Entity<Recipe>()
+          .Property(r => r.Combination)
+          .HasConversion(
+              v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null),
+              v => JsonSerializer.Deserialize<string[]>(v, (JsonSerializerOptions)null));
+
 
       // Seeding data using separate seeder classes
       BeanSeeder.Seed(builder);
