@@ -1,4 +1,4 @@
-### By: Moses Atia Poston
+By: Moses Atia Poston
 
 ## Jelly Belly Wiki
 
