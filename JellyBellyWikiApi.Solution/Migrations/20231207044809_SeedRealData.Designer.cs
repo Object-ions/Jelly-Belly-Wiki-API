@@ -2,6 +2,7 @@
 using JellyBellyWikiApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JellyBellyWikiApi.Migrations
 {
     [DbContext(typeof(JellyBellyWikiApiContext))]
-    partial class JellyBellyWikiApiContextModelSnapshot : ModelSnapshot
+    [Migration("20231207044809_SeedRealData")]
+    partial class SeedRealData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,7 +68,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 1,
                             BackgroundColor = "#CEDC91",
-                            ColorGroup = "khaki",
+                            ColorGroup = "White",
                             Description = "The Refreshing And Crisp Flavor Of Lemon Lime Soda.",
                             FlavorName = "7Up",
                             GlutenFree = false,
@@ -81,7 +83,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 2,
                             BackgroundColor = "#E1DFE1",
-                            ColorGroup = "gainsboro",
+                            ColorGroup = "White",
                             Description = "A Deliciously Creamy Take On The Classic Vanilla Flavor.",
                             FlavorName = "A&W® Cream Soda",
                             GlutenFree = false,
@@ -96,7 +98,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 3,
                             BackgroundColor = "#792E27",
-                            ColorGroup = "saddlebrown",
+                            ColorGroup = "White",
                             Description = "Say 'Cheers' With The Flavor Of This All-American Classic Drink.",
                             FlavorName = "A&W® Root Beer",
                             GlutenFree = false,
@@ -111,7 +113,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 4,
                             BackgroundColor = "#5B3640",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "Hard To Pronounce But A Delight To Enjoy. A Super Sweet And Rich Berry Taste Unlike Any Other.",
                             FlavorName = "Acai Berry",
                             GlutenFree = false,
@@ -126,7 +128,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 5,
                             BackgroundColor = "#F0C57F",
-                            ColorGroup = "burlywood",
+                            ColorGroup = "White",
                             Description = "A Creamy Combination Of French Vanilla, Apple Pie, And Caramel Flavors Adds A Sweet Twist To The Classic American Dessert.",
                             FlavorName = "Apple Pie A La Cold Stone®",
                             GlutenFree = false,
@@ -141,7 +143,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 6,
                             BackgroundColor = "#E798AB",
-                            ColorGroup = "lightpink",
+                            ColorGroup = "White",
                             Description = "A Sweet Cherry Flavor With Just A Hint Of Tartness.",
                             FlavorName = "Barbados Cherry",
                             GlutenFree = false,
@@ -156,7 +158,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 7,
                             BackgroundColor = "#3A7195",
-                            ColorGroup = "steelblue",
+                            ColorGroup = "White",
                             Description = "Enjoy The Taste Of Fresh-Picked Blueberries. Deliciously Flavored With Real Blueberry Puree.",
                             FlavorName = "Blueberry",
                             GlutenFree = false,
@@ -171,7 +173,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 8,
                             BackgroundColor = "#E3ACBD",
-                            ColorGroup = "lightpink",
+                            ColorGroup = "White",
                             Description = "This Bean Has Everything But The Bubble! Taking A Trip Down Memory Lane Has Never Tasted So Good.",
                             FlavorName = "Bubble Gum",
                             GlutenFree = false,
@@ -186,7 +188,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 9,
                             BackgroundColor = "#F6D334",
-                            ColorGroup = "gold",
+                            ColorGroup = "White",
                             Description = "Now You Can Enjoy Buttery Perfection Without Having To Go To The Movies.",
                             FlavorName = "Buttered Popcorn",
                             GlutenFree = false,
@@ -201,7 +203,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 10,
                             BackgroundColor = "#FAA538",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "This Sweet Summertime Favorite Is Always In Season.",
                             FlavorName = "Cantaloupe",
                             GlutenFree = false,
@@ -216,7 +218,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 11,
                             BackgroundColor = "#5A262A",
-                            ColorGroup = "saddlebrown",
+                            ColorGroup = "White",
                             Description = "The Rich And Creamy Taste Of Cappuccino. So 'Delicioso' Because Each Is Flavored With Real Coffee.",
                             FlavorName = "Cappuccino",
                             GlutenFree = false,
@@ -231,7 +233,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 12,
                             BackgroundColor = "#F0C57F",
-                            ColorGroup = "burlywood",
+                            ColorGroup = "White",
                             Description = "A Partnership Made In Heaven. Sweet Caramel And Buttery Popcorn.",
                             FlavorName = "Caramel Corn",
                             GlutenFree = false,
@@ -246,7 +248,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 13,
                             BackgroundColor = "#3A7195",
-                            ColorGroup = "steelblue",
+                            ColorGroup = "White",
                             Description = "Enjoy The Taste Of Fresh-Picked Blueberries. Deliciously Flavored With Real Blueberry Puree.",
                             FlavorName = "Blueberry",
                             GlutenFree = false,
@@ -261,7 +263,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 14,
                             BackgroundColor = "#792E27",
-                            ColorGroup = "saddlebrown",
+                            ColorGroup = "White",
                             Description = "Rich Chocolate Taste That Will Bring You To Your Happy Place. Flavored With Real Cocoa Powder For An Indulgent Treat.",
                             FlavorName = "Chocolate Devotion®",
                             GlutenFree = false,
@@ -276,7 +278,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 15,
                             BackgroundColor = "#402427",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "A Creamy, Chocolatey Tasting Delight Flavored With Real Cocoa Powder. No Spoon Required.",
                             FlavorName = "Chocolate Pudding",
                             GlutenFree = false,
@@ -291,7 +293,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 16,
                             BackgroundColor = "#DD4B62",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "The Perfect Combination Of Sugar And Spice. These Beans Have Just The Right Amount Of Cinnamon To Make Them A Sweet Treat For All.",
                             FlavorName = "Cinnamon",
                             GlutenFree = false,
@@ -306,7 +308,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 17,
                             BackgroundColor = "#ba815c",
-                            ColorGroup = "peru",
+                            ColorGroup = "White",
                             Description = "The Perfect Combination Of A Classic Glazed Donut And Sweet Apple Filling. Flavored With Real Apple Juice.",
                             FlavorName = "Cinnamon Apple Filled",
                             GlutenFree = false,
@@ -321,7 +323,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 18,
                             BackgroundColor = "#E1DFE1",
-                            ColorGroup = "gainsboro",
+                            ColorGroup = "White",
                             Description = "Take A Quick Trip To The Tropics With The Taste Of Real Coconut.",
                             FlavorName = "Coconut",
                             GlutenFree = false,
@@ -336,7 +338,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 19,
                             BackgroundColor = "#E19E9F",
-                            ColorGroup = "tan",
+                            ColorGroup = "White",
                             Description = "A Sweet Taste From Your Childhood That Will Bring A Smile To Your Face.",
                             FlavorName = "Cotton Candy",
                             GlutenFree = false,
@@ -351,7 +353,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 20,
                             BackgroundColor = "#871922",
-                            ColorGroup = "brown",
+                            ColorGroup = "White",
                             Description = "Not Too Tart And Not Too Sweet. This Berry Flavor Definitely Has The Perfect Balance.",
                             FlavorName = "Cranberry",
                             GlutenFree = false,
@@ -366,7 +368,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 21,
                             BackgroundColor = "#DD4B62",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "This Delicious Berry Flavor From Snapple® Packed Into A Jelly Bean For A Sweet Treat.",
                             FlavorName = "Cranberry Raspberry",
                             GlutenFree = false,
@@ -381,7 +383,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 22,
                             BackgroundColor = "#FADF50",
-                            ColorGroup = "khaki",
+                            ColorGroup = "White",
                             Description = "Like A Private Island For Your Taste Buds. Flavored With Real Pineapple Juice For Sweet Tropical Goodness.",
                             FlavorName = "Crushed Pineapple",
                             GlutenFree = false,
@@ -396,7 +398,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 23,
                             BackgroundColor = "#5B3640",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "There'S Nothing Like A Dr Pepper. The Soda With A Signature Blend Of 23 Flavors Packed Into A Jelly Bean.",
                             FlavorName = "Dr Pepper®",
                             GlutenFree = false,
@@ -411,7 +413,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 24,
                             BackgroundColor = "#D2D0CE",
-                            ColorGroup = "lightgray",
+                            ColorGroup = "White",
                             Description = "A Jelly Bean That Tastes Just Like A Vanilla Bean.",
                             FlavorName = "French Vanilla",
                             GlutenFree = false,
@@ -426,7 +428,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 25,
                             BackgroundColor = "#CED8C2",
-                            ColorGroup = "lightgray",
+                            ColorGroup = "White",
                             Description = "Zesty And Bittersweet With Hints Of Elderberry And Lime.",
                             FlavorName = "Gin & Tonic",
                             GlutenFree = false,
@@ -441,7 +443,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 26,
                             BackgroundColor = "#91484c",
-                            ColorGroup = "sienna",
+                            ColorGroup = "White",
                             Description = "Enjoy The Oven-Baked Like Taste Of Blueberry Cake Without The Crumbs!",
                             FlavorName = "Glazed Blueberry Cake",
                             GlutenFree = false,
@@ -456,7 +458,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 27,
                             BackgroundColor = "#553E5C",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "A Sweet Grape Flavor With An Exciting Rush Of Fun And Flavor In Every Bean.",
                             FlavorName = "Grape Crush",
                             GlutenFree = false,
@@ -471,7 +473,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 28,
                             BackgroundColor = "#0E7534",
-                            ColorGroup = "forestgreen",
+                            ColorGroup = "White",
                             Description = "Tart And Crisp Flavor Made From Real Apple Juice.",
                             FlavorName = "Green Apple",
                             GlutenFree = false,
@@ -486,7 +488,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 29,
                             BackgroundColor = "#4F657C",
-                            ColorGroup = "dimgray",
+                            ColorGroup = "White",
                             Description = "Take Your Taste Buds To A Tropical Island Paradise. Expertly Flavored With A Blend Of Juices From Real Fruits.",
                             FlavorName = "Island Punch",
                             GlutenFree = false,
@@ -501,7 +503,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 30,
                             BackgroundColor = "#00798B",
-                            ColorGroup = "teal",
+                            ColorGroup = "White",
                             Description = "A Delicious Medley Of Raspberry, Blueberry And Strawberry Flavors.",
                             FlavorName = "Berry Blue",
                             GlutenFree = false,
@@ -516,7 +518,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 31,
                             BackgroundColor = "#293656",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "A Beautifully Sparkling Bean Flavored With Real Blueberry Puree For A Taste That Bursts With Flavor.",
                             FlavorName = "Jewel Blueberry",
                             GlutenFree = false,
@@ -531,7 +533,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 32,
                             BackgroundColor = "#CD8784",
-                            ColorGroup = "rosybrown",
+                            ColorGroup = "White",
                             Description = "This Sparkly Bean Has Everything But The Bubble! Taking A Trip Down Memory Lane Has Never Tasted So Good.",
                             FlavorName = "Jewel Bubble Gum",
                             GlutenFree = false,
@@ -546,7 +548,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 33,
                             BackgroundColor = "#E9CCAD",
-                            ColorGroup = "wheat",
+                            ColorGroup = "White",
                             Description = "Ready To Toast To Any Occasion With A Classy Irridescent Finish, This Bean Contains All The Flavour Of A Glass Of Bubbly Without Any Of The Alcohol.",
                             FlavorName = "Jewel Champagne",
                             GlutenFree = false,
@@ -561,7 +563,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 34,
                             BackgroundColor = "#E5DCD5",
-                            ColorGroup = "gainsboro",
+                            ColorGroup = "White",
                             Description = "Creamy And Smooth Taste With A Special Sparkle That Makes This Bean Shine.",
                             FlavorName = "Jewel Cream Soda",
                             GlutenFree = false,
@@ -576,7 +578,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 35,
                             BackgroundColor = "#602825",
-                            ColorGroup = "saddlebrown",
+                            ColorGroup = "White",
                             Description = "Includes A Fizzy Sensation With Just The Right Blend Of Flavours. Perfect To Enjoy On Its Own Or Mixed With Other Flavours.",
                             FlavorName = "Jewel Ginger Ale",
                             GlutenFree = false,
@@ -591,7 +593,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 36,
                             BackgroundColor = "#3D7889",
-                            ColorGroup = "steelblue",
+                            ColorGroup = "White",
                             Description = "You Just Picked A Winner! Flavourings Of Real Grape Juice Give It A Fresh From The Vine Taste.",
                             FlavorName = "Jewel Grape Soda",
                             GlutenFree = false,
@@ -606,7 +608,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 37,
                             BackgroundColor = "#FCB76C",
-                            ColorGroup = "sandybrown",
+                            ColorGroup = "White",
                             Description = "A Beautifully Sparkling Citrus Treat Flavored With Real Orange Puree.",
                             FlavorName = "Jewel Orange",
                             GlutenFree = false,
@@ -621,7 +623,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 38,
                             BackgroundColor = "#2B9B39",
-                            ColorGroup = "forestgreen",
+                            ColorGroup = "White",
                             Description = "So Shiny, So Tart. Flavored With Real Apple Juice.",
                             FlavorName = "Jewel Sour Apple",
                             GlutenFree = false,
@@ -636,7 +638,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 39,
                             BackgroundColor = "#D6BA03",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "A Shiny Bean That Packs Some Serious Pucker Power. Flavored With Real Lemon Puree To Deliver A Tasty Tartness.",
                             FlavorName = "Jewel Sour Lemon",
                             GlutenFree = false,
@@ -651,7 +653,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 40,
                             BackgroundColor = "#9C4B6F",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "This Bean Sparkles Like A Ruby And Is Made With Real Cherry Juice To Burst With Flavor.",
                             FlavorName = "Jewel Very Cherry",
                             GlutenFree = false,
@@ -666,7 +668,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 41,
                             BackgroundColor = "#AAAE45",
-                            ColorGroup = "yellowgreen",
+                            ColorGroup = "White",
                             Description = "With Just One Bite, It'S Easy To See Why It'S Called Juicy Pear. The Fresh Sweet Taste Comes From Flavorings Of Real Pear.",
                             FlavorName = "Juicy Pear",
                             GlutenFree = false,
@@ -681,7 +683,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 42,
                             BackgroundColor = "#8EBF14",
-                            ColorGroup = "yellowgreen",
+                            ColorGroup = "White",
                             Description = "A Sweet And Exotic Taste Made With Flavorings Of Real Kiwifruit.",
                             FlavorName = "Kiwi",
                             GlutenFree = false,
@@ -696,7 +698,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 43,
                             BackgroundColor = "#DD4B62",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "The Iconic Blend Of Tangy Kiwi And Sweet Strawberry Made Famous By Snapple® In The Form Of A Jelly Bean.",
                             FlavorName = "Kiwi Strawberry",
                             GlutenFree = false,
@@ -711,7 +713,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 44,
                             BackgroundColor = "#DD4B62",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "The Perfect Amount Of Pucker. Real Lemon Flavorings Give These Beans Their Tasty Tartness.",
                             FlavorName = "Sunkist® Lemon",
                             GlutenFree = false,
@@ -726,7 +728,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 45,
                             BackgroundColor = "#DD4B62",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "Mix It Up With This Citrusy Sweet Blend. Flavored With Real Orange Puree.",
                             FlavorName = "Mandarin Orange Mango Smoothie",
                             GlutenFree = false,
@@ -741,7 +743,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 46,
                             BackgroundColor = "#D1CA3D",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "Fresh And Sweet. Tropical Island Goodness Flavored With Real Mango Puree.",
                             FlavorName = "Mango",
                             GlutenFree = false,
@@ -756,7 +758,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 47,
                             BackgroundColor = "#F99B25",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "Go Mad For This Sweet, Fruity, And Delicious Mango Flavor From Snapple®.",
                             FlavorName = "Mango Madness",
                             GlutenFree = false,
@@ -771,7 +773,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 48,
                             BackgroundColor = "#EBC669",
-                            ColorGroup = "burlywood",
+                            ColorGroup = "White",
                             Description = "A Tropical Treat With A Bubbly Twist. This Fruity Delight Tastes Just Like Your Favorite Boba Milk Tea Drink.",
                             FlavorName = "Mango Milk Tea",
                             GlutenFree = false,
@@ -786,7 +788,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 49,
                             BackgroundColor = "#7EB159",
-                            ColorGroup = "yellowgreen",
+                            ColorGroup = "White",
                             Description = "No Tequila Required. Made With A Twist Of Lime Juice.",
                             FlavorName = "Margarita",
                             GlutenFree = false,
@@ -801,7 +803,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 50,
                             BackgroundColor = "#C2E189",
-                            ColorGroup = "khaki",
+                            ColorGroup = "White",
                             Description = "Savor The Perfect Blend Of Matcha Milk Tea And Tapioca Pearls In Every Bite.",
                             FlavorName = "Matcha Milk Tea",
                             GlutenFree = false,
@@ -816,7 +818,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 51,
                             BackgroundColor = "#D48840",
-                            ColorGroup = "peru",
+                            ColorGroup = "White",
                             Description = "A Sophisticated Combination Of Champagne And Orange Juice. There'S No Bubbly, But Each Is Deliciously Flavored With Real Orange Puree.",
                             FlavorName = "Mimosa",
                             GlutenFree = false,
@@ -831,7 +833,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 52,
                             BackgroundColor = "#83AD5C",
-                            ColorGroup = "darkseagreen",
+                            ColorGroup = "White",
                             Description = "A Delicious Combination Of Chocolate And Mint Flavor In Every Bean.",
                             FlavorName = "Mint Chocolate Chip®",
                             GlutenFree = false,
@@ -846,7 +848,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 53,
                             BackgroundColor = "#B598AF",
-                            ColorGroup = "darkgray",
+                            ColorGroup = "White",
                             Description = "A Delightful Mix Of Creamy Berry Flavors. No Blender Required.",
                             FlavorName = "Mixed Berry Smoothie",
                             GlutenFree = false,
@@ -861,7 +863,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 54,
                             BackgroundColor = "#03ad50",
-                            ColorGroup = "seagreen",
+                            ColorGroup = "White",
                             Description = "Sit Back And Enjoy The Refreshing Taste Of Mint And Lime Without Any Of The Alcohol.",
                             FlavorName = "Mojito",
                             GlutenFree = false,
@@ -876,7 +878,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 55,
                             BackgroundColor = "#AD7E47",
-                            ColorGroup = "peru",
+                            ColorGroup = "White",
                             Description = "Complete With A Copper Finish, This Bean Tastes Like The Iconic Cocktail Without The Distilled Spirit.",
                             FlavorName = "Moscow Mule",
                             GlutenFree = false,
@@ -891,7 +893,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 56,
                             BackgroundColor = "#F6A763",
-                            ColorGroup = "sandybrown",
+                            ColorGroup = "White",
                             Description = "The Iconic Orange Soda Flavor That Offers A Refreshingly Sweet Escape On A Warm Afternoon.",
                             FlavorName = "Orange Crush",
                             GlutenFree = false,
@@ -906,7 +908,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 57,
                             BackgroundColor = "#F79C72",
-                            ColorGroup = "lightsalmon",
+                            ColorGroup = "White",
                             Description = "The Light And Refreshing Combination Of Sweet Orange And Smooth Cream Flavors. Made Possible With Real Orange Puree. No Freezer Required.",
                             FlavorName = "Orange Sherbet",
                             GlutenFree = false,
@@ -921,7 +923,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 58,
                             BackgroundColor = "#c2864b",
-                            ColorGroup = "peru",
+                            ColorGroup = "White",
                             Description = "The Perfectly Sweet Flavor Everyone Loves To Wake Up To.",
                             FlavorName = "Original Glazed®",
                             GlutenFree = false,
@@ -936,7 +938,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 59,
                             BackgroundColor = "#c4293e",
-                            ColorGroup = "crimson",
+                            ColorGroup = "White",
                             Description = "Enjoy A Scoop Of Everyone'S Summertime Favorite. Flavored With Real Strawberry Puree For A Fresh Fruit Taste.",
                             FlavorName = "Our Strawberry Blonde®",
                             GlutenFree = false,
@@ -951,7 +953,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 60,
                             BackgroundColor = "#EB8435",
-                            ColorGroup = "peru",
+                            ColorGroup = "White",
                             Description = "The Luscious And Ripe Taste Of Summer. Flavored With Real Peach Puree.",
                             FlavorName = "Peach",
                             GlutenFree = false,
@@ -966,7 +968,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 61,
                             BackgroundColor = "#EFE393",
-                            ColorGroup = "khaki",
+                            ColorGroup = "White",
                             Description = "Smooth & Creamy With Just A Hint Of Tartness. Flavoured With Real Pear And Pineapple Juices.",
                             FlavorName = "Pineapple Pear Smoothie",
                             GlutenFree = false,
@@ -981,7 +983,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 62,
                             BackgroundColor = "#da566a",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "All Pink With A Flavor That Is Tart, Tangy, And Lemony.",
                             FlavorName = "Pink Lemonade",
                             GlutenFree = false,
@@ -996,7 +998,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 63,
                             BackgroundColor = "#7EB159",
-                            ColorGroup = "yellowgreen",
+                            ColorGroup = "White",
                             Description = "Smooth & Creamy With Just A Hint Of Tartness. Flavored With Real Pear And Pineapple Juices.",
                             FlavorName = "Piñ1A Colada",
                             GlutenFree = false,
@@ -1011,7 +1013,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 64,
                             BackgroundColor = "#293656",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "Sweet And Ripe. Flavoured With Real Plum Juice To Give It A Freshly Picked Taste.",
                             FlavorName = "Plum",
                             GlutenFree = false,
@@ -1026,7 +1028,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 65,
                             BackgroundColor = "#DD4B62",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "Perfectly Tart And Sweet But Without The Seeds. Flavored With Real Pomegranate Juice.",
                             FlavorName = "Pomegranate",
                             GlutenFree = false,
@@ -1041,7 +1043,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 66,
                             BackgroundColor = "#972C3F",
-                            ColorGroup = "brown",
+                            ColorGroup = "White",
                             Description = "The Ultimate In Chic Drinks. Contains The Same Robust And Refreshing Taste As The Classic Cocktail Without Any Of The Alcohol.",
                             FlavorName = "Pomegranate Cosmo",
                             GlutenFree = false,
@@ -1056,7 +1058,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 67,
                             BackgroundColor = "#B11F29",
-                            ColorGroup = "firebrick",
+                            ColorGroup = "White",
                             Description = "Enjoy The Fresh-Picked Taste Of Real Raspberry Puree.",
                             FlavorName = "Raspberry",
                             GlutenFree = false,
@@ -1071,7 +1073,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 68,
                             BackgroundColor = "#972C3F",
-                            ColorGroup = "brown",
+                            ColorGroup = "White",
                             Description = "Crisp, Delicious And Sweet. A Classic Taste That Only Comes From Including Real Apple Juice.",
                             FlavorName = "Red Apple",
                             GlutenFree = false,
@@ -1086,7 +1088,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 69,
                             BackgroundColor = "#FF9BB3",
-                            ColorGroup = "lightpink",
+                            ColorGroup = "White",
                             Description = "The Delicious Flavour Of A Glass Of Bubbly That Makes Every Occasion Extra Rosy.",
                             FlavorName = "Rose",
                             GlutenFree = false,
@@ -1101,7 +1103,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 70,
                             BackgroundColor = "#E9CCAD",
-                            ColorGroup = "wheat",
+                            ColorGroup = "White",
                             Description = "The Perfect Taste Combination Of Marshmallow, Graham Cracker And Chocolate. No Campfire Required.",
                             FlavorName = "S'Mores",
                             GlutenFree = false,
@@ -1116,7 +1118,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 71,
                             BackgroundColor = "#871922",
-                            ColorGroup = "brown",
+                            ColorGroup = "White",
                             Description = "We Turned Up The Heat. This Bean'S Fiery Cinnamon Flavor Bites Back With A Delectable Spice That'S Just Right.",
                             FlavorName = "Sizzling Cinnamon",
                             GlutenFree = false,
@@ -1131,7 +1133,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 72,
                             BackgroundColor = "#9E222C",
-                            ColorGroup = "brown",
+                            ColorGroup = "White",
                             Description = "A Sour Twist To One Of Our Most Popular Flavors. Made To Perfection With Real Cherry Juice For A Delicious Fresh-Picked Flavor.",
                             FlavorName = "Sour Cherry",
                             GlutenFree = false,
@@ -1146,7 +1148,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 73,
                             BackgroundColor = "#3a7295",
-                            ColorGroup = "steelblue",
+                            ColorGroup = "White",
                             Description = "So Sour. So Good. Flavorings Of Real Grape Juice Produces A Fresh From The Vine Taste.",
                             FlavorName = "Sour Grape",
                             GlutenFree = false,
@@ -1161,7 +1163,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 74,
                             BackgroundColor = "#F9D501",
-                            ColorGroup = "gold",
+                            ColorGroup = "White",
                             Description = "This Bean Packs Extra Pucker Power. Real Lemon Puree' Delivers Its Special Tasty Tartness.",
                             FlavorName = "Sour Lemon",
                             GlutenFree = false,
@@ -1176,7 +1178,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 75,
                             BackgroundColor = "#F99B25",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "Pucker Up! Flavored With Real Orange Puree.",
                             FlavorName = "Sour Orange",
                             GlutenFree = false,
@@ -1191,7 +1193,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 76,
                             BackgroundColor = "#E5932E",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "Go Ahead. Mix It Up! A Delicious Combo Flavored With Real Strawberry And Banana Purees.",
                             FlavorName = "Strawberry Banana Smoothie",
                             GlutenFree = false,
@@ -1206,7 +1208,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 77,
                             BackgroundColor = "#E798AB",
-                            ColorGroup = "lightpink",
+                            ColorGroup = "White",
                             Description = "A Dessert Lover'S Dream! There Is A Reason Why It'S One Of Our Most Popular Flavors. Go Ahead, Treat Yourself.",
                             FlavorName = "Strawberry Cheesecake",
                             GlutenFree = false,
@@ -1221,7 +1223,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 78,
                             BackgroundColor = "#B95A66",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "You'Ll Feel Like You Are Poolside As You Enjoy The Fresh Fruity Taste. We Flavor Each Bean With Real Strawberry Puree.",
                             FlavorName = "Strawberry Daiquiri",
                             GlutenFree = false,
@@ -1236,7 +1238,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 79,
                             BackgroundColor = "#E798AB",
-                            ColorGroup = "lightpink",
+                            ColorGroup = "White",
                             Description = "Classic Glazed Donut Flavors With The Added Indulgence Of Strawberry Icing.",
                             FlavorName = "Strawberry Iced",
                             GlutenFree = false,
@@ -1251,7 +1253,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 80,
                             BackgroundColor = "#C02032",
-                            ColorGroup = "firebrick",
+                            ColorGroup = "White",
                             Description = "The Perfect Sweet Topping. Flavoured With Real Strawberry Juice For A Fresh From The Jar Taste.",
                             FlavorName = "Strawberry Jam",
                             GlutenFree = false,
@@ -1266,7 +1268,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 81,
                             BackgroundColor = "#F9CAC8",
-                            ColorGroup = "pink",
+                            ColorGroup = "White",
                             Description = "Refreshing And Sweet. Sweet Strawberries, Milk Tea, And Tapioca Pearls Combine For A Delightful Treat.",
                             FlavorName = "Strawberry Milk Tea",
                             GlutenFree = false,
@@ -1281,7 +1283,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 82,
                             BackgroundColor = "#F9D501",
-                            ColorGroup = "gold",
+                            ColorGroup = "White",
                             Description = "The Perfect Amount Of Pucker. Real Lemon Flavorings Give These Beans Their Tasty Tartness.",
                             FlavorName = "Lemon",
                             GlutenFree = false,
@@ -1296,7 +1298,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 83,
                             BackgroundColor = "#D5DC55",
-                            ColorGroup = "darkkhaki",
+                            ColorGroup = "White",
                             Description = "Sweet, Tart, And Zesty. Flavored With Real Lime Juice For That Fresh-Picked Taste.",
                             FlavorName = "Sunkist® Lime",
                             GlutenFree = false,
@@ -1311,7 +1313,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 84,
                             BackgroundColor = "#F99B25",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "The Perfect Way To Wake Up Your Taste Buds. Each Flavored With Real Orange Puree For A Sweet Citrus Treat.",
                             FlavorName = "Sunkist® Orange",
                             GlutenFree = false,
@@ -1326,7 +1328,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 85,
                             BackgroundColor = "#E6986B",
-                            ColorGroup = "darksalmon",
+                            ColorGroup = "White",
                             Description = "It Tastes So Fresh Squeezed Because It'S Flavored With Real Grapefruit Juice.",
                             FlavorName = "Sunkist® Pink Grapefruit",
                             GlutenFree = false,
@@ -1341,7 +1343,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 86,
                             BackgroundColor = "#EE734A",
-                            ColorGroup = "coral",
+                            ColorGroup = "White",
                             Description = "Get Ready For A Sweet And Tart Taste That'S Flavored With Real Tangerine Juice For A Burst Of Flavor.",
                             FlavorName = "Sunkist® Tangerine",
                             GlutenFree = false,
@@ -1356,7 +1358,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 87,
                             BackgroundColor = "#CCB7C3",
-                            ColorGroup = "silver",
+                            ColorGroup = "White",
                             Description = "Take Your Taste Buds On A Journey With This Internationally-Inspired Flavor. The Perfect Blend Of Taro Milk Tea And Tapioca Pearls Make Up This Truly Unique Bean.",
                             FlavorName = "Taro Milk Tea",
                             GlutenFree = false,
@@ -1371,7 +1373,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 88,
                             BackgroundColor = "#EBAC4A",
-                            ColorGroup = "sandybrown",
+                            ColorGroup = "White",
                             Description = "Experience The Rich And Aromatic Blend Of Thai Milk Tea And Tapioca Pearls In Every Bite.",
                             FlavorName = "Thai Milk Tea",
                             GlutenFree = false,
@@ -1386,7 +1388,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 89,
                             BackgroundColor = "#D8C6AB",
-                            ColorGroup = "silver",
+                            ColorGroup = "White",
                             Description = "Bring Back Memories Of Sitting Around The Campfire. No Stick Required.",
                             FlavorName = "Toasted Marshmallow",
                             GlutenFree = false,
@@ -1401,7 +1403,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 90,
                             BackgroundColor = "#CCA42C",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "So Delicious, You'Ll Want To Eat A Bunch. Flavored With Real Banana Puree.",
                             FlavorName = "Top Banana",
                             GlutenFree = false,
@@ -1416,7 +1418,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 91,
                             BackgroundColor = "#EFB3CB",
-                            ColorGroup = "lightpink",
+                            ColorGroup = "White",
                             Description = "This Beloved Bean Is A Unique And Delicious Combination Of Fruity Flavors.",
                             FlavorName = "Tutti-Fruitti",
                             GlutenFree = false,
@@ -1431,7 +1433,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 92,
                             BackgroundColor = "#AD1E34",
-                            ColorGroup = "brown",
+                            ColorGroup = "White",
                             Description = "Our Most Popular Flavor Is Created With Real Cherry Juice To Seem Like It Came Right From A Tree.",
                             FlavorName = "Very Cherry",
                             GlutenFree = false,
@@ -1446,7 +1448,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 93,
                             BackgroundColor = "#264D16",
-                            ColorGroup = "darkgreen",
+                            ColorGroup = "White",
                             Description = "A Sweet Sensation That'S Green On The Outside And Red On The Inside. Flavored With Real Watermelon Juice To Be Delicious Inside And Out.",
                             FlavorName = "Watermelon",
                             GlutenFree = false,
@@ -1461,7 +1463,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 94,
                             BackgroundColor = "#655277",
-                            ColorGroup = "dimgray",
+                            ColorGroup = "White",
                             Description = "Deep And Fruity Flavor That Tastes Like It Came Right From The Bush. Flavored With Real Blackberry Puree.",
                             FlavorName = "Wild Blackberry",
                             GlutenFree = false,
@@ -1476,7 +1478,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 95,
                             BackgroundColor = "#FFE92D",
-                            ColorGroup = "gold",
+                            ColorGroup = "White",
                             Description = "The Classic Candy That Is Sweet With Just A Hint Of Sour. Flavoured With Real Lemon Puree.",
                             FlavorName = "Lemon Drop",
                             GlutenFree = false,
@@ -1491,7 +1493,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 96,
                             BackgroundColor = "#D5DC55",
-                            ColorGroup = "darkkhaki",
+                            ColorGroup = "White",
                             Description = "The Citrus Match Made In Heaven And Made With Real Lime Juice Concentrate.",
                             FlavorName = "Lemon Lime",
                             GlutenFree = false,
@@ -1506,7 +1508,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 97,
                             BackgroundColor = "#F1C720",
-                            ColorGroup = "gold",
+                            ColorGroup = "White",
                             Description = "A Tart And Sweet Taste You'Ll Swear Was Topped With Meringue. Flavored With Real Lemon Puree.",
                             FlavorName = "Lemon Meringue Pie",
                             GlutenFree = false,
@@ -1521,7 +1523,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 98,
                             BackgroundColor = "#022F34",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "Indulge In The Unmistakable Flavor That Balances Sweet With Spice. Our Traditional Taste Comes From Real Black Licorice.",
                             FlavorName = "Licorice",
                             GlutenFree = false,
@@ -1536,7 +1538,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 99,
                             BackgroundColor = "#",
-                            ColorGroup = "black",
+                            ColorGroup = "White",
                             Description = "The Sweet And Fruity Flavors Of Cherry And Passion Fruit Are Blended To Perfection In This Unique Smoothie Flavor.",
                             FlavorName = "Cherry Passion Fruit Smoothie",
                             GlutenFree = false,
@@ -1551,7 +1553,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 100,
                             BackgroundColor = "#03698B",
-                            ColorGroup = "teal",
+                            ColorGroup = "White",
                             Description = "Enjoy The Taste Of A Fresh-Picked Raspberry In A Beautiful Blue Hue.",
                             FlavorName = "Blue Raspberry",
                             GlutenFree = false,
@@ -1566,7 +1568,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 101,
                             BackgroundColor = "#EEE7D8",
-                            ColorGroup = "antiquewhite",
+                            ColorGroup = "White",
                             Description = "Party All The Time With This Unique Ice Cream Flavor.",
                             FlavorName = "Birthday Cake Remix®",
                             GlutenFree = false,
@@ -1581,7 +1583,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 102,
                             BackgroundColor = "#EEE7D8",
-                            ColorGroup = "antiquewhite",
+                            ColorGroup = "White",
                             Description = "Make Everyday Taste Like Your Birthday.",
                             FlavorName = "Birthday Cake",
                             GlutenFree = false,
@@ -1596,7 +1598,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 103,
                             BackgroundColor = "#3C812A",
-                            ColorGroup = "forestgreen",
+                            ColorGroup = "White",
                             Description = "Fresh From The Tree Sweetness With A Sour Twist. Flavored With Real Apple Juice.",
                             FlavorName = "Sour Apple",
                             GlutenFree = false,
@@ -1611,7 +1613,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 104,
                             BackgroundColor = "#C02032",
-                            ColorGroup = "firebrick",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Cherry",
                             GlutenFree = false,
@@ -1626,7 +1628,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 105,
                             BackgroundColor = "#DD4B62",
-                            ColorGroup = "indianred",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Sizzling Cinnamon",
                             GlutenFree = false,
@@ -1641,7 +1643,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 106,
                             BackgroundColor = "#2B9B39",
-                            ColorGroup = "forestgreen",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Green Apple",
                             GlutenFree = false,
@@ -1656,7 +1658,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 107,
                             BackgroundColor = "#c8cf65",
-                            ColorGroup = "darkkhaki",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Juicy Pear",
                             GlutenFree = false,
@@ -1671,7 +1673,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 108,
                             BackgroundColor = "#e9d443",
-                            ColorGroup = "sandybrown",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Lemon",
                             GlutenFree = false,
@@ -1686,7 +1688,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 109,
                             BackgroundColor = "#022F34",
-                            ColorGroup = "darkslategray",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Licorice",
                             GlutenFree = false,
@@ -1701,7 +1703,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 110,
                             BackgroundColor = "#FADF50",
-                            ColorGroup = "khaki",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Pineapple",
                             GlutenFree = false,
@@ -1716,7 +1718,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 111,
                             BackgroundColor = "#FDE96C",
-                            ColorGroup = "khaki",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Buttered Popcorn",
                             GlutenFree = false,
@@ -1731,7 +1733,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 112,
                             BackgroundColor = "#EFB3CB",
-                            ColorGroup = "lightpink",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Strawberry",
                             GlutenFree = false,
@@ -1746,7 +1748,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 113,
                             BackgroundColor = "#f99b24",
-                            ColorGroup = "goldenrod",
+                            ColorGroup = "White",
                             Description = "",
                             FlavorName = "Sugar-Free Tangerine",
                             GlutenFree = false,
@@ -1761,7 +1763,7 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             BeanId = 114,
                             BackgroundColor = "#085881",
-                            ColorGroup = "teal",
+                            ColorGroup = "White",
                             Description = "A Combination Of Fruits To Give Your Taste Buds The Royal Treatment.",
                             FlavorName = "Jewel Berry Blue",
                             GlutenFree = false,
