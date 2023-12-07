@@ -11,8 +11,7 @@ namespace JellyBellyWikiApi.DataSeeding
         new Bean
         { 
           BeanId = 1,
-          Sku = 1001,
-          GroupName = "Jelly Belly Official Flavors",
+           GroupNameSerialized = "Jelly Belly Official Flavors, Most Popular Flavors",
           FlavorName = "Buttered Popcorn",
           Description = "Experience the delicious taste of buttered popcorn in a bite-sized jelly bean.",
           Ingredients = new [] {"Sugar, Corn Syrup, Modified Food Starch, Contains 2% or less of the following: Natural and Artificial Flavors, Color Added, Vegetable and Fruit Juice (Color), Beeswax, Carnauba Wax, Confectioner's Glaze."},
@@ -27,8 +26,7 @@ namespace JellyBellyWikiApi.DataSeeding
         new Bean
         {
           BeanId = 2,
-          Sku = 1002,
-          GroupName = "Jelly Belly Official Flavors",
+           GroupNameSerialized = "Jelly Belly Official Flavors",
           FlavorName = "A&W® Root Beer",
           BackgroundColor = "#792E27",
           ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/63b9e71d-9866-4044-9af7-7a64a52b0e0e",
@@ -43,8 +41,7 @@ namespace JellyBellyWikiApi.DataSeeding
         new Bean
         {
           BeanId = 3,
-          Sku = 1003,
-          GroupName = "Jelly Belly Official Flavors",
+           GroupNameSerialized = "Jelly Belly Official Flavors",
           FlavorName = "Berry Blue",
           BackgroundColor = "#0A9882",
           ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/4e65d579-9595-4620-b6c4-a9606df99f3d",
@@ -59,8 +56,7 @@ namespace JellyBellyWikiApi.DataSeeding
         new Bean
         {
           BeanId = 4,
-          Sku = 1004,
-          GroupName = "Jelly Belly Official Flavors",
+           GroupNameSerialized = "Jelly Belly Official Flavors",
           FlavorName = "Blueberry",
           BackgroundColor = "#3A7195",
           ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/a8f085b5-b4ff-4aca-8650-43ad54c80fe4",
@@ -75,8 +71,7 @@ namespace JellyBellyWikiApi.DataSeeding
         new Bean
         {
           BeanId = 5,
-          Sku = 1005,
-          GroupName = "Jelly Belly Official Flavors",
+           GroupNameSerialized = "Jelly Belly Official Flavors",
           FlavorName = "Bubble Gum",
           BackgroundColor = "#E3ACBD",
           ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/51474130-73e9-40b7-a8ba-c9eac7be7de4",
