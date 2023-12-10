@@ -2,6 +2,7 @@
 using JellyBellyWikiApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JellyBellyWikiApi.Migrations
 {
     [DbContext(typeof(JellyBellyWikiApiContext))]
-    partial class JellyBellyWikiApiContextModelSnapshot : ModelSnapshot
+    [Migration("20231210042740_SeedRecipeData")]
+    partial class SeedRecipeData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1820,103 +1822,6 @@ namespace JellyBellyWikiApi.Migrations
                             FactId = 5,
                             Description = "Making Jelly Belly beans is a complex process. It involves several stages, including creating the flavor centers, adding the candy shell, and polishing the beans to achieve their signature shine.",
                             Title = "Behind the Scenes"
-                        });
-                });
-
-            modelBuilder.Entity("JellyBellyWikiApi.Models.MileStone", b =>
-                {
-                    b.Property<int>("MileStoneId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("Year")
-                        .HasColumnType("int");
-
-                    b.HasKey("MileStoneId");
-
-                    b.ToTable("MileStones");
-
-                    b.HasData(
-                        new
-                        {
-                            MileStoneId = 1,
-                            Description = "Gustav Goelitz opens a candy business in Belleville, Illinois, laying the foundation for the company's future.",
-                            Year = 1869
-                        },
-                        new
-                        {
-                            MileStoneId = 2,
-                            Description = "The Goelitz family specializes in mellocremes, including candy corn.",
-                            Year = 1898
-                        },
-                        new
-                        {
-                            MileStoneId = 3,
-                            Description = "During World War II, amidst sugar rationing, the company introduces Mint Wafers.",
-                            Year = 1940
-                        },
-                        new
-                        {
-                            MileStoneId = 4,
-                            Description = "A significant breakthrough with the Goelitz Mini Jelly Beans, infused with flavor in both the center and the shell.",
-                            Year = 1965
-                        },
-                        new
-                        {
-                            MileStoneId = 5,
-                            Description = "The first Jelly Belly jelly beans are introduced with flavors like Root Beer, Green Apple, Licorice, Cream Soda, Lemon, Tangerine, Very Cherry, and Grape.",
-                            Year = 1976
-                        },
-                        new
-                        {
-                            MileStoneId = 6,
-                            Description = "The brand gains significant popularity, notably with President Ronald Reagan as a fan.",
-                            Year = 1980
-                        },
-                        new
-                        {
-                            MileStoneId = 7,
-                            Description = "The company begins printing the Jelly Belly name on every bean.",
-                            Year = 1996
-                        },
-                        new
-                        {
-                            MileStoneId = 8,
-                            Description = "The company is renamed to Jelly Belly Candy Company.",
-                            Year = 2001
-                        },
-                        new
-                        {
-                            MileStoneId = 9,
-                            Description = "Introduction of Bertie Bott's Every Flavor Beans from the Harry Potter series.",
-                            Year = 2002
-                        },
-                        new
-                        {
-                            MileStoneId = 10,
-                            Description = "Sales reach $125 million, indicating substantial growth.",
-                            Year = 2004
-                        },
-                        new
-                        {
-                            MileStoneId = 11,
-                            Description = "BeanBoozled jelly beans are introduced, featuring wild and wacky flavors.",
-                            Year = 2008
-                        },
-                        new
-                        {
-                            MileStoneId = 12,
-                            Description = "Draft Beer flavor, inspired by Hefeweizen ale, is introduced.",
-                            Year = 2014
-                        },
-                        new
-                        {
-                            MileStoneId = 13,
-                            Description = "Ferrara Candy Company announces an agreement to acquire Jelly Belly Candy Company.",
-                            Year = 2023
                         });
                 });
 
