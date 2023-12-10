@@ -152,10 +152,10 @@ If pagination is not defined in the request, default values will be used.
 
 #### Example Queries
 
-The following query will return beans with ID of 6 to 10 from the dataset (page number 2, with 5 beans on each page).
+The following query will return beans with ID of 3 to 4 from the dataset (page number 2, with 2 beans on each page).
 
 ```
-'https://localhost:5001/api/Beans?pageIndex=2&pageSize=5'
+'https://localhost:5001/api/Beans?pageIndex=2&pageSize=2'
 ```
 
 #### Sample JSON Response from the above query
@@ -163,89 +163,38 @@ The following query will return beans with ID of 6 to 10 from the dataset (page 
 ```json
 {
   "totalCount": 114,
-  "pageSize": 5,
+  "pageSize": 2,
   "currentPage": 2,
-  "totalPages": 23,
+  "totalPages": 57,
   "items": [
     {
-      "beanId": 6,
+      "beanId": 3,
+      "groupName": ["Jelly Belly Official Flavors", "Soda Pop Shoppe® Flavors"],
+      "groupNameSerialized": "Jelly Belly Official Flavors, Soda Pop Shoppe® Flavors",
+      "flavorName": "A&W® Root Beer",
+      "description": "Say 'Cheers' With The Flavor Of This All-American Classic Drink.",
+      "colorGroup": "saddlebrown",
+      "backgroundColor": "#792E27",
+      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/63b9e71d-9866-4044-9af7-7a64a52b0e0e",
+      "ingredients": [
+        "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Natural & Artificial Flavors, Color Added, Vegetable & Fruit Juice (Color), Beeswax, Carnauba Wax, Confectioner'S Glaze."
+      ],
+      "glutenFree": false,
+      "sugarFree": false,
+      "seasonal": false,
+      "kosher": true
+    },
+    {
+      "beanId": 4,
       "groupName": ["Superfruit Flavors"],
       "groupNameSerialized": "Superfruit Flavors",
-      "flavorName": "Barbados Cherry",
-      "description": "A Sweet Cherry Flavor With Just A Hint Of Tartness.",
-      "colorGroup": "lightpink",
-      "backgroundColor": "#E798AB",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/168244d0-b3ba-4725-a2d9-5083b362d10a",
+      "flavorName": "Acai Berry",
+      "description": "Hard To Pronounce But A Delight To Enjoy. A Super Sweet And Rich Berry Taste Unlike Any Other.",
+      "colorGroup": "darkslategray",
+      "backgroundColor": "#5B3640",
+      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/6f0c6164-71c8-47f6-a55f-893f5fd58fa0",
       "ingredients": [
         "Cane Sugar, Tapioca Syrup, Modified Food Starch, Sour Cherry Juice From Concentrate, Blueberry Juice From Blueberry Puree, Pomegranate Juice From Concentrate, Acai Puree, Natural Flavors, Acerola (Barbados) Cherry Juice, Cranberry Puree, Citric Acid, Apple (Color), Confectioner'S Glaze, Beeswax, Grape Concentrate (Color), Carrot (Color), Carnauba Wax, Black Currant (Color), Hibiscus (Color), Color Added."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    },
-    {
-      "beanId": 7,
-      "groupName": ["Jelly Belly Official Flavors"],
-      "groupNameSerialized": "Jelly Belly Official Flavors",
-      "flavorName": "Blueberry",
-      "description": "Enjoy The Taste Of Fresh-Picked Blueberries. Deliciously Flavored With Real Blueberry Puree.",
-      "colorGroup": "steelblue",
-      "backgroundColor": "#3A7195",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/a8f085b5-b4ff-4aca-8650-43ad54c80fe4",
-      "ingredients": [
-        "Sugar, Corn Syrup, Modified Food Starch, Blueberry Juice From Puree, Contains 2% Or Less Of The Following: Citric Acid, Natural & Artificial Flavor, Color Added, Blue 1 Lake, Beeswax, Carnauba Wax, Confectioner'S Glaze."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    },
-    {
-      "beanId": 8,
-      "groupName": ["Jelly Belly Official Flavors", "Kids Mix Flavors"],
-      "groupNameSerialized": "Jelly Belly Official Flavors, Kids Mix Flavors",
-      "flavorName": "Bubble Gum",
-      "description": "This Bean Has Everything But The Bubble! Taking A Trip Down Memory Lane Has Never Tasted So Good.",
-      "colorGroup": "lightpink",
-      "backgroundColor": "#E3ACBD",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/51474130-73e9-40b7-a8ba-c9eac7be7de4",
-      "ingredients": [
-        "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Artificial Flavor, Color Added, Red 40 Lake, Red 40, Yellow 5 Lake, Beeswax, Carnauba Wax, Confectioner'S Glaze."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    },
-    {
-      "beanId": 9,
-      "groupName": ["Jelly Belly Official Flavors", "Kids Mix Flavors"],
-      "groupNameSerialized": "Jelly Belly Official Flavors, Kids Mix Flavors",
-      "flavorName": "Buttered Popcorn",
-      "description": "Now You Can Enjoy Buttery Perfection Without Having To Go To The Movies.",
-      "colorGroup": "gold",
-      "backgroundColor": "#F6D334",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/61207309-fffb-443a-b735-b9a5a6374c8d",
-      "ingredients": [
-        "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Natural And Artificial Flavors, Color Added, Yellow 5, Beeswax, Carnauba Wax, Confectioner'S Glaze, Salt."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    },
-    {
-      "beanId": 10,
-      "groupName": ["Jelly Belly Official Flavors", "Tropical Mix Flavors"],
-      "groupNameSerialized": "Jelly Belly Official Flavors, Tropical Mix Flavors",
-      "flavorName": "Cantaloupe",
-      "description": "This Sweet Summertime Favorite Is Always In Season.",
-      "colorGroup": "goldenrod",
-      "backgroundColor": "#FAA538",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/45d0972c-e554-4374-8b21-ac50ff450d3e",
-      "ingredients": [
-        "Sugar, Corn Syrup, Modified Food Starch, Cantaloupe Juice From Cantaloupe Powder, Contains 2% Or Less Of The Following: Natural And Artificial Flavors, Color Added, Yellow 6 Lake, Yellow 6, Beeswax, Carnauba Wax, Confectioner'S Glaze."
       ],
       "glutenFree": false,
       "sugarFree": false,
