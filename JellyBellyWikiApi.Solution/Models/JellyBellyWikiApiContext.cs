@@ -8,6 +8,7 @@ namespace JellyBellyWikiApi.Models
   {
     public DbSet<Bean> Beans { get; set; }
     public DbSet<Fact> Facts { get; set; }
+    public DbSet<MileStone> MileStones { get; set; }
     public DbSet<Recipe> Recipes { get; set; }
 
     public JellyBellyWikiApiContext(DbContextOptions<JellyBellyWikiApiContext> options) : base(options)
@@ -30,6 +31,7 @@ namespace JellyBellyWikiApi.Models
 
             BeanSeeder.Seed(builder);
             FactSeeder.Seed(builder);
+            MileStoneSeeder.Seed(builder);
             RecipeSeeder.Seed(builder);
     }
   }
