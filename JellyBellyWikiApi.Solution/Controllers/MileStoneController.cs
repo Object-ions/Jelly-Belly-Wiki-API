@@ -16,16 +16,18 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/mileStones
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<MileStone>>> GetGet(int? year)
+    public ActionResult<Pagination<MileStone>> GetGet(int? year, int pageIndex = 1, int pageSize = 10)
     {
       IQueryable<MileStone> query = _db.MileStones.AsQueryable();
 
-     if (year.HasValue)
+      if (year.HasValue)
       {
-       query = query.Where(entry => entry.Year == year.Value);
+        query = query.Where(entry => entry.Year == year.Value);
       }
 
-      return await query.ToListAsync();
+      var pagedResults = PaginationHelper.Paging(query, pageIndex, pageSize);
+
+      return pagedResults;
     }
 
     // GET: api/mileStones/{id}

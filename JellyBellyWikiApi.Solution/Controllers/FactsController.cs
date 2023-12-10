@@ -16,16 +16,18 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/facts
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Fact>>> Get(string title, string description)
+    public ActionResult<Pagination<Fact>> Get(string title, int pageIndex = 1, int pageSize = 10)
     {
       IQueryable<Fact> query = _db.Facts.AsQueryable();
 
       if (!string.IsNullOrEmpty(title))
       {
-        query = query.Where(entry => entry.Title == title);
+        query = query.Where(entry => entry.Title.Contains(title));
       }
 
-      return await query.ToListAsync();
+      var pagedResults = PaginationHelper.Paging(query, pageIndex, pageSize);
+
+      return pagedResults;
     }
 
     // GET: api/facts/{id}

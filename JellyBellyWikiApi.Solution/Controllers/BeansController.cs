@@ -20,7 +20,7 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/beans
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Bean>>> Get(string groupName, string flavorName, string colorGroup, int? sku, bool? glutenFree, bool? sugarFree, bool? seasonal, bool? kosher)
+    public ActionResult<Pagination<Bean>> Get(string groupName, string flavorName, string colorGroup, int? sku, bool? glutenFree, bool? sugarFree, bool? seasonal, bool? kosher, int minAge, int maxAge, int pageIndex = 1, int pageSize = 10)
     {
       IQueryable<Bean> query = _db.Beans.AsQueryable();
 
@@ -54,14 +54,14 @@ namespace JellyBellyWikiApi.Controllers
         query = query.Where(entry => entry.Kosher == kosher.Value);
       }
 
-      var list = await query.ToListAsync();
-
       if (!string.IsNullOrEmpty(groupName))
       {
-        list = list.Where(entry => entry.GroupNameSerialized.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries).Contains(groupName)).ToList();
+        query = query.Where(entry => entry.GroupNameSerialized.Contains(groupName));
       }
 
-      return list;
+      var pagedResults = PaginationHelper.Paging(query, pageIndex, pageSize);
+
+      return pagedResults;
     }
 
     // GET: api/beans/{id}

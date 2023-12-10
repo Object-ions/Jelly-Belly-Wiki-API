@@ -16,16 +16,17 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/recipes
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Recipe>>> Get(string name, string combination)
+    public ActionResult<Pagination<Recipe>> Get(string name, int pageIndex = 1, int pageSize = 10)
     {
       IQueryable<Recipe> query = _db.Recipes.AsQueryable();
 
       if (!string.IsNullOrEmpty(name))
       {
-        query = query.Where(entry => entry.Name == name);
+          query = query.Where(entry => entry.Name.Contains(name));
       }
-
-      return await query.ToListAsync();
+      var pagedResults = PaginationHelper.Paging(query, pageIndex, pageSize);
+      
+      return pagedResults;
     }
 
     // GET: api/recipes/{id}
@@ -38,7 +39,6 @@ namespace JellyBellyWikiApi.Controllers
       {
         return NotFound();
       }
-
       return recipe;
     }
   }
