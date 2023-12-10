@@ -147,3 +147,158 @@ If pagination is not defined in the request, default values will be used.
 | :----------: | :--------------------: | ----------------------------------------- | ---------------------------------------- |
 |     GET      |   /api/{mileStones}    | Retrieves a list of mileStones.           | year, pageIndex, pageSize (all optional) |
 |     GET      | /api/{mileStones}/{id} | Retrieves a specific mileStone by its ID. | None                                     |
+
+## Examples
+
+#### Example Queries
+
+The following query will return beans with ID of 6 to 10 from the dataset (page number 2, with 5 beans on each page).
+
+```
+'https://localhost:5001/api/Beans?pageIndex=2&pageSize=5'
+```
+
+#### Sample JSON Response from the above query
+
+```json
+{
+  "totalCount": 114,
+  "pageSize": 5,
+  "currentPage": 2,
+  "totalPages": 23,
+  "items": [
+    {
+      "beanId": 6,
+      "groupName": ["Superfruit Flavors"],
+      "groupNameSerialized": "Superfruit Flavors",
+      "flavorName": "Barbados Cherry",
+      "description": "A Sweet Cherry Flavor With Just A Hint Of Tartness.",
+      "colorGroup": "lightpink",
+      "backgroundColor": "#E798AB",
+      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/168244d0-b3ba-4725-a2d9-5083b362d10a",
+      "ingredients": [
+        "Cane Sugar, Tapioca Syrup, Modified Food Starch, Sour Cherry Juice From Concentrate, Blueberry Juice From Blueberry Puree, Pomegranate Juice From Concentrate, Acai Puree, Natural Flavors, Acerola (Barbados) Cherry Juice, Cranberry Puree, Citric Acid, Apple (Color), Confectioner'S Glaze, Beeswax, Grape Concentrate (Color), Carrot (Color), Carnauba Wax, Black Currant (Color), Hibiscus (Color), Color Added."
+      ],
+      "glutenFree": false,
+      "sugarFree": false,
+      "seasonal": false,
+      "kosher": true
+    },
+    {
+      "beanId": 7,
+      "groupName": ["Jelly Belly Official Flavors"],
+      "groupNameSerialized": "Jelly Belly Official Flavors",
+      "flavorName": "Blueberry",
+      "description": "Enjoy The Taste Of Fresh-Picked Blueberries. Deliciously Flavored With Real Blueberry Puree.",
+      "colorGroup": "steelblue",
+      "backgroundColor": "#3A7195",
+      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/a8f085b5-b4ff-4aca-8650-43ad54c80fe4",
+      "ingredients": [
+        "Sugar, Corn Syrup, Modified Food Starch, Blueberry Juice From Puree, Contains 2% Or Less Of The Following: Citric Acid, Natural & Artificial Flavor, Color Added, Blue 1 Lake, Beeswax, Carnauba Wax, Confectioner'S Glaze."
+      ],
+      "glutenFree": false,
+      "sugarFree": false,
+      "seasonal": false,
+      "kosher": true
+    },
+    {
+      "beanId": 8,
+      "groupName": ["Jelly Belly Official Flavors", "Kids Mix Flavors"],
+      "groupNameSerialized": "Jelly Belly Official Flavors, Kids Mix Flavors",
+      "flavorName": "Bubble Gum",
+      "description": "This Bean Has Everything But The Bubble! Taking A Trip Down Memory Lane Has Never Tasted So Good.",
+      "colorGroup": "lightpink",
+      "backgroundColor": "#E3ACBD",
+      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/51474130-73e9-40b7-a8ba-c9eac7be7de4",
+      "ingredients": [
+        "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Artificial Flavor, Color Added, Red 40 Lake, Red 40, Yellow 5 Lake, Beeswax, Carnauba Wax, Confectioner'S Glaze."
+      ],
+      "glutenFree": false,
+      "sugarFree": false,
+      "seasonal": false,
+      "kosher": true
+    },
+    {
+      "beanId": 9,
+      "groupName": ["Jelly Belly Official Flavors", "Kids Mix Flavors"],
+      "groupNameSerialized": "Jelly Belly Official Flavors, Kids Mix Flavors",
+      "flavorName": "Buttered Popcorn",
+      "description": "Now You Can Enjoy Buttery Perfection Without Having To Go To The Movies.",
+      "colorGroup": "gold",
+      "backgroundColor": "#F6D334",
+      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/61207309-fffb-443a-b735-b9a5a6374c8d",
+      "ingredients": [
+        "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Natural And Artificial Flavors, Color Added, Yellow 5, Beeswax, Carnauba Wax, Confectioner'S Glaze, Salt."
+      ],
+      "glutenFree": false,
+      "sugarFree": false,
+      "seasonal": false,
+      "kosher": true
+    },
+    {
+      "beanId": 10,
+      "groupName": ["Jelly Belly Official Flavors", "Tropical Mix Flavors"],
+      "groupNameSerialized": "Jelly Belly Official Flavors, Tropical Mix Flavors",
+      "flavorName": "Cantaloupe",
+      "description": "This Sweet Summertime Favorite Is Always In Season.",
+      "colorGroup": "goldenrod",
+      "backgroundColor": "#FAA538",
+      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/45d0972c-e554-4374-8b21-ac50ff450d3e",
+      "ingredients": [
+        "Sugar, Corn Syrup, Modified Food Starch, Cantaloupe Juice From Cantaloupe Powder, Contains 2% Or Less Of The Following: Natural And Artificial Flavors, Color Added, Yellow 6 Lake, Yellow 6, Beeswax, Carnauba Wax, Confectioner'S Glaze."
+      ],
+      "glutenFree": false,
+      "sugarFree": false,
+      "seasonal": false,
+      "kosher": true
+    }
+  ]
+}
+```
+
+The following query will return facts with ID of 1 and 2 from the dataset (page number 1, with 2 facts on each page).
+
+```
+'https://localhost:5001/api/Facts?pageIndex=1&pageSize=2'
+```
+
+#### Sample JSON Response from the above query
+
+```json
+{
+  "totalCount": 99,
+  "pageSize": 2,
+  "currentPage": 1,
+  "totalPages": 50,
+  "items": [
+    {
+      "factId": 1,
+      "title": "Popularity of Flavors",
+      "description": "Very Cherry has been the most popular Jelly Belly flavor for many years, only briefly surpassed by Buttered Popcorn in 1998."
+    },
+    {
+      "factId": 2,
+      "title": "Caloric Content",
+      "description": "Each bean contains only 4 calories, meaning that a handful of 25 beans amounts to 100 calories."
+    }
+  ]
+}
+```
+
+## Known Bugs
+
+- No known bugs.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright (c) 2023 Moshe Atia Poston.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+- If you detect any bug in the program, please reach out to me at [moshikoatia@gmail.com](mailto:moshikoatia@gmail.com).
