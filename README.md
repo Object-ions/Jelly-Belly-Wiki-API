@@ -122,7 +122,28 @@ If pagination is not defined in the request, default values will be used.
 
 "Beans"
 
-| Request Type |       Path        | Description                          | Parameters                                                                                                                                                          |
-| :----------: | :---------------: | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     GET      |   /api/{beans}    | Retrieves a list of beans.           | groupName, flavorName, description, colorGroup, backgroundColor, imageUrl, ingredients, glutenFree, sugarFree, seasonal, kosher, pageIndex, pageSize (all optional) |
-|     GET      | /api/{beans}/{id} | Retrieves a specific bean by its ID. | None                                                                                                                                                                |
+| Request Type |       Path        | Description                          | Parameters                                                                                                                                             |
+| :----------: | :---------------: | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|     GET      |   /api/{beans}    | Retrieves a list of beans.           | groupName, flavorName, colorGroup, backgroundColor, imageUrl, ingredients, glutenFree, sugarFree, seasonal, kosher, pageIndex, pageSize (all optional) |
+|     GET      | /api/{beans}/{id} | Retrieves a specific bean by its ID. | None                                                                                                                                                   |
+
+"Facts"
+
+| Request Type |       Path        | Description                          | Parameters                                |
+| :----------: | :---------------: | ------------------------------------ | ----------------------------------------- |
+|     GET      |   /api/{facts}    | Retrieves a list of facts.           | title, pageIndex, pageSize (all optional) |
+|     GET      | /api/{facts}/{id} | Retrieves a specific fact by its ID. | None                                      |
+
+"Recipes"
+
+| Request Type |        Path         | Description                            | Parameters                               |
+| :----------: | :-----------------: | -------------------------------------- | ---------------------------------------- |
+|     GET      |   /api/{recipes}    | Retrieves a list of recipes.           | name, pageIndex, pageSize (all optional) |
+|     GET      | /api/{recipes}/{id} | Retrieves a specific recipe by its ID. | None                                     |
+
+"MileStones"
+
+| Request Type |          Path          | Description                               | Parameters                               |
+| :----------: | :--------------------: | ----------------------------------------- | ---------------------------------------- |
+|     GET      |   /api/{mileStones}    | Retrieves a list of mileStones.           | year, pageIndex, pageSize (all optional) |
+|     GET      | /api/{mileStones}/{id} | Retrieves a specific mileStone by its ID. | None                                     |
