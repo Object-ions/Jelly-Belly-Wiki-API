@@ -16,6 +16,17 @@ builder.Services.AddDbContext<JellyBellyWikiApiContext>(
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+      {
+        options.AddDefaultPolicy(
+            policy =>
+            {
+
+              policy.AllowAnyOrigin();
+              policy.AllowAnyHeader();
+              policy.AllowAnyMethod();
+            });
+      });
 
 var app = builder.Build();
 
@@ -28,6 +39,8 @@ else
 {
   app.UseHttpsRedirection();
 }
+
+app.UseCors();
 
 app.UseAuthorization();
 
