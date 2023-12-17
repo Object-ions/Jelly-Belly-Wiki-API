@@ -3,386 +3,386 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JellyBellyWikiApi.DataSeeding
 {
-  public static class RecipeSeeder
+  public static class CombinationSeeder
   {
     public static void Seed(ModelBuilder builder)
     {
-      builder.Entity<Recipe>().HasData(
-        new Recipe
+      builder.Entity<Combination>().HasData(
+        new Combination
       { 
-          RecipeId = 1,
+          CombinationId = 1,
           Name = "Cherry Turnover",
-          Combination =  new[] {"Very Cherry + Very Cherry + Coconut + Buttered Popcorn + Cherry Turnover"}
+          Tag =  new[] {"Very Cherry + Very Cherry + Coconut + Buttered Popcorn + Cherry Turnover"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 2,
+          CombinationId = 2,
           Name = "Apple Pie",
-          Combination = new[] {"Green Apple + Green Apple + Cinnamon"}
+          Tag = new[] {"Green Apple + Green Apple + Cinnamon"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 3,
+          CombinationId = 3,
           Name = "Banana Bread",
-          Combination = new[] {"Top Banana + Top Banana + Buttered Popcorn"}
+          Tag = new[] {"Top Banana + Top Banana + Buttered Popcorn"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 4,
+          CombinationId = 4,
           Name = "Banana Cream Pie",
-          Combination = new[] {"Top Banana + A&W® Cream Soda + Coconut"}
+          Tag = new[] {"Top Banana + A&W® Cream Soda + Coconut"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 5,
+          CombinationId = 5,
           Name = "Banana Split",
-          Combination = new[] {"Top Banana + Chocolate Pudding + Crushed Pineapple + Strawberry Jam + Very Cherry + French Vanilla"}
+          Tag = new[] {"Top Banana + Chocolate Pudding + Crushed Pineapple + Strawberry Jam + Very Cherry + French Vanilla"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 6,
+          CombinationId = 6,
           Name = "Bananas Foster",
-          Combination = new[] {"Top Banana + Top Banana + Top Banana + Buttered Popcorn + French Vanilla"}
+          Tag = new[] {"Top Banana + Top Banana + Top Banana + Buttered Popcorn + French Vanilla"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 7,
+          CombinationId = 7,
           Name = "Berry Lemonade",
-          Combination = new[] {"Berry Blu + SUNKIST® Lemon"}
+          Tag = new[] {"Berry Blu + SUNKIST® Lemon"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 8,
+          CombinationId = 8,
           Name = "Blueberry Cheesecake",
-          Combination = new[] {"Blueberry + Strawberry Cheesecake + French Vanilla + A&W® Cream Soda"}
+          Tag = new[] {"Blueberry + Strawberry Cheesecake + French Vanilla + A&W® Cream Soda"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 9,
+          CombinationId = 9,
           Name = "Blueberry Muffin",
-          Combination = new[] {"Blueberry + Blueberry + Buttered Popcorn"}
+          Tag = new[] {"Blueberry + Blueberry + Buttered Popcorn"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 10,
+          CombinationId = 10,
           Name = "Blueberry Pancakes",
-          Combination = new[] {"Blueberry + Caramel Corn + French Vanilla + Toasted Marshmallow + Toasted Marshmallow"}
+          Tag = new[] {"Blueberry + Caramel Corn + French Vanilla + Toasted Marshmallow + Toasted Marshmallow"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 11,
+          CombinationId = 11,
           Name = "Café Mocha",
-          Combination = new[] {"Cappuccino + Cappuccino + Chocolate Pudding + French Vanilla"}
+          Tag = new[] {"Cappuccino + Cappuccino + Chocolate Pudding + French Vanilla"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 12,
+          CombinationId = 12,
           Name = "Candy Apple",
-          Combination = new[] {"Green Apple + Green Apple + Cinnamon"}
+          Tag = new[] {"Green Apple + Green Apple + Cinnamon"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 13,
+          CombinationId = 13,
           Name = "Cherry Cola",
-          Combination = new[] {"Very Cherry + Very Cherry + Dr Pepper®"}
+          Tag = new[] {"Very Cherry + Very Cherry + Dr Pepper®"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 14,
+          CombinationId = 14,
           Name = "Cherry Turnover",
-          Combination = new[] {"Very Cherry + Very Cherry + Coconut + Buttered Popcorn"}
+          Tag = new[] {"Very Cherry + Very Cherry + Coconut + Buttered Popcorn"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 15,
+          CombinationId = 15,
           Name = "Chocolate Covered Cherries",
-          Combination = new[] {"Very Cherry + Very Cherry + Chocolate Pudding"}
+          Tag = new[] {"Very Cherry + Very Cherry + Chocolate Pudding"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 16,
+          CombinationId = 16,
           Name = "Chocolate Dipped Banana",
-          Combination = new[] {"Top Banana + Chocolate Pudding"}
+          Tag = new[] {"Top Banana + Chocolate Pudding"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 17,
+          CombinationId = 17,
           Name = "Chocolate Dipped Strawberries",
-          Combination = new[] {"Strawberry Daiquiri + Strawberry Daiquiri + Chocolate Pudding"}
+          Tag = new[] {"Strawberry Daiquiri + Strawberry Daiquiri + Chocolate Pudding"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 18,
+          CombinationId = 18,
           Name = "Chocolate Macaroons",
-          Combination = new[] {"Chocolate Pudding + Coconut"}
+          Tag = new[] {"Chocolate Pudding + Coconut"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 19,
+          CombinationId = 19,
           Name = "Chocolate Popcorn",
-          Combination = new[] {"Chocolate Pudding + Buttered Popcorn"}
+          Tag = new[] {"Chocolate Pudding + Buttered Popcorn"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 20,
+          CombinationId = 20,
           Name = "Cinnamon Bubble Gum",
-          Combination = new[] {"Cinnamon + Bubble Gum"}
+          Tag = new[] {"Cinnamon + Bubble Gum"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 21,
+          CombinationId = 21,
           Name = "Cinnamon Popcorn",
-          Combination = new[] {"Buttered Popcorn + Buttered Popcorn + Sizzling Cinnamon"}
+          Tag = new[] {"Buttered Popcorn + Buttered Popcorn + Sizzling Cinnamon"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 22,
+          CombinationId = 22,
           Name = "Coffee Cake",
-          Combination = new[] {"Cappuccino + Buttered Popcorn + French Vanilla"}
+          Tag = new[] {"Cappuccino + Buttered Popcorn + French Vanilla"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 23,
+          CombinationId = 23,
           Name = "Cola",
-          Combination = new[] {"Lime + Cinnamon"}
+          Tag = new[] {"Lime + Cinnamon"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 24,
+          CombinationId = 24,
           Name = "Fruit Punch",
-          Combination = new[] {"Island Punch + SUNKIST® Orange + Very Cherry"}
+          Tag = new[] {"Island Punch + SUNKIST® Orange + Very Cherry"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 25,
+          CombinationId = 25,
           Name = "Fruit Salad",
-          Combination = new[] {"Kiwi + Strawberry Jam + Blueberry + Cantaloupe"}
+          Tag = new[] {"Kiwi + Strawberry Jam + Blueberry + Cantaloupe"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 26,
+          CombinationId = 26,
           Name = "Ginger Beer",
-          Combination = new[] {"Draft Beer + Draft Beer + Ginger Ale"}
+          Tag = new[] {"Draft Beer + Draft Beer + Ginger Ale"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 27,
+          CombinationId = 27,
           Name = "Green Apple Bubble Gum",
-          Combination = new[] {"Green Apple + Bubble Gum + Bubble Gum"}
+          Tag = new[] {"Green Apple + Bubble Gum + Bubble Gum"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 28,
+          CombinationId = 28,
           Name = "Hot Apple Cider",
-          Combination = new[] {"Red Apple + Red Apple + Cinnamon"}
+          Tag = new[] {"Red Apple + Red Apple + Cinnamon"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 29,
+          CombinationId = 29,
           Name = "Hot Chocolate",
-          Combination = new[] {"Toasted Marshmallow + Chocolate Pudding"}
+          Tag = new[] {"Toasted Marshmallow + Chocolate Pudding"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 30,
+          CombinationId = 30,
           Name = "Hot Fudge Sundae",
-          Combination = new[] {"French Vanilla + French Vanilla + Chocolate Pudding + A&W® Cream Soda + Very Cherry"}
+          Tag = new[] {"French Vanilla + French Vanilla + Chocolate Pudding + A&W® Cream Soda + Very Cherry"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 31,
+          CombinationId = 31,
           Name = "Iced Vanilla Latte",
-          Combination = new[] {"French Vanilla + Cappuccino"}
+          Tag = new[] {"French Vanilla + Cappuccino"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 32,
+          CombinationId = 32,
           Name = "Italian Biscotti",
-          Combination = new[] {"Licorice + Buttered Popcorn + Buttered Popcorn"}
+          Tag = new[] {"Licorice + Buttered Popcorn + Buttered Popcorn"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 33,
+          CombinationId = 33,
           Name = "Key Lime Pie",
-          Combination = new[] {"Lemon Lime + Toasted Marshmallow"}
+          Tag = new[] {"Lemon Lime + Toasted Marshmallow"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 34,
+          CombinationId = 34,
           Name = "Lemon Squares",
-          Combination = new[] {"Lemon + Lemon + Vanilla + Coconut"}
+          Tag = new[] {"Lemon + Lemon + Vanilla + Coconut"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 35,
+          CombinationId = 35,
           Name = "Mango Pineapple Salsa",
-          Combination = new[] {"Mango + Crushed Pineapple + Chili Mango"}
+          Tag = new[] {"Mango + Crushed Pineapple + Chili Mango"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 36,
+          CombinationId = 36,
           Name = "Mango Tango Salsa",
-          Combination = new[] {"Mango + Lemon Lime + Chili Mango"}
+          Tag = new[] {"Mango + Lemon Lime + Chili Mango"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 37,
+          CombinationId = 37,
           Name = "Michelada",
-          Combination = new[] {"Draft Beer + Draft Beer + Lemon Lime + Tabasco®"}
+          Tag = new[] {"Draft Beer + Draft Beer + Lemon Lime + Tabasco®"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 38,
+          CombinationId = 38,
           Name = "Mud Pie",
-          Combination = new[] {"Chocolate Pudding + Chocolate Pudding + Very Cherry"}
+          Tag = new[] {"Chocolate Pudding + Chocolate Pudding + Very Cherry"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 39,
+          CombinationId = 39,
           Name = "Peach Bellini Drink",
-          Combination = new[] {"Orange Sherbet + Orange Sherbet + A&W® Cream Soda"}
+          Tag = new[] {"Orange Sherbet + Orange Sherbet + A&W® Cream Soda"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 40,
+          CombinationId = 40,
           Name = "Peaches and Cream",
-          Combination = new[] {"Peach + A&W® Cream Soda"}
+          Tag = new[] {"Peach + A&W® Cream Soda"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 41,
+          CombinationId = 41,
           Name = "Pink Lemonade",
-          Combination = new[] {"Cotton Candy + SUNKIST® Lemon"}
+          Tag = new[] {"Cotton Candy + SUNKIST® Lemon"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 42,
+          CombinationId = 42,
           Name = "Plum Pudding",
-          Combination = new[] {"Plum + Plum + French Vanilla"}
+          Tag = new[] {"Plum + Plum + French Vanilla"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 43,
+          CombinationId = 43,
           Name = "Plum Sorbet",
-          Combination = new[] {"Plum + Plum + SUNKIST® Lemon + Green Apple"}
+          Tag = new[] {"Plum + Plum + SUNKIST® Lemon + Green Apple"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 44,
+          CombinationId = 44,
           Name = "Plum Tart",
-          Combination = new[] {"Plum + Plum + Cinnamon + A&W® Cream Soda"}
+          Tag = new[] {"Plum + Plum + Cinnamon + A&W® Cream Soda"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 45,
+          CombinationId = 45,
           Name = "Pumpkin Spice Latte",
-          Combination = new[] {"Pumpkin Pie + Pumpkin Pie + French Vanilla + Cappuccino"}
+          Tag = new[] {"Pumpkin Pie + Pumpkin Pie + French Vanilla + Cappuccino"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 46,
+          CombinationId = 46,
           Name = "Rainbow Sherbet",
-          Combination = new[] {"Raspberry + Lemon Lime + Orange Sherbet"}
+          Tag = new[] {"Raspberry + Lemon Lime + Orange Sherbet"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 47,
+          CombinationId = 47,
           Name = "Raspberry Crème Brûlée",
-          Combination = new[] {"French Vanilla + Raspberry + Toasted Marshmallow"}
+          Tag = new[] {"French Vanilla + Raspberry + Toasted Marshmallow"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 48,
+          CombinationId = 48,
           Name = "Root Beer Float",
-          Combination = new[] {"A&W® Root Beer + A&W® Root Beer + A&W® Cream Soda"}
+          Tag = new[] {"A&W® Root Beer + A&W® Root Beer + A&W® Cream Soda"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 49,
+          CombinationId = 49,
           Name = "S'mores",
-          Combination = new[] {"Caramel Corn + Toasted Marshmallow + Toasted Marshmallow + Chocolate Pudding"}
+          Tag = new[] {"Caramel Corn + Toasted Marshmallow + Toasted Marshmallow + Chocolate Pudding"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 50,
+          CombinationId = 50,
           Name = "Strawberry-Kiwi Refresher",
-          Combination = new[] {"Kiwi + Strawberry Daiquiri"}
+          Tag = new[] {"Kiwi + Strawberry Daiquiri"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 51,
+          CombinationId = 51,
           Name = "Strawberry Shortcake",
-          Combination = new[] {"Strawberry Jam + French Vanilla"}
+          Tag = new[] {"Strawberry Jam + French Vanilla"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 52,
+          CombinationId = 52,
           Name = "Sweet Fried Bananas",
-          Combination = new[] {"Top Banana + Top Banana + Cinnamon + Buttered Popcorn"}
+          Tag = new[] {"Top Banana + Top Banana + Cinnamon + Buttered Popcorn"}
       },
-      new Recipe
+      new Combination
       {
-          RecipeId = 53,
+          CombinationId = 53,
           Name = "Tequila Sunrise",
-          Combination = new[] {"Margarita + Margarita + SUNKIST® Orange + Very Cherry"}
+          Tag = new[] {"Margarita + Margarita + SUNKIST® Orange + Very Cherry"}
       },
 
-      new Recipe
+      new Combination
       {
-          RecipeId = 54,
+          CombinationId = 54,
           Name = "Tiramisu",
-          Combination = new[] {"Cappuccino + Cappuccino + A&W® Cream Soda + Chocolate Pudding"}
+          Tag = new[] {"Cappuccino + Cappuccino + A&W® Cream Soda + Chocolate Pudding"}
       }
       );
     }

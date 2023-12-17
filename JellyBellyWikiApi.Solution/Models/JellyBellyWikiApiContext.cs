@@ -9,7 +9,7 @@ namespace JellyBellyWikiApi.Models
     public DbSet<Bean> Beans { get; set; }
     public DbSet<Fact> Facts { get; set; }
     public DbSet<MileStone> MileStones { get; set; }
-    public DbSet<Recipe> Recipes { get; set; }
+    public DbSet<Combination> Combinations { get; set; }
 
     public JellyBellyWikiApiContext(DbContextOptions<JellyBellyWikiApiContext> options) : base(options)
     {
@@ -23,7 +23,7 @@ namespace JellyBellyWikiApi.Models
                     v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null),
                     v => JsonSerializer.Deserialize<string[]>(v, (JsonSerializerOptions)null));
 
-            builder.Entity<Recipe>()
+            builder.Entity<Combination>()
                 .Property(r => r.Combination)
                 .HasConversion(
                     v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null),
@@ -32,7 +32,7 @@ namespace JellyBellyWikiApi.Models
             BeanSeeder.Seed(builder);
             FactSeeder.Seed(builder);
             MileStoneSeeder.Seed(builder);
-            RecipeSeeder.Seed(builder);
+            CombinationSeeder.Seed(builder);
     }
   }
 }
