@@ -1774,6 +1774,349 @@ namespace JellyBellyWikiApi.Migrations
                         });
                 });
 
+            modelBuilder.Entity("JellyBellyWikiApi.Models.Combination", b =>
+                {
+                    b.Property<int>("CombinationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Tag")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("CombinationId");
+
+                    b.ToTable("Combinations");
+
+                    b.HasData(
+                        new
+                        {
+                            CombinationId = 1,
+                            Name = "Cherry Turnover",
+                            Tag = "[\"Very Cherry \\u002B Very Cherry \\u002B Coconut \\u002B Buttered Popcorn \\u002B Cherry Turnover\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 2,
+                            Name = "Apple Pie",
+                            Tag = "[\"Green Apple \\u002B Green Apple \\u002B Cinnamon\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 3,
+                            Name = "Banana Bread",
+                            Tag = "[\"Top Banana \\u002B Top Banana \\u002B Buttered Popcorn\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 4,
+                            Name = "Banana Cream Pie",
+                            Tag = "[\"Top Banana \\u002B A\\u0026W\\u00AE Cream Soda \\u002B Coconut\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 5,
+                            Name = "Banana Split",
+                            Tag = "[\"Top Banana \\u002B Chocolate Pudding \\u002B Crushed Pineapple \\u002B Strawberry Jam \\u002B Very Cherry \\u002B French Vanilla\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 6,
+                            Name = "Bananas Foster",
+                            Tag = "[\"Top Banana \\u002B Top Banana \\u002B Top Banana \\u002B Buttered Popcorn \\u002B French Vanilla\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 7,
+                            Name = "Berry Lemonade",
+                            Tag = "[\"Berry Blu \\u002B SUNKIST\\u00AE Lemon\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 8,
+                            Name = "Blueberry Cheesecake",
+                            Tag = "[\"Blueberry \\u002B Strawberry Cheesecake \\u002B French Vanilla \\u002B A\\u0026W\\u00AE Cream Soda\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 9,
+                            Name = "Blueberry Muffin",
+                            Tag = "[\"Blueberry \\u002B Blueberry \\u002B Buttered Popcorn\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 10,
+                            Name = "Blueberry Pancakes",
+                            Tag = "[\"Blueberry \\u002B Caramel Corn \\u002B French Vanilla \\u002B Toasted Marshmallow \\u002B Toasted Marshmallow\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 11,
+                            Name = "Café Mocha",
+                            Tag = "[\"Cappuccino \\u002B Cappuccino \\u002B Chocolate Pudding \\u002B French Vanilla\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 12,
+                            Name = "Candy Apple",
+                            Tag = "[\"Green Apple \\u002B Green Apple \\u002B Cinnamon\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 13,
+                            Name = "Cherry Cola",
+                            Tag = "[\"Very Cherry \\u002B Very Cherry \\u002B Dr Pepper\\u00AE\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 14,
+                            Name = "Cherry Turnover",
+                            Tag = "[\"Very Cherry \\u002B Very Cherry \\u002B Coconut \\u002B Buttered Popcorn\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 15,
+                            Name = "Chocolate Covered Cherries",
+                            Tag = "[\"Very Cherry \\u002B Very Cherry \\u002B Chocolate Pudding\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 16,
+                            Name = "Chocolate Dipped Banana",
+                            Tag = "[\"Top Banana \\u002B Chocolate Pudding\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 17,
+                            Name = "Chocolate Dipped Strawberries",
+                            Tag = "[\"Strawberry Daiquiri \\u002B Strawberry Daiquiri \\u002B Chocolate Pudding\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 18,
+                            Name = "Chocolate Macaroons",
+                            Tag = "[\"Chocolate Pudding \\u002B Coconut\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 19,
+                            Name = "Chocolate Popcorn",
+                            Tag = "[\"Chocolate Pudding \\u002B Buttered Popcorn\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 20,
+                            Name = "Cinnamon Bubble Gum",
+                            Tag = "[\"Cinnamon \\u002B Bubble Gum\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 21,
+                            Name = "Cinnamon Popcorn",
+                            Tag = "[\"Buttered Popcorn \\u002B Buttered Popcorn \\u002B Sizzling Cinnamon\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 22,
+                            Name = "Coffee Cake",
+                            Tag = "[\"Cappuccino \\u002B Buttered Popcorn \\u002B French Vanilla\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 23,
+                            Name = "Cola",
+                            Tag = "[\"Lime \\u002B Cinnamon\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 24,
+                            Name = "Fruit Punch",
+                            Tag = "[\"Island Punch \\u002B SUNKIST\\u00AE Orange \\u002B Very Cherry\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 25,
+                            Name = "Fruit Salad",
+                            Tag = "[\"Kiwi \\u002B Strawberry Jam \\u002B Blueberry \\u002B Cantaloupe\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 26,
+                            Name = "Ginger Beer",
+                            Tag = "[\"Draft Beer \\u002B Draft Beer \\u002B Ginger Ale\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 27,
+                            Name = "Green Apple Bubble Gum",
+                            Tag = "[\"Green Apple \\u002B Bubble Gum \\u002B Bubble Gum\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 28,
+                            Name = "Hot Apple Cider",
+                            Tag = "[\"Red Apple \\u002B Red Apple \\u002B Cinnamon\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 29,
+                            Name = "Hot Chocolate",
+                            Tag = "[\"Toasted Marshmallow \\u002B Chocolate Pudding\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 30,
+                            Name = "Hot Fudge Sundae",
+                            Tag = "[\"French Vanilla \\u002B French Vanilla \\u002B Chocolate Pudding \\u002B A\\u0026W\\u00AE Cream Soda \\u002B Very Cherry\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 31,
+                            Name = "Iced Vanilla Latte",
+                            Tag = "[\"French Vanilla \\u002B Cappuccino\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 32,
+                            Name = "Italian Biscotti",
+                            Tag = "[\"Licorice \\u002B Buttered Popcorn \\u002B Buttered Popcorn\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 33,
+                            Name = "Key Lime Pie",
+                            Tag = "[\"Lemon Lime \\u002B Toasted Marshmallow\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 34,
+                            Name = "Lemon Squares",
+                            Tag = "[\"Lemon \\u002B Lemon \\u002B Vanilla \\u002B Coconut\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 35,
+                            Name = "Mango Pineapple Salsa",
+                            Tag = "[\"Mango \\u002B Crushed Pineapple \\u002B Chili Mango\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 36,
+                            Name = "Mango Tango Salsa",
+                            Tag = "[\"Mango \\u002B Lemon Lime \\u002B Chili Mango\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 37,
+                            Name = "Michelada",
+                            Tag = "[\"Draft Beer \\u002B Draft Beer \\u002B Lemon Lime \\u002B Tabasco\\u00AE\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 38,
+                            Name = "Mud Pie",
+                            Tag = "[\"Chocolate Pudding \\u002B Chocolate Pudding \\u002B Very Cherry\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 39,
+                            Name = "Peach Bellini Drink",
+                            Tag = "[\"Orange Sherbet \\u002B Orange Sherbet \\u002B A\\u0026W\\u00AE Cream Soda\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 40,
+                            Name = "Peaches and Cream",
+                            Tag = "[\"Peach \\u002B A\\u0026W\\u00AE Cream Soda\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 41,
+                            Name = "Pink Lemonade",
+                            Tag = "[\"Cotton Candy \\u002B SUNKIST\\u00AE Lemon\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 42,
+                            Name = "Plum Pudding",
+                            Tag = "[\"Plum \\u002B Plum \\u002B French Vanilla\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 43,
+                            Name = "Plum Sorbet",
+                            Tag = "[\"Plum \\u002B Plum \\u002B SUNKIST\\u00AE Lemon \\u002B Green Apple\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 44,
+                            Name = "Plum Tart",
+                            Tag = "[\"Plum \\u002B Plum \\u002B Cinnamon \\u002B A\\u0026W\\u00AE Cream Soda\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 45,
+                            Name = "Pumpkin Spice Latte",
+                            Tag = "[\"Pumpkin Pie \\u002B Pumpkin Pie \\u002B French Vanilla \\u002B Cappuccino\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 46,
+                            Name = "Rainbow Sherbet",
+                            Tag = "[\"Raspberry \\u002B Lemon Lime \\u002B Orange Sherbet\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 47,
+                            Name = "Raspberry Crème Brûlée",
+                            Tag = "[\"French Vanilla \\u002B Raspberry \\u002B Toasted Marshmallow\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 48,
+                            Name = "Root Beer Float",
+                            Tag = "[\"A\\u0026W\\u00AE Root Beer \\u002B A\\u0026W\\u00AE Root Beer \\u002B A\\u0026W\\u00AE Cream Soda\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 49,
+                            Name = "S'mores",
+                            Tag = "[\"Caramel Corn \\u002B Toasted Marshmallow \\u002B Toasted Marshmallow \\u002B Chocolate Pudding\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 50,
+                            Name = "Strawberry-Kiwi Refresher",
+                            Tag = "[\"Kiwi \\u002B Strawberry Daiquiri\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 51,
+                            Name = "Strawberry Shortcake",
+                            Tag = "[\"Strawberry Jam \\u002B French Vanilla\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 52,
+                            Name = "Sweet Fried Bananas",
+                            Tag = "[\"Top Banana \\u002B Top Banana \\u002B Cinnamon \\u002B Buttered Popcorn\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 53,
+                            Name = "Tequila Sunrise",
+                            Tag = "[\"Margarita \\u002B Margarita \\u002B SUNKIST\\u00AE Orange \\u002B Very Cherry\"]"
+                        },
+                        new
+                        {
+                            CombinationId = 54,
+                            Name = "Tiramisu",
+                            Tag = "[\"Cappuccino \\u002B Cappuccino \\u002B A\\u0026W\\u00AE Cream Soda \\u002B Chocolate Pudding\"]"
+                        });
+                });
+
             modelBuilder.Entity("JellyBellyWikiApi.Models.Fact", b =>
                 {
                     b.Property<int>("FactId")
@@ -2481,349 +2824,6 @@ namespace JellyBellyWikiApi.Migrations
                             MileStoneId = 13,
                             Description = "Ferrara Candy Company announces an agreement to acquire Jelly Belly Candy Company.",
                             Year = 2023
-                        });
-                });
-
-            modelBuilder.Entity("JellyBellyWikiApi.Models.Recipe", b =>
-                {
-                    b.Property<int>("RecipeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Combination")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("RecipeId");
-
-                    b.ToTable("Recipes");
-
-                    b.HasData(
-                        new
-                        {
-                            RecipeId = 1,
-                            Combination = "[\"Very Cherry \\u002B Very Cherry \\u002B Coconut \\u002B Buttered Popcorn \\u002B Cherry Turnover\"]",
-                            Name = "Cherry Turnover"
-                        },
-                        new
-                        {
-                            RecipeId = 2,
-                            Combination = "[\"Green Apple \\u002B Green Apple \\u002B Cinnamon\"]",
-                            Name = "Apple Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 3,
-                            Combination = "[\"Top Banana \\u002B Top Banana \\u002B Buttered Popcorn\"]",
-                            Name = "Banana Bread"
-                        },
-                        new
-                        {
-                            RecipeId = 4,
-                            Combination = "[\"Top Banana \\u002B A\\u0026W\\u00AE Cream Soda \\u002B Coconut\"]",
-                            Name = "Banana Cream Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 5,
-                            Combination = "[\"Top Banana \\u002B Chocolate Pudding \\u002B Crushed Pineapple \\u002B Strawberry Jam \\u002B Very Cherry \\u002B French Vanilla\"]",
-                            Name = "Banana Split"
-                        },
-                        new
-                        {
-                            RecipeId = 6,
-                            Combination = "[\"Top Banana \\u002B Top Banana \\u002B Top Banana \\u002B Buttered Popcorn \\u002B French Vanilla\"]",
-                            Name = "Bananas Foster"
-                        },
-                        new
-                        {
-                            RecipeId = 7,
-                            Combination = "[\"Berry Blu \\u002B SUNKIST\\u00AE Lemon\"]",
-                            Name = "Berry Lemonade"
-                        },
-                        new
-                        {
-                            RecipeId = 8,
-                            Combination = "[\"Blueberry \\u002B Strawberry Cheesecake \\u002B French Vanilla \\u002B A\\u0026W\\u00AE Cream Soda\"]",
-                            Name = "Blueberry Cheesecake"
-                        },
-                        new
-                        {
-                            RecipeId = 9,
-                            Combination = "[\"Blueberry \\u002B Blueberry \\u002B Buttered Popcorn\"]",
-                            Name = "Blueberry Muffin"
-                        },
-                        new
-                        {
-                            RecipeId = 10,
-                            Combination = "[\"Blueberry \\u002B Caramel Corn \\u002B French Vanilla \\u002B Toasted Marshmallow \\u002B Toasted Marshmallow\"]",
-                            Name = "Blueberry Pancakes"
-                        },
-                        new
-                        {
-                            RecipeId = 11,
-                            Combination = "[\"Cappuccino \\u002B Cappuccino \\u002B Chocolate Pudding \\u002B French Vanilla\"]",
-                            Name = "Café Mocha"
-                        },
-                        new
-                        {
-                            RecipeId = 12,
-                            Combination = "[\"Green Apple \\u002B Green Apple \\u002B Cinnamon\"]",
-                            Name = "Candy Apple"
-                        },
-                        new
-                        {
-                            RecipeId = 13,
-                            Combination = "[\"Very Cherry \\u002B Very Cherry \\u002B Dr Pepper\\u00AE\"]",
-                            Name = "Cherry Cola"
-                        },
-                        new
-                        {
-                            RecipeId = 14,
-                            Combination = "[\"Very Cherry \\u002B Very Cherry \\u002B Coconut \\u002B Buttered Popcorn\"]",
-                            Name = "Cherry Turnover"
-                        },
-                        new
-                        {
-                            RecipeId = 15,
-                            Combination = "[\"Very Cherry \\u002B Very Cherry \\u002B Chocolate Pudding\"]",
-                            Name = "Chocolate Covered Cherries"
-                        },
-                        new
-                        {
-                            RecipeId = 16,
-                            Combination = "[\"Top Banana \\u002B Chocolate Pudding\"]",
-                            Name = "Chocolate Dipped Banana"
-                        },
-                        new
-                        {
-                            RecipeId = 17,
-                            Combination = "[\"Strawberry Daiquiri \\u002B Strawberry Daiquiri \\u002B Chocolate Pudding\"]",
-                            Name = "Chocolate Dipped Strawberries"
-                        },
-                        new
-                        {
-                            RecipeId = 18,
-                            Combination = "[\"Chocolate Pudding \\u002B Coconut\"]",
-                            Name = "Chocolate Macaroons"
-                        },
-                        new
-                        {
-                            RecipeId = 19,
-                            Combination = "[\"Chocolate Pudding \\u002B Buttered Popcorn\"]",
-                            Name = "Chocolate Popcorn"
-                        },
-                        new
-                        {
-                            RecipeId = 20,
-                            Combination = "[\"Cinnamon \\u002B Bubble Gum\"]",
-                            Name = "Cinnamon Bubble Gum"
-                        },
-                        new
-                        {
-                            RecipeId = 21,
-                            Combination = "[\"Buttered Popcorn \\u002B Buttered Popcorn \\u002B Sizzling Cinnamon\"]",
-                            Name = "Cinnamon Popcorn"
-                        },
-                        new
-                        {
-                            RecipeId = 22,
-                            Combination = "[\"Cappuccino \\u002B Buttered Popcorn \\u002B French Vanilla\"]",
-                            Name = "Coffee Cake"
-                        },
-                        new
-                        {
-                            RecipeId = 23,
-                            Combination = "[\"Lime \\u002B Cinnamon\"]",
-                            Name = "Cola"
-                        },
-                        new
-                        {
-                            RecipeId = 24,
-                            Combination = "[\"Island Punch \\u002B SUNKIST\\u00AE Orange \\u002B Very Cherry\"]",
-                            Name = "Fruit Punch"
-                        },
-                        new
-                        {
-                            RecipeId = 25,
-                            Combination = "[\"Kiwi \\u002B Strawberry Jam \\u002B Blueberry \\u002B Cantaloupe\"]",
-                            Name = "Fruit Salad"
-                        },
-                        new
-                        {
-                            RecipeId = 26,
-                            Combination = "[\"Draft Beer \\u002B Draft Beer \\u002B Ginger Ale\"]",
-                            Name = "Ginger Beer"
-                        },
-                        new
-                        {
-                            RecipeId = 27,
-                            Combination = "[\"Green Apple \\u002B Bubble Gum \\u002B Bubble Gum\"]",
-                            Name = "Green Apple Bubble Gum"
-                        },
-                        new
-                        {
-                            RecipeId = 28,
-                            Combination = "[\"Red Apple \\u002B Red Apple \\u002B Cinnamon\"]",
-                            Name = "Hot Apple Cider"
-                        },
-                        new
-                        {
-                            RecipeId = 29,
-                            Combination = "[\"Toasted Marshmallow \\u002B Chocolate Pudding\"]",
-                            Name = "Hot Chocolate"
-                        },
-                        new
-                        {
-                            RecipeId = 30,
-                            Combination = "[\"French Vanilla \\u002B French Vanilla \\u002B Chocolate Pudding \\u002B A\\u0026W\\u00AE Cream Soda \\u002B Very Cherry\"]",
-                            Name = "Hot Fudge Sundae"
-                        },
-                        new
-                        {
-                            RecipeId = 31,
-                            Combination = "[\"French Vanilla \\u002B Cappuccino\"]",
-                            Name = "Iced Vanilla Latte"
-                        },
-                        new
-                        {
-                            RecipeId = 32,
-                            Combination = "[\"Licorice \\u002B Buttered Popcorn \\u002B Buttered Popcorn\"]",
-                            Name = "Italian Biscotti"
-                        },
-                        new
-                        {
-                            RecipeId = 33,
-                            Combination = "[\"Lemon Lime \\u002B Toasted Marshmallow\"]",
-                            Name = "Key Lime Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 34,
-                            Combination = "[\"Lemon \\u002B Lemon \\u002B Vanilla \\u002B Coconut\"]",
-                            Name = "Lemon Squares"
-                        },
-                        new
-                        {
-                            RecipeId = 35,
-                            Combination = "[\"Mango \\u002B Crushed Pineapple \\u002B Chili Mango\"]",
-                            Name = "Mango Pineapple Salsa"
-                        },
-                        new
-                        {
-                            RecipeId = 36,
-                            Combination = "[\"Mango \\u002B Lemon Lime \\u002B Chili Mango\"]",
-                            Name = "Mango Tango Salsa"
-                        },
-                        new
-                        {
-                            RecipeId = 37,
-                            Combination = "[\"Draft Beer \\u002B Draft Beer \\u002B Lemon Lime \\u002B Tabasco\\u00AE\"]",
-                            Name = "Michelada"
-                        },
-                        new
-                        {
-                            RecipeId = 38,
-                            Combination = "[\"Chocolate Pudding \\u002B Chocolate Pudding \\u002B Very Cherry\"]",
-                            Name = "Mud Pie"
-                        },
-                        new
-                        {
-                            RecipeId = 39,
-                            Combination = "[\"Orange Sherbet \\u002B Orange Sherbet \\u002B A\\u0026W\\u00AE Cream Soda\"]",
-                            Name = "Peach Bellini Drink"
-                        },
-                        new
-                        {
-                            RecipeId = 40,
-                            Combination = "[\"Peach \\u002B A\\u0026W\\u00AE Cream Soda\"]",
-                            Name = "Peaches and Cream"
-                        },
-                        new
-                        {
-                            RecipeId = 41,
-                            Combination = "[\"Cotton Candy \\u002B SUNKIST\\u00AE Lemon\"]",
-                            Name = "Pink Lemonade"
-                        },
-                        new
-                        {
-                            RecipeId = 42,
-                            Combination = "[\"Plum \\u002B Plum \\u002B French Vanilla\"]",
-                            Name = "Plum Pudding"
-                        },
-                        new
-                        {
-                            RecipeId = 43,
-                            Combination = "[\"Plum \\u002B Plum \\u002B SUNKIST\\u00AE Lemon \\u002B Green Apple\"]",
-                            Name = "Plum Sorbet"
-                        },
-                        new
-                        {
-                            RecipeId = 44,
-                            Combination = "[\"Plum \\u002B Plum \\u002B Cinnamon \\u002B A\\u0026W\\u00AE Cream Soda\"]",
-                            Name = "Plum Tart"
-                        },
-                        new
-                        {
-                            RecipeId = 45,
-                            Combination = "[\"Pumpkin Pie \\u002B Pumpkin Pie \\u002B French Vanilla \\u002B Cappuccino\"]",
-                            Name = "Pumpkin Spice Latte"
-                        },
-                        new
-                        {
-                            RecipeId = 46,
-                            Combination = "[\"Raspberry \\u002B Lemon Lime \\u002B Orange Sherbet\"]",
-                            Name = "Rainbow Sherbet"
-                        },
-                        new
-                        {
-                            RecipeId = 47,
-                            Combination = "[\"French Vanilla \\u002B Raspberry \\u002B Toasted Marshmallow\"]",
-                            Name = "Raspberry Crème Brûlée"
-                        },
-                        new
-                        {
-                            RecipeId = 48,
-                            Combination = "[\"A\\u0026W\\u00AE Root Beer \\u002B A\\u0026W\\u00AE Root Beer \\u002B A\\u0026W\\u00AE Cream Soda\"]",
-                            Name = "Root Beer Float"
-                        },
-                        new
-                        {
-                            RecipeId = 49,
-                            Combination = "[\"Caramel Corn \\u002B Toasted Marshmallow \\u002B Toasted Marshmallow \\u002B Chocolate Pudding\"]",
-                            Name = "S'mores"
-                        },
-                        new
-                        {
-                            RecipeId = 50,
-                            Combination = "[\"Kiwi \\u002B Strawberry Daiquiri\"]",
-                            Name = "Strawberry-Kiwi Refresher"
-                        },
-                        new
-                        {
-                            RecipeId = 51,
-                            Combination = "[\"Strawberry Jam \\u002B French Vanilla\"]",
-                            Name = "Strawberry Shortcake"
-                        },
-                        new
-                        {
-                            RecipeId = 52,
-                            Combination = "[\"Top Banana \\u002B Top Banana \\u002B Cinnamon \\u002B Buttered Popcorn\"]",
-                            Name = "Sweet Fried Bananas"
-                        },
-                        new
-                        {
-                            RecipeId = 53,
-                            Combination = "[\"Margarita \\u002B Margarita \\u002B SUNKIST\\u00AE Orange \\u002B Very Cherry\"]",
-                            Name = "Tequila Sunrise"
-                        },
-                        new
-                        {
-                            RecipeId = 54,
-                            Combination = "[\"Cappuccino \\u002B Cappuccino \\u002B A\\u0026W\\u00AE Cream Soda \\u002B Chocolate Pudding\"]",
-                            Name = "Tiramisu"
                         });
                 });
 #pragma warning restore 612, 618
