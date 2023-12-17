@@ -1,9 +1,9 @@
 namespace JellyBellyWikiApi.Models
 {
-  public class Recipe
+  public class Combination
   {
-    public int RecipeId { get; set; }
+    public int CombinationId { get; set; }
     public string Name { get; set; }
-    public string[] Combination { get; set; }
+    public string[] Tag { get; set; }
   }
 }

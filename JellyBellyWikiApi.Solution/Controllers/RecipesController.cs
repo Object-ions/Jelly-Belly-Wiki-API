@@ -6,19 +6,19 @@ namespace JellyBellyWikiApi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class RecipesController : ControllerBase
+  public class CombinationsController : ControllerBase
   {
     private readonly JellyBellyWikiApiContext _db;
-    public RecipesController(JellyBellyWikiApiContext db)
+    public CombinationsController(JellyBellyWikiApiContext db)
     {
       _db = db;
     }
 
-    // GET api/recipes
+    // GET api/combinations
     [HttpGet]
-    public ActionResult<Pagination<Recipe>> Get(string name, int pageIndex = 1, int pageSize = 10)
+    public ActionResult<Pagination<Combination>> Get(string name, int pageIndex = 1, int pageSize = 10)
     {
-      IQueryable<Recipe> query = _db.Recipes.AsQueryable();
+      IQueryable<Combination> query = _db.Combinations.AsQueryable();
 
       if (!string.IsNullOrEmpty(name))
       {
@@ -29,17 +29,17 @@ namespace JellyBellyWikiApi.Controllers
       return pagedResults;
     }
 
-    // GET: api/recipes/{id}
+    // GET: api/combinations/{id}
     [HttpGet("{id}")]
-    public async Task<ActionResult<Recipe>> GetRecipe(int id)
+    public async Task<ActionResult<Combination>> GetCombination(int id)
     {
-      Recipe recipe = await _db.Recipes.FindAsync(id);
+      Combination combination = await _db.Combinations.FindAsync(id);
 
-      if (recipe == null)
+      if (combination == null)
       {
         return NotFound();
       }
-      return recipe;
+      return combination;
     }
   }
 }
