@@ -20,7 +20,7 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/beans
     [HttpGet]
-    public ActionResult<Pagination<Bean>> Get(string groupName, string flavorName, string colorGroup, int? sku, bool? glutenFree, bool? sugarFree, bool? seasonal, bool? kosher, int minAge, int maxAge, int pageIndex = 1, int pageSize = 10)
+    public ActionResult<Pagination<Bean>> Get(string groupName, string flavorName, string colorGroup, int? sku, bool? glutenFree, bool? sugarFree, bool? seasonal, bool? kosher, int pageIndex = 1, int pageSize = 10)
     {
       IQueryable<Bean> query = _db.Beans.AsQueryable();
 
