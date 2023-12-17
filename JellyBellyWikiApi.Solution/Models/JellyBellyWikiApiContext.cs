@@ -24,7 +24,7 @@ namespace JellyBellyWikiApi.Models
                     v => JsonSerializer.Deserialize<string[]>(v, (JsonSerializerOptions)null));
 
             builder.Entity<Combination>()
-                .Property(r => r.Combination)
+                .Property(r => r.Tag)
                 .HasConversion(
                     v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null),
                     v => JsonSerializer.Deserialize<string[]>(v, (JsonSerializerOptions)null));
