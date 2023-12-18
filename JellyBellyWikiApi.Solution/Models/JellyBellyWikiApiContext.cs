@@ -34,6 +34,7 @@ namespace JellyBellyWikiApi.Models
             FactSeeder.Seed(builder);
             MileStoneSeeder.Seed(builder);
             CombinationSeeder.Seed(builder);
+            RecipeSeeder.Seed(builder);
     }
   }
 }
