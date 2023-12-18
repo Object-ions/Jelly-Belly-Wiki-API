@@ -16,7 +16,7 @@ namespace JellyBellyWikiApi.Controllers
 
     // GET api/recipes
     [HttpGet]
-    public ActionResult<Pagination<Recipe>> GetGet(string Name, int pageIndex = 1, int pageSize = 10)
+    public ActionResult<Pagination<Recipe>> GetGet(string name, int pageIndex = 1, int pageSize = 10)
     {
       IQueryable<Recipe> query = _db.Recipes.AsQueryable();
 
