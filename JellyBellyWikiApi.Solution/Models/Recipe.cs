@@ -13,6 +13,14 @@ namespace JellyBellyWikiApi.Models
     public string TotalTime { get; set; }
     public string MakingAmount { get; set; }
     public string ImageUrl { get; set; }
+    
+    public string IngredientsJson 
+    { 
+      get => JsonSerializer.Serialize(Ingredients);
+      set => Ingredients = JsonSerializer.Deserialize<string[]>(value);
+    }
+
+    [NotMapped]
     public string[] Ingredients { get; set; }
 
     public string Additions1Json 
@@ -42,7 +50,22 @@ namespace JellyBellyWikiApi.Models
     [NotMapped]
     public string[] Additions3 { get; set; }
 
+    public string DirectionsJson 
+    { 
+      get => JsonSerializer.Serialize(Directions);
+      set => Directions = JsonSerializer.Deserialize<string[]>(value);
+    }
+
+    [NotMapped]
     public string[] Directions { get; set; }
+
+    public string TipsJson 
+    { 
+      get => JsonSerializer.Serialize(Tips);
+      set => Tips = JsonSerializer.Deserialize<string[]>(value);
+    }
+
+    [NotMapped]
     public string[] Tips { get; set; }
   }
 }
