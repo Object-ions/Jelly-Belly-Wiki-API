@@ -195,6 +195,24 @@ namespace JellyBellyWikiApi.DataSeeding
           Directions = new[] { "Place popped popcorn in large bowl and set aside., In separate microwave-safe bowl, combine caramel squares and cream. Heat on medium-high power in microwave for about one minute; stop after 20 seconds to avoid over boiling and to stir. Repeat until caramel is melted., Gradually pour hot mixture over popcorn, stirring with large spoon. Gently toss the popcorn for even coating. Add Candy Corn and continue stirring until well blended., Serve in decorative cones (instructions below) or form into balls and wrap in plastic wrap., DECORATIVE CONE DIRECTIONS: Cut 7-inch square card stock and roll into desired cone shape. Leave small hole at the bottom of cone and secure shape with double-sided tape., Place Styrofoam or floral foam in tray or box. Height of foam should be about ½-inch shorter than sides of tray or box. Insert 5-inch skewers into foam approximately 3-inches apart. Fill tray with Candy Corn to cover foam., Place cones on skewers, holding cone upright and fill with Candy Corn Caramel Corn." },
           Tips = new[] {""},
         },
+        new Recipe
+        {
+          RecipeId = 12,
+          Name = "CREEPY CRITTER CUPCAKES",
+          Description = "Spooky creatures have never been this tasty! Jelly Belly jelly beans and Confections make these cupcakes perfect for Halloween, or any time you want a scary treat.",
+          PrepTime = "",
+          CookTime = "",
+          TotalTime = "",
+          MakingAmount = "16 Cupcakes",
+          Img = "https://cdn-tp1.mozu.com/9046-m1/cms/files/fb3a5e7a-6c72-4924-98ce-14fdc8031549",
+          Ingredients = new[] { "4 jumbo cupcakes, baked in orange paper liners, 12 standard cupcakes, baked in orange paper liners, 1 can chocolate frosting, 32 Mint Cremes, 32 Licorice Pastels, 6 cups (about 3 lbs) Jelly Belly jelly beans in flavors: Watermelon, Juicy Pear, Island Punch, 64 Sour Neon Inchworms, 16 Very Cherry Jelly Belly jelly beans" },
+          Additions1 = new[] {""},
+          Additions2 = new[] {""},
+          Additions3 = new[] {""},
+          Directions = new[] { "Spoon ¼ cup of the chocolate frosting into a small zipper bag. Press out the excess air and seal. Snip a small corner (1/8 inch) from the bag. Pipe a dot of frosting on the flat side of the Mint Cremes and attach a Licorice Pastel to make the monster eyes., Working on 1 cupcake at a time, spread some of the chocolate frosting on top of a cupcake, mounding slightly. Arrange like-colored Jelly Belly jelly beans all around the outer edge of the cupcake lengthwise from center to outer edge. Place another row of jelly beans, slightly overlapping the first row. Continue adding rows of Jelly Belly jelly beans until it is covered. Remove 4 of the jelly beans along the outer edge and in their place add 4 Sour Neon Inchworms as legs. Add a dot of chocolate frosting to secure if necessary. Pipe dots of frosting and attach the Mint Creme eyes and red jelly bean nose on top of the cupcake. Repeat with the other cupcakes, jelly beans and frosting." },
+          Tips = new[] {""},
+        },
+
       );
     }
   }
