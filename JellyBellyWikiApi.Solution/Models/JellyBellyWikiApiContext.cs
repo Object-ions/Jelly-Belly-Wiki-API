@@ -10,6 +10,7 @@ namespace JellyBellyWikiApi.Models
     public DbSet<Fact> Facts { get; set; }
     public DbSet<MileStone> MileStones { get; set; }
     public DbSet<Combination> Combinations { get; set; }
+    public DbSet<Recipe> Recipes { get; set; }
 
     public JellyBellyWikiApiContext(DbContextOptions<JellyBellyWikiApiContext> options) : base(options)
     {
