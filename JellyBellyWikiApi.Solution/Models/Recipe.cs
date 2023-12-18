@@ -9,7 +9,7 @@ namespace JellyBellyWikiApi.Models
     public string CookTime { get; set; }
     public string TotalTime { get; set; }
     public string MakingAmount { get; set; }
-    public string Img { get; set; }
+    public string ImageUrl { get; set; }
     public string[] Ingredients { get; set; }
     public string[] Additions1 { get; set; }
     public string[] Additions2 { get; set; }
