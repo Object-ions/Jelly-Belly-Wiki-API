@@ -6,9 +6,11 @@
 
 This API provides detailed information about Jelly Belly beans, including facts, milestones, recipes, and bean details. It is designed to be a comprehensive resource for Jelly Belly enthusiasts and researchers.
 
-<!-- This project is a part of a bigger project that includes the UI and the webscrape -->
-<!-- link for 2 other repos -->
-<!-- links for live site -->
+This project is divided into three main parts, each with its own repository:
+
+1. **Web Scraper Repository (GitHub Repo)**: This repository contains scripts and supporting files for data collection using Python, BeautifulSoup, and ChromeDriver. It details the methodology used for creatively gathering data step by step until it was ready to be seeded into the C# API.
+2. **API Repository (GitHub Repo)**: The heart of the project, this repository holds the C# and EF Core .Net API with MySql migrations. It serves as the core database of the project. Detailed instructions on how to use this API are available in the repository, similar to the API Documentation provided in the UI.
+3. **UI Repository (GitHub Repo)**: The User Interface makes full use of the API's database, showcasing one approach to design by utilizing all the endpoints and their various options.
 
 ## Features
 
@@ -31,212 +33,282 @@ This API provides detailed information about Jelly Belly beans, including facts,
 
 ### Required Technology
 
-1. Follow the instructions on this <a href="https://old.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql">page</a> for installing and configuring MySQL.
-2. Installing dotnet-ef:
+1. **MySQL Installation and Configuration**:
 
-   > ```bash
-   > $ dotnet tool install --global dotnet-ef --version 6.0.0
-   > ```
+   - Follow the instructions on [this page](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/) for installing and configuring MySQL if you don't already have it installed.
 
-3. Install Postman
-   (Optional) [Download and install Postman](https://www.postman.com/downloads/).
+2. **Installing dotnet-ef**:
 
-#### Cloning the Repo:
+   - Run the following command in your terminal:
+     ```
+     $ dotnet tool install --global dotnet-ef --version 6.0.0
+     ```
 
-1. Open Terminal.
-2. Change your directory to where you would want the cloned directory.
-3. Input the following command into your terminal:
-   > ```bash
-   > $ git clone https://github.com/Object-ions/Jelly-Belly-Wiki-API
-   > ```
+3. **Install Postman (Optional)**:
 
-#### Set up a Connection String to Database
+   - Download and install [Postman](https://www.postman.com/downloads/). This is recommended if you wish to conduct API testing and data retrieval independently, without immediate application integration.
 
-4. Using the terminal, navigate to the production directory- `JellyBellyWikiApi.Solution` and create a new file called `appsettings.json`
+4. **Cloning the Repo**:
+   - Open your Terminal.
+   - Change your directory to where you want the cloned directory.
+   - Input the following command:
+     ```
+     $ git clone https://github.com/Object-ions/Jelly-Belly-Wiki-API
+     ```
 
-5. Add the following code snippet while also replacing the following values with your own values as shown below the code snippet:
+### Set up a Connection String to Database
 
-- [YOUR-USERNAME-HERE] with your username
-- [YOUR-PASSWORD-HERE] with your password
-- [YOUR-DATABASE-NAME-HERE] with the name of your database
+1. **Create `appsettings.json`**:
 
-```json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR-DATABASE-NAME-HERE];uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
-  }
-}
-```
+   - Using the terminal, navigate to the `JellyBellyWikiApi.Solution` production directory.
+   - Create a new file named `appsettings.json`.
 
-#### Create the Database
+2. **Configure `appsettings.json`**:
 
-6. In your terminal, under the project's production directory `JellyBellyWikiApi.Solution`, run this command to create the database.
+   - Add the following code snippet to the `appsettings.json` file. Be sure to replace `[YOUR-USERNAME-HERE]`, `[YOUR-PASSWORD-HERE]`, and `[YOUR-DATABASE-NAME-HERE]` with your actual MySQL username, password, and database name:
 
-> ```bash
-> $ dotnet ef database update
-> ```
+     ```json
+     {
+       "Logging": {
+         "LogLevel": {
+           "Default": "Information",
+           "Microsoft.AspNetCore": "Warning"
+         }
+       },
+       "AllowedHosts": "*",
+       "ConnectionStrings": {
+         "DefaultConnection": "Server=localhost;Port=3306;
+         database=[YOUR-DATABASE-NAME-HERE];
+         uid=[YOUR-USERNAME-HERE];
+         pwd=[YOUR-PASSWORD-HERE];"
+       }
+     }
+     ```
 
-However, if update does not work, run this command in your terminal:
+### Create the Database
 
-> ```bash
-> $ dotnet ef migrations add Initial
-> $ dotnet ef database update
-> ```
+6. **Create Database**:
+   - In your terminal, navigate to the project's production directory `JellyBellyWikiApi.Solution`.
+   - Run the following command to create the database:
+     ```
+     $ dotnet ef database update
+     ```
+   - If the update command does not work, run these commands instead:
+     ```
+     $ dotnet ef migrations add Initial
+     $ dotnet ef database update
+     ```
 
-## Launching the API
+### Launching the API
 
-In the command line in the project's production directory `JellyBellyWikiApi.Solution`, enter the command `dotnet watch run`. This will compile and execute the application.
+7. **Start the API**:
 
-> ```bash
-> $ dotnet watch run
-> ```
+   - In the command line, under the directory `JellyBellyWikiApi.Solution`, enter the command:
+     ```
+     $ dotnet watch run
+     ```
+   - This will compile and execute the application and open 'Swagger' on `localhost:5001`.
 
-## Using API
+   - If 'Swagger' does not open automatically, you can access it using this link in your browser:
+     [Swagger UI](https://localhost:5001/swagger/index.html)
 
-To access the API endpoints, utilize tools like a browser, Postman, or Swagger.
+### Using API
 
-(If working with Swagger, go to either https://localhost:5001/swagger/index.html or http://localhost:5000/swagger/index.html.)
+To access the API endpoints and see the data, you can utilize tools like a browser, Postman, or Swagger. This allows you to interact with the API and explore its capabilities.
 
-#### Pagination Info
-
-The API supports pagination for listing endpoints. Pagination allows you to retrieve a subset of records, making it efficient for large datasets.
-
-- pageIndex: Indicates the current page number. Starts at 1.
-- pageSize: Defines the number of records per page.
-
-Example: To retrieve the second page of beans with 10 beans per page, use:
-`GET /api/beans?pageIndex=1&pageSize=10`
-
-If pagination is not defined in the request, default values will be used.
+For guidance on integrating this API into your application, refer to the section "How to Utilize This API" for detailed instructions and examples.
 
 ## Endpoints
 
-#### HTTP Request Structure
+### List of Endpoints:
 
-"Beans"
+- Beans
+- Facts
+- Recipes
+- Combinations
+- History
 
-| Request Type |       Path        | Description                          | Parameters                                                                                                                                             |
-| :----------: | :---------------: | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|     GET      |   /api/{beans}    | Retrieves a list of beans.           | groupName, flavorName, colorGroup, backgroundColor, imageUrl, ingredients, glutenFree, sugarFree, seasonal, kosher, pageIndex, pageSize (all optional) |
-|     GET      | /api/{beans}/{id} | Retrieves a specific bean by its ID. | None                                                                                                                                                   |
+### HTTP Request Structure
 
-"Facts"
+#### "Beans"
 
-| Request Type |       Path        | Description                          | Parameters                                |
-| :----------: | :---------------: | ------------------------------------ | ----------------------------------------- |
-|     GET      |   /api/{facts}    | Retrieves a list of facts.           | title, pageIndex, pageSize (all optional) |
-|     GET      | /api/{facts}/{id} | Retrieves a specific fact by its ID. | None                                      |
+| Endpoint          | Request Type | Path              | Description                                           | Parameters                                                                                      |
+| ----------------- | ------------ | ----------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| 1. Get Beans      | GET          | `/api/beans`      | Retrieves a paginated list of beans.                  | groupName, flavorName, colorGroup, glutenFree, sugarFree, seasonal, kosher, pageIndex, pageSize |
+| 2. Get Bean by ID | GET          | `/api/beans/{id}` | Retrieves detailed information about a specific bean. | id                                                                                              |
 
-"Recipes"
+### Parameter Details
 
-| Request Type |        Path         | Description                            | Parameters                               |
-| :----------: | :-----------------: | -------------------------------------- | ---------------------------------------- |
-|     GET      |   /api/{recipes}    | Retrieves a list of recipes.           | name, pageIndex, pageSize (all optional) |
-|     GET      | /api/{recipes}/{id} | Retrieves a specific recipe by its ID. | None                                     |
+- `groupName` (string, optional): Filters beans by group name. To see a list of group names, refer to the file: 'list_of_properties_to_query.md'.
+- `flavorName` (string, optional): Filters beans by flavor name. To see a list of flavor names, refer to the file: 'list_of_properties_to_query.md'.
+- `colorGroup` (string, optional): Filters beans by color group. To see a list of color groups, refer to the file: 'list_of_properties_to_query.md'.
+- `glutenFree` (boolean, optional): Filters beans by gluten-free status.
+- `sugarFree` (boolean, optional): Filters beans by sugar-free status.
+- `seasonal` (boolean, optional): Filters beans by seasonal availability.
+- `kosher` (boolean, optional): Filters beans by kosher status.
+- `pageIndex` (int, default=1): Specifies the page index for pagination.
+- `pageSize` (int, default=10): Specifies the number of records per page for pagination.
 
-"MileStones"
+### Additional Information
 
-| Request Type |          Path          | Description                               | Parameters                               |
-| :----------: | :--------------------: | ----------------------------------------- | ---------------------------------------- |
-|     GET      |   /api/{mileStones}    | Retrieves a list of mileStones.           | year, pageIndex, pageSize (all optional) |
-|     GET      | /api/{mileStones}/{id} | Retrieves a specific mileStone by its ID. | None                                     |
+- **Response Format**: JSON
+- **Authentication**: No authentication required for these endpoints.
+- **Rate Limit**: Not specified (consider providing details if applicable).
+- **Error Codes**: Standard HTTP status codes (e.g., 404 for Not Found).
 
-## Examples
+### Example Request
 
-#### Example Queries
-
-The following query will return beans with ID of 3 to 4 from the dataset (page number 2, with 2 beans on each page).
-
-```
-'https://localhost:5001/api/Beans?pageIndex=2&pageSize=2'
-```
-
-#### Sample JSON Response from the above query
-
-```json
-{
-  "totalCount": 114,
-  "pageSize": 2,
-  "currentPage": 2,
-  "totalPages": 57,
-  "items": [
-    {
-      "beanId": 3,
-      "groupName": ["Jelly Belly Official Flavors", "Soda Pop Shoppe® Flavors"],
-      "groupNameSerialized": "Jelly Belly Official Flavors, Soda Pop Shoppe® Flavors",
-      "flavorName": "A&W® Root Beer",
-      "description": "Say 'Cheers' With The Flavor Of This All-American Classic Drink.",
-      "colorGroup": "saddlebrown",
-      "backgroundColor": "#792E27",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/63b9e71d-9866-4044-9af7-7a64a52b0e0e",
-      "ingredients": [
-        "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Natural & Artificial Flavors, Color Added, Vegetable & Fruit Juice (Color), Beeswax, Carnauba Wax, Confectioner'S Glaze."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    },
-    {
-      "beanId": 4,
-      "groupName": ["Superfruit Flavors"],
-      "groupNameSerialized": "Superfruit Flavors",
-      "flavorName": "Acai Berry",
-      "description": "Hard To Pronounce But A Delight To Enjoy. A Super Sweet And Rich Berry Taste Unlike Any Other.",
-      "colorGroup": "darkslategray",
-      "backgroundColor": "#5B3640",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/6f0c6164-71c8-47f6-a55f-893f5fd58fa0",
-      "ingredients": [
-        "Cane Sugar, Tapioca Syrup, Modified Food Starch, Sour Cherry Juice From Concentrate, Blueberry Juice From Blueberry Puree, Pomegranate Juice From Concentrate, Acai Puree, Natural Flavors, Acerola (Barbados) Cherry Juice, Cranberry Puree, Citric Acid, Apple (Color), Confectioner'S Glaze, Beeswax, Grape Concentrate (Color), Carrot (Color), Carnauba Wax, Black Currant (Color), Hibiscus (Color), Color Added."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    }
-  ]
-}
-```
-
-The following query will return facts with ID of 1 and 2 from the dataset (page number 1, with 2 facts on each page).
+- To retrieve information about the bean with ID 1:
 
 ```
-'https://localhost:5001/api/Facts?pageIndex=1&pageSize=2'
+https://localhost:5001/api/Beans/1
 ```
 
-#### Sample JSON Response from the above query
+\*\* For more example requests, check out the 'Query' section.
 
-```json
-{
-  "totalCount": 99,
-  "pageSize": 2,
-  "currentPage": 1,
-  "totalPages": 50,
-  "items": [
-    {
-      "factId": 1,
-      "title": "Popularity of Flavors",
-      "description": "Very Cherry has been the most popular Jelly Belly flavor for many years, only briefly surpassed by Buttered Popcorn in 1998."
-    },
-    {
-      "factId": 2,
-      "title": "Caloric Content",
-      "description": "Each bean contains only 4 calories, meaning that a handful of 25 beans amounts to 100 calories."
-    }
-  ]
-}
+## API Endpoints with Query Options and Examples
+
+To find detailed information about the parameters such as `groupName`, `flavorName`, `colorGroup`, and more, please refer to the "Endpoints" section of the documentation. There, you can find links to tables that provide comprehensive attribute lists.
+
+### Beans
+
+**Base URL**: `https://localhost:5001/api/beans`
+
+- `groupName`: [https://localhost:5001/api/beans?groupName=Jelly Belly Official Flavors](https://localhost:5001/api/beans?groupName=Jelly Belly Official Flavors)
+- `flavorName`: [https://localhost:5001/api/beans?flavorName=7Up](https://localhost:5001/api/beans?flavorName=7Up)
+- `colorGroup`: [https://localhost:5001/api/beans?colorGroup=khaki](https://localhost:5001/api/beans?colorGroup=khaki)
+- `glutenFree`: [https://localhost:5001/api/beans?glutenFree=true](https://localhost:5001/api/beans?glutenFree=true)
+- `sugarFree`: [https://localhost:5001/api/beans?sugarFree=false](https://localhost:5001/api/beans?sugarFree=false)
+- `seasonal`: [https://localhost:5001/api/beans?seasonal=true](https://localhost:5001/api/beans?seasonal=true)
+- `kosher`: [https://localhost:5001/api/beans?kosher=true](https://localhost:5001/api/beans?kosher=true)
+- `pageIndex` and `pageSize`: [https://localhost:5001/api/beans?pageIndex=1&pageSize=10](https://localhost:5001/api/beans?pageIndex=1&pageSize=10)
+
+### Facts
+
+**Base URL**: `https://localhost:5001/api/facts`
+
+- `title`: [https://localhost:5001/api/facts?title=Popularity of Flavors](https://localhost:5001/api/facts?title=Popularity of Flavors)
+
+### Combinations
+
+**Base URL**: `https://localhost:5001/api/combinations`
+
+- `name`: [https://localhost:5001/api/combinations?name=Cherry Turnover](https://localhost:5001/api/combinations?name=Cherry Turnover)
+
+### Recipes
+
+**Base URL**: `https://localhost:5001/api/recipes`
+
+- `name`: [https://localhost:5001/api/recipes?name=OMBRÉ CAKE](https://localhost:5001/api/recipes?name=OMBRÉ CAKE)
+
+### Milestones
+
+**Base URL**: `https://localhost:5001/api/mileStones`
+
+- `year`: [https://localhost:5001/api/mileStones?year=1869](https://localhost:5001/api/mileStones?year=1869)
+
+**Note**: When searching with phrases that include spaces, the URL will automatically replace spaces with "%20". You can search with spaces between words.
+
+## Request URL and Server Response
+
+Click on an option to see the requested URL with the response body:
+
+- [Response for query on Beans by flavorName](#response-for-query-on-beans-by-flavorname)
+- [Response for query on Beans by ID](#response-for-query-on-beans-by-id)
+- [Response for query on Beans by paging](#response-for-query-on-beans-by-paging)
+
+### Response for Query on Beans by FlavorName
+
+The following query will return beans with the flavor name "7UP":
+
 ```
+https://localhost:5001/api/Beans?flavorName=7up
+```
+
+#### Server Response
+
+- **Code**: `200`
+- **Response Body**:
+
+  ```json
+  {
+    "totalCount": 1,
+    "pageSize": 10,
+    "currentPage": 1,
+    "totalPages": 1,
+    "items": [
+      {
+        "beanId": 1,
+        "groupName": [
+          "Jelly Belly Official Flavors",
+          "Soda Pop Shoppe® Flavors"
+        ],
+        "groupNameSerialized": "Jelly Belly Official Flavors, Soda Pop Shoppe® Flavors",
+        "flavorName": "7Up",
+        "description": "The Refreshing And Crisp Flavor Of Lemon Lime Soda.",
+        "colorGroup": "khaki",
+        "backgroundColor": "#CEDC91",
+        "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/ab692677-5471-4863-91a8-659363ae4cc4",
+        "ingredients": [
+          "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Citric Acid, Sodium Lactate, Natural & Artificial Flavor, Color Added, Yellow 5, Blue 1, Beeswax, Carnauba Wax, Confectioner'S Glaze"
+        ],
+        "glutenFree": false,
+        "sugarFree": false,
+        "seasonal": false,
+        "kosher": true
+      }
+    ]
+  }
+  ```
+
+## Pagination Info
+
+The API supports pagination for listing endpoints. Pagination is an efficient way to handle large datasets by retrieving a subset of records at a time.
+
+### Pagination Parameters
+
+- `pageIndex`: Indicates the current page number. It starts at 1.
+- `pageSize`: Defines the number of records per page.
+
+### Example Usage
+
+To retrieve the second page of beans with 10 beans per page, use the following request:
+
+```
+ https://localhost:5001/api/beans?pageIndex=2&pageSize=10
+```
+
+**Note**: If pagination parameters are not defined in the request, default values will be applied.
 
 ## Known Bugs
 
-- No known bugs.
+### Description:
+
+Currently, there is a notable bug in the API concerning the structure of arrays. The expected behavior is to receive an array of strings. However, the API is returning an array containing a single element (at index 0) where the items are concatenated into a single string, separated by commas (,).
+
+### Temporary Workaround:
+
+In the user interface (UI), we have implemented a JavaScript-based solution to address this issue. This script manipulates the data received from the API to transform it back into the intended format, which is an array of individual strings. This approach ensures that the data is displayed correctly in the UI, despite the existing bug in the API.
+
+## Ongoing Development
+
+Please note that this project is not in its final form. Future updates will include enhanced descriptions, text improvements, and refined styling to improve user experience and interface aesthetics. Additionally, significant portions of the codebase are slated for refactoring to optimize performance and maintainability.
+
+This project is very much a work in progress, and regular updates are planned to address these aspects. Your patience and understanding are greatly appreciated as these improvements are made.
+
+## Copyright and Data Accuracy Disclaimer
+
+### Content Origin
+
+Please be aware that all data and information presented in this application, including the UI and the database, are derived from the official Jelly Belly website. This project does not claim originality of the content and acknowledges that all information is borrowed from publicly available sources.
+
+### Disclaimer
+
+While every effort has been made to ensure the accuracy of the information, there may be instances of errors, typos, or inaccuracies. Therefore, this resource should not be solely relied upon, especially for health-related decisions. I do not assume responsibility for the content's accuracy.
+
+### Consumer Advice
+
+Before consuming any Jelly Belly products, it is strongly advised to consult the official Jelly Belly website or product packaging to verify ingredients, calorie content, and other nutritional information. This step is crucial for those with dietary restrictions or allergies.
 
 ## License
 
