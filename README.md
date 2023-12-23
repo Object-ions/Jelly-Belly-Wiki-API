@@ -4,28 +4,32 @@
 
 ## Table of Contents
 
-- [Description](#project-description)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup/Installation Requirements](#setupinstallation-requirements)
-- [Endpoints](#endpoints)
-- [API Endpoints with Query Options and Examples](#api-endpoints-with-query-options-and-examples)
-- [Request URL and Server Response](#request-url-and-server-response)
-- [Pagination Info](#pagination-info)
-- [Known Bugs](#known-bugs)
-- [Ongoing Development](#ongoing-development)
-- [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
-- [License](#license)
+1. [Description](#project-description)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Setup/Installation Requirements](#setupinstallation-requirements)
+5. [Endpoints](#endpoints)
+6. [API Endpoints with Query Options and Examples](#api-endpoints-with-query-options-and-examples)
+7. [Request URL and Server Response](#request-url-and-server-response)
+8. [Pagination Info](#pagination-info)
+9. [Known Bugs](#known-bugs)
+10. [Ongoing Development](#ongoing-development)
+11. [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
+    - A. [Content Origin](#content-origin)
+    - B. [Disclaimer](#disclaimer)
+    - C. [Consumer Advice](#consumer-advice)
+12. [License](#license)
+13. [contact](#contact)
 
 ## [Project Description](#project-description)
 
 This API provides detailed information about Jelly Belly beans, including facts, milestones, recipes, and bean details. It is designed to be a comprehensive resource for Jelly Belly enthusiasts and researchers.
 
-This project is divided into three main parts, each with its own repository:
+This project is divided into three main segments, each with its own repository:
 
-1. **Web Scraper Repository (GitHub Repo)**: This repository contains scripts and supporting files for data collection using Python, BeautifulSoup, and ChromeDriver. It details the methodology used for creatively gathering data step by step until it was ready to be seeded into the C# API.
-2. **API Repository (GitHub Repo)**: The heart of the project, this repository holds the C# and EF Core .Net API with MySql migrations. It serves as the core database of the project. Detailed instructions on how to use this API are available in the repository, similar to the API Documentation provided in the UI.
-3. **UI Repository (GitHub Repo)**: The User Interface makes full use of the API's database, showcasing one approach to design by utilizing all the endpoints and their various options.
+1. [Jelly Belly Wiki API Data Collection](https://github.com/Object-ions/Jelly-Belly-Wiki-API-Data-Collection): This repository contains scripts and supporting files for data collection using Python, BeautifulSoup, and ChromeDriver. It details the methodology used for creatively gathering data step by step until it was ready to be seeded into the C# API.
+2. [Jelly Belly Wiki API](#) (this repo): The heart of the project, this repository holds the C# and EF Core .Net API with MySql migrations. It serves as the core database of the project. Detailed instructions on how to use this API are available in the repository, similar to the API Documentation provided in the UI.
+3. [Jelly Belly Wiki Client](https://github.com/Object-ions/Jelly_Belly_Wiki_Client):: The User Interface makes full use of the API's database, showcasing one approach to design by utilizing all the endpoints and their various options.
 
 ## [Features](#features)
 
@@ -337,4 +341,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-- If you detect any bug in the program, please reach out to me at [moshikoatia@gmail.com](mailto:moshikoatia@gmail.com).
+### [contact](#contact)
+
+If you detect any bug in the program, please reach out to me at [moshikoatia@gmail.com](mailto:moshikoatia@gmail.com).
