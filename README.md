@@ -2,7 +2,22 @@
 
 ### By Moses Atia Poston.
 
-## Description
+## Table of Contents
+
+- [Description](#project-description)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup/Installation Requirements](#setupinstallation-requirements)
+- [Endpoints](#endpoints)
+- [API Endpoints with Query Options and Examples](#api-endpoints-with-query-options-and-examples)
+- [Request URL and Server Response](#request-url-and-server-response)
+- [Pagination Info](#pagination-info)
+- [Known Bugs](#known-bugs)
+- [Ongoing Development](#ongoing-development)
+- [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
+- [License](#license)
+
+## [Project Description](#project-description)
 
 This API provides detailed information about Jelly Belly beans, including facts, milestones, recipes, and bean details. It is designed to be a comprehensive resource for Jelly Belly enthusiasts and researchers.
 
@@ -12,14 +27,14 @@ This project is divided into three main parts, each with its own repository:
 2. **API Repository (GitHub Repo)**: The heart of the project, this repository holds the C# and EF Core .Net API with MySql migrations. It serves as the core database of the project. Detailed instructions on how to use this API are available in the repository, similar to the API Documentation provided in the UI.
 3. **UI Repository (GitHub Repo)**: The User Interface makes full use of the API's database, showcasing one approach to design by utilizing all the endpoints and their various options.
 
-## Features
+## [Features](#features)
 
 - Detailed information on Jelly Belly beans
 - Historical milestones related to Jelly Belly
 - Recipes involving Jelly Belly beans
 - Fun facts about Jelly Belly
 
-## Technologies Used
+## [Technologies Used](#technologies-used)
 
 - C#
 - ASP.NET Core
@@ -29,7 +44,7 @@ This project is divided into three main parts, each with its own repository:
 - Postman
 - Swagger
 
-## Setup/Installation Requirements
+## [Setup/Installation Requirements](#setupinstallation-requirements)
 
 ### Required Technology
 
@@ -118,7 +133,7 @@ To access the API endpoints and see the data, you can utilize tools like a brows
 
 For guidance on integrating this API into your application, refer to the section "How to Utilize This API" for detailed instructions and examples.
 
-## Endpoints
+## [Endpoints](#endpoints)
 
 ### List of Endpoints:
 
@@ -280,7 +295,7 @@ To retrieve the second page of beans with 10 beans per page, use the following r
 
 **Note**: If pagination parameters are not defined in the request, default values will be applied.
 
-## Known Bugs
+## [Known Bugs](#known-bugs)
 
 ### Description:
 
@@ -290,13 +305,13 @@ Currently, there is a notable bug in the API concerning the structure of arrays.
 
 In the user interface (UI), we have implemented a JavaScript-based solution to address this issue. This script manipulates the data received from the API to transform it back into the intended format, which is an array of individual strings. This approach ensures that the data is displayed correctly in the UI, despite the existing bug in the API.
 
-## Ongoing Development
+## [Ongoing Development](#ongoing-development)
 
 Please note that this project is not in its final form. Future updates will include enhanced descriptions, text improvements, and refined styling to improve user experience and interface aesthetics. Additionally, significant portions of the codebase are slated for refactoring to optimize performance and maintainability.
 
 This project is very much a work in progress, and regular updates are planned to address these aspects. Your patience and understanding are greatly appreciated as these improvements are made.
 
-## Copyright and Data Accuracy Disclaimer
+## [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
 
 ### Content Origin
 
@@ -310,7 +325,7 @@ While every effort has been made to ensure the accuracy of the information, ther
 
 Before consuming any Jelly Belly products, it is strongly advised to consult the official Jelly Belly website or product packaging to verify ingredients, calorie content, and other nutritional information. This step is crucial for those with dietary restrictions or allergies.
 
-## License
+## [License](#license)
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
