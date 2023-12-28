@@ -2,6 +2,7 @@
 using JellyBellyWikiApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JellyBellyWikiApi.Migrations
 {
     [DbContext(typeof(JellyBellyWikiApiContext))]
-    partial class JellyBellyWikiApiContextModelSnapshot : ModelSnapshot
+    [Migration("20231228002110_UpdateRecipeSterializedUpdate")]
+    partial class UpdateRecipeSterializedUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

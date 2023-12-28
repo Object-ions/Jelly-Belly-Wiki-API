@@ -2,6 +2,7 @@
 using JellyBellyWikiApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JellyBellyWikiApi.Migrations
 {
     [DbContext(typeof(JellyBellyWikiApiContext))]
-    partial class JellyBellyWikiApiContextModelSnapshot : ModelSnapshot
+    [Migration("20231227224323_UpdateIngredientsSterialized")]
+    partial class UpdateIngredientsSterialized
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1903,9 +1905,6 @@ namespace JellyBellyWikiApi.Migrations
                     b.Property<string>("Tag")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("TagSerialized")
-                        .HasColumnType("longtext");
-
                     b.HasKey("CombinationId");
 
                     b.ToTable("Combinations");
@@ -1915,379 +1914,325 @@ namespace JellyBellyWikiApi.Migrations
                         {
                             CombinationId = 1,
                             Name = "Cherry Turnover",
-                            Tag = "[\"Very Cherry\",\"\\u002B\",\"Very Cherry\",\"\\u002B\",\"Coconut\",\"\\u002B\",\"Buttered Popcorn\"]",
-                            TagSerialized = "Very Cherry, + ,Very Cherry, + ,Coconut, + ,Buttered Popcorn"
+                            Tag = "[\"Very Cherry, \\u002B ,Very Cherry, \\u002B ,Coconut, \\u002B ,Buttered Popcorn\"]"
                         },
                         new
                         {
                             CombinationId = 2,
                             Name = "Apple Pie",
-                            Tag = "[\"Green Apple\",\"\\u002B\",\"Green Apple\",\"\\u002B\",\"Cinnamon\"]",
-                            TagSerialized = "Green Apple, + ,Green Apple, + ,Cinnamon"
+                            Tag = "[\"Green Apple, \\u002B ,Green Apple, \\u002B ,Cinnamon\"]"
                         },
                         new
                         {
                             CombinationId = 3,
                             Name = "Banana Bread",
-                            Tag = "[\"Top Banana\",\"\\u002B\",\"Top Banana\",\"\\u002B\",\"Buttered Popcorn\"]",
-                            TagSerialized = "Top Banana, + ,Top Banana, + ,Buttered Popcorn"
+                            Tag = "[\"Top Banana, \\u002B ,Top Banana, \\u002B ,Buttered Popcorn\"]"
                         },
                         new
                         {
                             CombinationId = 4,
                             Name = "Banana Cream Pie",
-                            Tag = "[\"Top Banana\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\",\"\\u002B\",\"Coconut\"]",
-                            TagSerialized = "Top Banana, + ,A&W® Cream Soda, + ,Coconut"
+                            Tag = "[\"Top Banana, \\u002B ,A\\u0026W\\u00AE Cream Soda, \\u002B ,Coconut\"]"
                         },
                         new
                         {
                             CombinationId = 5,
                             Name = "Banana Split",
-                            Tag = "[\"Top Banana\",\"\\u002B\",\"Chocolate Pudding\",\"\\u002B\",\"Crushed Pineapple\",\"\\u002B\",\"Strawberry Jam\",\"\\u002B\",\"Very Cherry\",\"\\u002B French Vanilla\"]",
-                            TagSerialized = "Top Banana, + ,Chocolate Pudding, + ,Crushed Pineapple, + ,Strawberry Jam, + ,Very Cherry, + French Vanilla"
+                            Tag = "[\"Top Banana, \\u002B ,Chocolate Pudding, \\u002B ,Crushed Pineapple, \\u002B ,Strawberry Jam, \\u002B ,Very Cherry, \\u002B ,French Vanilla\"]"
                         },
                         new
                         {
                             CombinationId = 6,
                             Name = "Bananas Foster",
-                            Tag = "[\"Top Banana\",\"\\u002B\",\"Top Banana\",\"\\u002B\",\"Top Banana\",\"\\u002B\",\"Buttered Popcorn\",\"\\u002B\",\"French Vanilla\"]",
-                            TagSerialized = "Top Banana, + ,Top Banana, + ,Top Banana, + ,Buttered Popcorn, + ,French Vanilla"
+                            Tag = "[\"Top Banana, \\u002B ,Top Banana, \\u002B ,Top Banana, \\u002B ,Buttered Popcorn, \\u002B ,French Vanilla\"]"
                         },
                         new
                         {
                             CombinationId = 7,
                             Name = "Berry Lemonade",
-                            Tag = "[\"Berry Blu\",\"\\u002B\",\"SUNKIST\\u00AE Lemon\"]",
-                            TagSerialized = "Berry Blu, + ,SUNKIST® Lemon"
+                            Tag = "[\"Berry Blu, \\u002B ,SUNKIST\\u00AE Lemon\"]"
                         },
                         new
                         {
                             CombinationId = 8,
                             Name = "Blueberry Cheesecake",
-                            Tag = "[\"Blueberry\",\"\\u002B\",\"Strawberry Cheesecake\",\"\\u002B\",\"French Vanilla\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\"]",
-                            TagSerialized = "Blueberry, + ,Strawberry Cheesecake, + ,French Vanilla, + ,A&W® Cream Soda"
+                            Tag = "[\"Blueberry, \\u002B ,Strawberry Cheesecake, \\u002B ,French Vanilla, \\u002B ,A\\u0026W\\u00AE Cream Soda\"]"
                         },
                         new
                         {
                             CombinationId = 9,
                             Name = "Blueberry Muffin",
-                            Tag = "[\"Blueberry\",\"\\u002B\",\"Blueberry\",\"\\u002B\",\"Buttered Popcorn\"]",
-                            TagSerialized = "Blueberry, + ,Blueberry, + ,Buttered Popcorn"
+                            Tag = "[\"Blueberry, \\u002B ,Blueberry, \\u002B ,Buttered Popcorn\"]"
                         },
                         new
                         {
                             CombinationId = 10,
                             Name = "Blueberry Pancakes",
-                            Tag = "[\"Blueberry\",\"\\u002B\",\"Caramel Corn\",\"\\u002B\",\"French Vanilla\",\"\\u002B\",\"Toasted Marshmallow\",\"\\u002B\",\"Toasted Marshmallow\"]",
-                            TagSerialized = "Blueberry, + ,Caramel Corn, + ,French Vanilla, + ,Toasted Marshmallow, + ,Toasted Marshmallow"
+                            Tag = "[\"Blueberry, \\u002B ,Caramel Corn, \\u002B ,French Vanilla, \\u002B ,Toasted Marshmallow, \\u002B ,Toasted Marshmallow\"]"
                         },
                         new
                         {
                             CombinationId = 11,
                             Name = "Café Mocha",
-                            Tag = "[\"Cappuccino\",\"\\u002B\",\"Cappuccino\",\"\\u002B\",\"Chocolate Pudding\",\"\\u002B\",\"French Vanilla\"]",
-                            TagSerialized = "Cappuccino, + ,Cappuccino, + ,Chocolate Pudding, + ,French Vanilla"
+                            Tag = "[\"Cappuccino, \\u002B ,Cappuccino, \\u002B ,Chocolate Pudding, \\u002B ,French Vanilla\"]"
                         },
                         new
                         {
                             CombinationId = 12,
                             Name = "Candy Apple",
-                            Tag = "[\"Green Apple\",\"\\u002B\",\"Green Apple\",\"\\u002B\",\"Cinnamon\"]",
-                            TagSerialized = "Green Apple, + ,Green Apple, + ,Cinnamon"
+                            Tag = "[\"Green Apple, \\u002B ,Green Apple, \\u002B ,Cinnamon\"]"
                         },
                         new
                         {
                             CombinationId = 13,
                             Name = "Cherry Cola",
-                            Tag = "[\"Very Cherry\",\"\\u002B\",\"Very Cherry\",\"\\u002B\",\"Dr Pepper\\u00AE\"]",
-                            TagSerialized = "Very Cherry, + ,Very Cherry, + ,Dr Pepper®"
+                            Tag = "[\"Very Cherry, \\u002B ,Very Cherry, \\u002B ,Dr Pepper\\u00AE\"]"
                         },
                         new
                         {
                             CombinationId = 14,
                             Name = "Cherry Turnover",
-                            Tag = "[\"Very Cherry\",\"\\u002B\",\"Very Cherry\",\"\\u002B\",\"Coconut\",\"\\u002B\",\"Buttered Popcorn\"]",
-                            TagSerialized = "Very Cherry, + ,Very Cherry, + ,Coconut, + ,Buttered Popcorn"
+                            Tag = "[\"Very Cherry, \\u002B ,Very Cherry, \\u002B ,Coconut, \\u002B ,Buttered Popcorn\"]"
                         },
                         new
                         {
                             CombinationId = 15,
                             Name = "Chocolate Covered Cherries",
-                            Tag = "[\"Very Cherry\",\"\\u002B\",\"Very Cherry\",\"\\u002B\",\"Chocolate Pudding\"]",
-                            TagSerialized = "Very Cherry, + ,Very Cherry, + ,Chocolate Pudding"
+                            Tag = "[\"Very Cherry, \\u002B ,Very Cherry, \\u002B ,Chocolate Pudding\"]"
                         },
                         new
                         {
                             CombinationId = 16,
                             Name = "Chocolate Dipped Banana",
-                            Tag = "[\"Top Banana\",\"\\u002B\",\"Chocolate Pudding\"]",
-                            TagSerialized = "Top Banana, + ,Chocolate Pudding"
+                            Tag = "[\"Top Banana, \\u002B ,Chocolate Pudding\"]"
                         },
                         new
                         {
                             CombinationId = 17,
                             Name = "Chocolate Dipped Strawberries",
-                            Tag = "[\"Strawberry Daiquiri\",\"\\u002B\",\"Strawberry Daiquiri\",\"\\u002B\",\"Chocolate Pudding\"]",
-                            TagSerialized = "Strawberry Daiquiri, + ,Strawberry Daiquiri, + ,Chocolate Pudding"
+                            Tag = "[\"Strawberry Daiquiri, \\u002B ,Strawberry Daiquiri, \\u002B ,Chocolate Pudding\"]"
                         },
                         new
                         {
                             CombinationId = 18,
                             Name = "Chocolate Macaroons",
-                            Tag = "[\"Chocolate Pudding\",\"\\u002B\",\"Coconut\"]",
-                            TagSerialized = "Chocolate Pudding, + ,Coconut"
+                            Tag = "[\"Chocolate Pudding, \\u002B ,Coconut\"]"
                         },
                         new
                         {
                             CombinationId = 19,
                             Name = "Chocolate Popcorn",
-                            Tag = "[\"Chocolate Pudding\",\"\\u002B\",\"Buttered Popcorn\"]",
-                            TagSerialized = "Chocolate Pudding, + ,Buttered Popcorn"
+                            Tag = "[\"Chocolate Pudding, \\u002B ,Buttered Popcorn\"]"
                         },
                         new
                         {
                             CombinationId = 20,
                             Name = "Cinnamon Bubble Gum",
-                            Tag = "[\"Cinnamon\",\"\\u002B\",\"Bubble Gum\"]",
-                            TagSerialized = "Cinnamon, + ,Bubble Gum"
+                            Tag = "[\"Cinnamon, \\u002B ,Bubble Gum\"]"
                         },
                         new
                         {
                             CombinationId = 21,
                             Name = "Cinnamon Popcorn",
-                            Tag = "[\"Buttered Popcorn\",\"\\u002B\",\"Buttered Popcorn\",\"\\u002B\",\"Sizzling Cinnamon\"]",
-                            TagSerialized = "Buttered Popcorn, + ,Buttered Popcorn, + ,Sizzling Cinnamon"
+                            Tag = "[\"Buttered Popcorn, \\u002B ,Buttered Popcorn, \\u002B ,Sizzling Cinnamon\"]"
                         },
                         new
                         {
                             CombinationId = 22,
                             Name = "Coffee Cake",
-                            Tag = "[\"Cappuccino\",\"\\u002B\",\"Buttered Popcorn\",\"\\u002B\",\"French Vanilla\"]",
-                            TagSerialized = "Cappuccino, + ,Buttered Popcorn, + ,French Vanilla"
+                            Tag = "[\"Cappuccino, \\u002B ,Buttered Popcorn, \\u002B ,French Vanilla\"]"
                         },
                         new
                         {
                             CombinationId = 23,
                             Name = "Cola",
-                            Tag = "[\"Lime\",\"\\u002B\",\"Cinnamon\"]",
-                            TagSerialized = "Lime, + ,Cinnamon"
+                            Tag = "[\"Lime, \\u002B ,Cinnamon\"]"
                         },
                         new
                         {
                             CombinationId = 24,
                             Name = "Fruit Punch",
-                            Tag = "[\"Island Punch\",\"\\u002B\",\"SUNKIST\\u00AE Orange\",\"\\u002B\",\"Very Cherry\"]",
-                            TagSerialized = "Island Punch, + ,SUNKIST® Orange, + ,Very Cherry"
+                            Tag = "[\"Island Punch, \\u002B ,SUNKIST\\u00AE Orange, \\u002B ,Very Cherry\"]"
                         },
                         new
                         {
                             CombinationId = 25,
                             Name = "Fruit Salad",
-                            Tag = "[\"Kiwi\",\"\\u002B\",\"Strawberry Jam\",\"\\u002B\",\"Blueberry\",\"\\u002B\",\"Cantaloupe\"]",
-                            TagSerialized = "Kiwi, + ,Strawberry Jam, + ,Blueberry, + ,Cantaloupe"
+                            Tag = "[\"Kiwi, \\u002B ,Strawberry Jam, \\u002B ,Blueberry, \\u002B ,Cantaloupe\"]"
                         },
                         new
                         {
                             CombinationId = 26,
                             Name = "Ginger Beer",
-                            Tag = "[\"Draft Beer\",\"\\u002B\",\"Draft Beer\",\"\\u002B\",\"Ginger Ale\"]",
-                            TagSerialized = "Draft Beer, + ,Draft Beer, + ,Ginger Ale"
+                            Tag = "[\"Draft Beer, \\u002B ,Draft Beer, \\u002B ,Ginger Ale\"]"
                         },
                         new
                         {
                             CombinationId = 27,
                             Name = "Green Apple Bubble Gum",
-                            Tag = "[\"Green Apple\",\"\\u002B\",\"Bubble Gum\",\"\\u002B\",\"Bubble Gum\"]",
-                            TagSerialized = "Green Apple, + ,Bubble Gum, + ,Bubble Gum"
+                            Tag = "[\"Green Apple, \\u002B ,Bubble Gum, \\u002B ,Bubble Gum\"]"
                         },
                         new
                         {
                             CombinationId = 28,
                             Name = "Hot Apple Cider",
-                            Tag = "[\"Red Apple\",\"\\u002B\",\"Red Apple\",\"\\u002B\",\"Cinnamon\"]",
-                            TagSerialized = "Red Apple, + ,Red Apple, + ,Cinnamon"
+                            Tag = "[\"Red Apple, \\u002B ,Red Apple, \\u002B ,Cinnamon\"]"
                         },
                         new
                         {
                             CombinationId = 29,
                             Name = "Hot Chocolate",
-                            Tag = "[\"Toasted Marshmallow\",\"\\u002B\",\"Chocolate Pudding\"]",
-                            TagSerialized = "Toasted Marshmallow, + ,Chocolate Pudding"
+                            Tag = "[\"Toasted Marshmallow, \\u002B ,Chocolate Pudding\"]"
                         },
                         new
                         {
                             CombinationId = 30,
                             Name = "Hot Fudge Sundae",
-                            Tag = "[\"French Vanilla\",\"\\u002B\",\"French Vanilla\",\"\\u002B\",\"Chocolate Pudding\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\",\"\\u002B\",\"Very Cherry\"]",
-                            TagSerialized = "French Vanilla, + ,French Vanilla, + ,Chocolate Pudding, + ,A&W® Cream Soda, + ,Very Cherry"
+                            Tag = "[\"French Vanilla, \\u002B ,French Vanilla, \\u002B ,Chocolate Pudding, \\u002B ,A\\u0026W\\u00AE Cream Soda, \\u002B ,Very Cherry\"]"
                         },
                         new
                         {
                             CombinationId = 31,
                             Name = "Iced Vanilla Latte",
-                            Tag = "[\"French Vanilla\",\"\\u002B\",\"Cappuccino\"]",
-                            TagSerialized = "French Vanilla, + ,Cappuccino"
+                            Tag = "[\"French Vanilla, \\u002B ,Cappuccino\"]"
                         },
                         new
                         {
                             CombinationId = 32,
                             Name = "Italian Biscotti",
-                            Tag = "[\"Licorice\",\"\\u002B\",\"Buttered Popcorn\",\"\\u002B\",\"Buttered Popcorn\"]",
-                            TagSerialized = "Licorice, + ,Buttered Popcorn, + ,Buttered Popcorn"
+                            Tag = "[\"Licorice, \\u002B ,Buttered Popcorn, \\u002B ,Buttered Popcorn\"]"
                         },
                         new
                         {
                             CombinationId = 33,
                             Name = "Key Lime Pie",
-                            Tag = "[\"Lemon Lime\",\"\\u002B\",\"Toasted Marshmallow\"]",
-                            TagSerialized = "Lemon Lime, + ,Toasted Marshmallow"
+                            Tag = "[\"Lemon Lime, \\u002B ,Toasted Marshmallow\"]"
                         },
                         new
                         {
                             CombinationId = 34,
                             Name = "Lemon Squares",
-                            Tag = "[\"Lemon\",\"\\u002B\",\"Lemon\",\"\\u002B\",\"Vanilla\",\"\\u002B\",\"Coconut\"]",
-                            TagSerialized = "Lemon, + ,Lemon, + ,Vanilla, + ,Coconut"
+                            Tag = "[\"Lemon, \\u002B ,Lemon, \\u002B ,Vanilla, \\u002B ,Coconut\"]"
                         },
                         new
                         {
                             CombinationId = 35,
                             Name = "Mango Pineapple Salsa",
-                            Tag = "[\"Mango\",\"\\u002B\",\"Crushed Pineapple\",\"\\u002B\",\"Chili Mango\"]",
-                            TagSerialized = "Mango, + ,Crushed Pineapple, + ,Chili Mango"
+                            Tag = "[\"Mango, \\u002B ,Crushed Pineapple, \\u002B ,Chili Mango\"]"
                         },
                         new
                         {
                             CombinationId = 36,
                             Name = "Mango Tango Salsa",
-                            Tag = "[\"Mango\",\"\\u002B\",\"Lemon Lime\",\"\\u002B\",\"Chili Mango\"]",
-                            TagSerialized = "Mango, + ,Lemon Lime, + ,Chili Mango"
+                            Tag = "[\"Mango, \\u002B ,Lemon Lime, \\u002B ,Chili Mango\"]"
                         },
                         new
                         {
                             CombinationId = 37,
                             Name = "Michelada",
-                            Tag = "[\"Draft Beer\",\"\\u002B\",\"Draft Beer\",\"\\u002B\",\"Lemon Lime\",\"\\u002B\",\"Tabasco\\u00AE\"]",
-                            TagSerialized = "Draft Beer, + ,Draft Beer, + ,Lemon Lime, + ,Tabasco®"
+                            Tag = "[\"Draft Beer, \\u002B ,Draft Beer, \\u002B ,Lemon Lime, \\u002B ,Tabasco\\u00AE\"]"
                         },
                         new
                         {
                             CombinationId = 38,
                             Name = "Mud Pie",
-                            Tag = "[\"Chocolate Pudding\",\"\\u002B\",\"Chocolate Pudding\",\"\\u002B\",\"Very Cherry\"]",
-                            TagSerialized = "Chocolate Pudding, + ,Chocolate Pudding, + ,Very Cherry"
+                            Tag = "[\"Chocolate Pudding, \\u002B ,Chocolate Pudding, \\u002B ,Very Cherry\"]"
                         },
                         new
                         {
                             CombinationId = 39,
                             Name = "Peach Bellini Drink",
-                            Tag = "[\"Orange Sherbet\",\"\\u002B\",\"Orange Sherbet\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\"]",
-                            TagSerialized = "Orange Sherbet, + ,Orange Sherbet, + ,A&W® Cream Soda"
+                            Tag = "[\"Orange Sherbet, \\u002B ,Orange Sherbet, \\u002B ,A\\u0026W\\u00AE Cream Soda\"]"
                         },
                         new
                         {
                             CombinationId = 40,
                             Name = "Peaches and Cream",
-                            Tag = "[\"Peach\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\"]",
-                            TagSerialized = "Peach, + ,A&W® Cream Soda"
+                            Tag = "[\"Peach, \\u002B ,A\\u0026W\\u00AE Cream Soda\"]"
                         },
                         new
                         {
                             CombinationId = 41,
                             Name = "Pink Lemonade",
-                            Tag = "[\"Cotton Candy\",\"\\u002B\",\"SUNKIST\\u00AE Lemon\"]",
-                            TagSerialized = "Cotton Candy, + ,SUNKIST® Lemon"
+                            Tag = "[\"Cotton Candy, \\u002B ,SUNKIST\\u00AE Lemon\"]"
                         },
                         new
                         {
                             CombinationId = 42,
                             Name = "Plum Pudding",
-                            Tag = "[\"Plum\",\"\\u002B\",\"Plum\",\"\\u002B\",\"French Vanilla\"]",
-                            TagSerialized = "Plum, + ,Plum, + ,French Vanilla"
+                            Tag = "[\"Plum, \\u002B ,Plum, \\u002B ,French Vanilla\"]"
                         },
                         new
                         {
                             CombinationId = 43,
                             Name = "Plum Sorbet",
-                            Tag = "[\"Plum\",\"\\u002B\",\"Plum\",\"\\u002B\",\"SUNKIST\\u00AE Lemon\",\"\\u002B\",\"Green Apple\"]",
-                            TagSerialized = "Plum, + ,Plum, + ,SUNKIST® Lemon, + ,Green Apple"
+                            Tag = "[\"Plum, \\u002B ,Plum, \\u002B ,SUNKIST\\u00AE Lemon, \\u002B ,Green Apple\"]"
                         },
                         new
                         {
                             CombinationId = 44,
                             Name = "Plum Tart",
-                            Tag = "[\"Plum\",\"\\u002B\",\"Plum\",\"\\u002B\",\"Cinnamon\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\"]",
-                            TagSerialized = "Plum, + ,Plum, + ,Cinnamon, + ,A&W® Cream Soda"
+                            Tag = "[\"Plum, \\u002B ,Plum, \\u002B ,Cinnamon, \\u002B ,A\\u0026W\\u00AE Cream Soda\"]"
                         },
                         new
                         {
                             CombinationId = 45,
                             Name = "Pumpkin Spice Latte",
-                            Tag = "[\"Pumpkin Pie\",\"\\u002B\",\"Pumpkin Pie\",\"\\u002B\",\"French Vanilla\",\"\\u002B\",\"Cappuccino\"]",
-                            TagSerialized = "Pumpkin Pie, + ,Pumpkin Pie, + ,French Vanilla, + ,Cappuccino"
+                            Tag = "[\"Pumpkin Pie, \\u002B ,Pumpkin Pie, \\u002B ,French Vanilla, \\u002B ,Cappuccino\"]"
                         },
                         new
                         {
                             CombinationId = 46,
                             Name = "Rainbow Sherbet",
-                            Tag = "[\"Raspberry\",\"\\u002B\",\"Lemon Lime\",\"\\u002B\",\"Orange Sherbet\"]",
-                            TagSerialized = "Raspberry, + ,Lemon Lime, + ,Orange Sherbet"
+                            Tag = "[\"Raspberry, \\u002B ,Lemon Lime, \\u002B ,Orange Sherbet\"]"
                         },
                         new
                         {
                             CombinationId = 47,
                             Name = "Raspberry Crème Brûlée",
-                            Tag = "[\"French Vanilla\",\"\\u002B\",\"Raspberry\",\"\\u002B\",\"Toasted Marshmallow\"]",
-                            TagSerialized = "French Vanilla, + ,Raspberry, + ,Toasted Marshmallow"
+                            Tag = "[\"French Vanilla, \\u002B ,Raspberry, \\u002B ,Toasted Marshmallow\"]"
                         },
                         new
                         {
                             CombinationId = 48,
                             Name = "Root Beer Float",
-                            Tag = "[\"A\\u0026W\\u00AE Root Beer\",\"\\u002B\",\"A\\u0026W\\u00AE Root Beer\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\"]",
-                            TagSerialized = "A&W® Root Beer, + ,A&W® Root Beer, + ,A&W® Cream Soda"
+                            Tag = "[\"A\\u0026W\\u00AE Root Beer, \\u002B ,A\\u0026W\\u00AE Root Beer, \\u002B ,A\\u0026W\\u00AE Cream Soda\"]"
                         },
                         new
                         {
                             CombinationId = 49,
                             Name = "S'mores",
-                            Tag = "[\"Caramel Corn\",\"\\u002B\",\"Toasted Marshmallow\",\"\\u002B\",\"Toasted Marshmallow\",\"\\u002B\",\"Chocolate Pudding\"]",
-                            TagSerialized = "Caramel Corn, + ,Toasted Marshmallow, + ,Toasted Marshmallow, + ,Chocolate Pudding"
+                            Tag = "[\"Caramel Corn, \\u002B ,Toasted Marshmallow, \\u002B ,Toasted Marshmallow, \\u002B ,Chocolate Pudding\"]"
                         },
                         new
                         {
                             CombinationId = 50,
                             Name = "Strawberry-Kiwi Refresher",
-                            Tag = "[\"Kiwi\",\"\\u002B\",\"Strawberry Daiquiri\"]",
-                            TagSerialized = "Kiwi, + ,Strawberry Daiquiri"
+                            Tag = "[\"Kiwi, \\u002B ,Strawberry Daiquiri\"]"
                         },
                         new
                         {
                             CombinationId = 51,
                             Name = "Strawberry Shortcake",
-                            Tag = "[\"Strawberry Jam\",\"\\u002B\",\"French Vanilla\"]",
-                            TagSerialized = "Strawberry Jam, + ,French Vanilla"
+                            Tag = "[\"Strawberry Jam, \\u002B ,French Vanilla\"]"
                         },
                         new
                         {
                             CombinationId = 52,
                             Name = "Sweet Fried Bananas",
-                            Tag = "[\"Top Banana\",\"\\u002B\",\"Top Banana\",\"\\u002B\",\"Cinnamon\",\"\\u002B\",\"Buttered Popcorn\"]",
-                            TagSerialized = "Top Banana, + ,Top Banana, + ,Cinnamon, + ,Buttered Popcorn"
+                            Tag = "[\"Top Banana, \\u002B ,Top Banana, \\u002B ,Cinnamon, \\u002B ,Buttered Popcorn\"]"
                         },
                         new
                         {
                             CombinationId = 53,
                             Name = "Tequila Sunrise",
-                            Tag = "[\"Margarita\",\"\\u002B\",\"Margarita\",\"\\u002B\",\"SUNKIST\\u00AE Orange\",\"\\u002B\",\"Very Cherry\"]",
-                            TagSerialized = "Margarita, + ,Margarita, + ,SUNKIST® Orange, + ,Very Cherry"
+                            Tag = "[\"Margarita, \\u002B ,Margarita, \\u002B ,SUNKIST\\u00AE Orange, \\u002B ,Very Cherry\"]"
                         },
                         new
                         {
                             CombinationId = 54,
                             Name = "Tiramisu",
-                            Tag = "[\"Cappuccino\",\"\\u002B\",\"Cappuccino\",\"\\u002B\",\"A\\u0026W\\u00AE Cream Soda\",\"\\u002B\",\"Chocolate Pudding\"]",
-                            TagSerialized = "Cappuccino, + ,Cappuccino, + ,A&W® Cream Soda, + ,Chocolate Pudding"
+                            Tag = "[\"Cappuccino, \\u002B ,Cappuccino, \\u002B ,A\\u0026W\\u00AE Cream Soda, \\u002B ,Chocolate Pudding\"]"
                         });
                 });
 
@@ -3067,13 +3012,13 @@ namespace JellyBellyWikiApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Additions1Serialized")
+                    b.Property<string>("Additions1Json")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Additions2Serialized")
+                    b.Property<string>("Additions2Json")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Additions3Serialized")
+                    b.Property<string>("Additions3Json")
                         .HasColumnType("longtext");
 
                     b.Property<string>("CookTime")
@@ -3082,13 +3027,13 @@ namespace JellyBellyWikiApi.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("DirectionsSerialized")
+                    b.Property<string>("DirectionsJson")
                         .HasColumnType("longtext");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("IngredientsSerialized")
+                    b.Property<string>("IngredientsJson")
                         .HasColumnType("longtext");
 
                     b.Property<string>("MakingAmount")
@@ -3100,7 +3045,7 @@ namespace JellyBellyWikiApi.Migrations
                     b.Property<string>("PrepTime")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("TipsSerialized")
+                    b.Property<string>("TipsJson")
                         .HasColumnType("longtext");
 
                     b.Property<string>("TotalTime")
@@ -3114,460 +3059,460 @@ namespace JellyBellyWikiApi.Migrations
                         new
                         {
                             RecipeId = 1,
-                            Additions1Serialized = "GLAZE, 2 cups icing sugar, 1/4 cup milk, approx., 1 tsp vanilla extract, 1/2 cup Jelly Belly Valentine Mix:, Bubble Gum, Coconut, Cotton Candy, Strawberry Cheesecake and Very Cherry",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"GLAZE, 2 cups icing sugar, 1/4 cup milk, approx., 1 tsp vanilla extract, 1/2 cup Jelly Belly Valentine Mix:, Bubble Gum, Coconut, Cotton Candy, Strawberry Cheesecake and Very Cherry\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "10 minutes",
                             Description = "Your special someone will L-O-V-E this delicious treat topped with their favorites from the Jelly Belly® Valentine Mix!",
-                            DirectionsSerialized = "Preheat oven to 375°F. Grease one standard donut pan well with butter or cooking spray., In a large bowl, sift together flour, sugar, baking powder, baking soda and salt., In separate bowl, whisk together buttermilk, egg, melted butter and vanilla., Stir the dry ingredients into the liquid ingredients until combined., Spoon the batter into the pan, filling each mold three-quarters full., Bake for 9 to 10 minutes or until tops spring back when pressed and a toothpick inserted into the donuts comes out clean., Let cool in pan for 5 minutes. Remove from pan and cool on rack. Reinforce donut holes with handle of wooden spoon, if necessary., Glaze: In a small bowl, whisk together icing sugar and milk, adding more milk a teaspoon at a time until icing is thin enough for donuts to be dipped into., Dip donuts into glaze, turning to coat top completely. Return to rack to set. Dip a second time to create a solid white finish. Arrange Jelly Belly® jelly beans on top, sprinkling or placing as you wish.",
+                            DirectionsJson = "[\"Preheat oven to 375\\u00B0F. Grease one standard donut pan well with butter or cooking spray., In a large bowl, sift together flour, sugar, baking powder, baking soda and salt., In separate bowl, whisk together buttermilk, egg, melted butter and vanilla., Stir the dry ingredients into the liquid ingredients until combined., Spoon the batter into the pan, filling each mold three-quarters full., Bake for 9 to 10 minutes or until tops spring back when pressed and a toothpick inserted into the donuts comes out clean., Let cool in pan for 5 minutes. Remove from pan and cool on rack. Reinforce donut holes with handle of wooden spoon, if necessary., Glaze: In a small bowl, whisk together icing sugar and milk, adding more milk a teaspoon at a time until icing is thin enough for donuts to be dipped into., Dip donuts into glaze, turning to coat top completely. Return to rack to set. Dip a second time to create a solid white finish. Arrange Jelly Belly\\u00AE jelly beans on top, sprinkling or placing as you wish.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/fdb32456-5901-4745-8297-1d92035ab382",
-                            IngredientsSerialized = "3/4 cup all-purpose flour, 1/2 cup granulated sugar, 3/4 tsp baking powder, 1/4 tsp baking soda, 1/4 tsp salt, 1/3 cup buttermilk, 1 egg, 1/4 cup melted unsalted butter, 1/2 tsp vanilla extract",
+                            IngredientsJson = "[\"3/4 cup all-purpose flour, 1/2 cup granulated sugar, 3/4 tsp baking powder, 1/4 tsp baking soda, 1/4 tsp salt, 1/3 cup buttermilk, 1 egg, 1/4 cup melted unsalted butter, 1/2 tsp vanilla extract\"]",
                             MakingAmount = "6 Donuts",
                             Name = "BAKED VALENTINE'S DAY DONUTS",
                             PrepTime = "5 minutes",
-                            TipsSerialized = "Tint icing sugar with red food coloring for a red or pink finish.",
+                            TipsJson = "[\"Tint icing sugar with red food coloring for a red or pink finish.\"]",
                             TotalTime = "35 minutes"
                         },
                         new
                         {
                             RecipeId = 2,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Your favorite brownie recipe or mix is transformed into a love-inspired treat. Decorate with Jelly Belly beans and send X's and O's to someone special.",
-                            DirectionsSerialized = "Preheat oven to 325°F. Line a 9 inch square baking pan with foil and coat with vegetable cooking spray., Prepare brownie mix according to package directions. Spread the batter into the prepared pan and make smooth. Bake until a toothpick inserted in center comes out clean, 38 to 43 minutes. Transfer to a wire rack and cool completely., Invert the brownie from the pan and remove the foil. Spread the top of the brownie with the chocolate frosting. Refrigerate frosted brownie until firm, about 1 hour., Cut brownie into 2 inch squares, making sure to clean the knife after each cut. Or use a 2 1/2 inch heart shaped cookie cutter and to cut out heart shapes, as close together as possible, making sure to clean the cutter after every heart., Use the red Jelly Belly beans to make X's and the white Jelly Belly beans to make O's on top of the square brownies. Cover the heart brownies with the pink Jelly Belly beans.",
+                            DirectionsJson = "[\"Preheat oven to 325\\u00B0F. Line a 9 inch square baking pan with foil and coat with vegetable cooking spray., Prepare brownie mix according to package directions. Spread the batter into the prepared pan and make smooth. Bake until a toothpick inserted in center comes out clean, 38 to 43 minutes. Transfer to a wire rack and cool completely., Invert the brownie from the pan and remove the foil. Spread the top of the brownie with the chocolate frosting. Refrigerate frosted brownie until firm, about 1 hour., Cut brownie into 2 inch squares, making sure to clean the knife after each cut. Or use a 2 1/2 inch heart shaped cookie cutter and to cut out heart shapes, as close together as possible, making sure to clean the cutter after every heart., Use the red Jelly Belly beans to make X\\u0027s and the white Jelly Belly beans to make O\\u0027s on top of the square brownies. Cover the heart brownies with the pink Jelly Belly beans.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/8e657035-f26b-4661-80ca-d90368548c07",
-                            IngredientsSerialized = "1 box (18.75 ounces) brownie mix, 1 can (16 ounces) milk chocolate frosting, 1 cup Jelly Belly Valentine's Mix (That's Jewel Bubble Gum, Jewel Cream Soda and Jewel Very Cherry)",
+                            IngredientsJson = "[\"1 box (18.75 ounces) brownie mix, 1 can (16 ounces) milk chocolate frosting, 1 cup Jelly Belly Valentine\\u0027s Mix (That\\u0027s Jewel Bubble Gum, Jewel Cream Soda and Jewel Very Cherry)\"]",
                             MakingAmount = "12 brownies",
                             Name = "JELLY BELLY HUGS AND KISSES BROWNIES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 3,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "These cute cupcakes are anything but pests! Express your love with these inspiring desserts, and charm your way into hearts everywhere.",
-                            DirectionsSerialized = "Preheat the oven to 350°F. Place paper cupcake liners in 24 cupcake cups. Prepare the cake mix according to package directions substituting the buttermilk for the water called for on the box. Divide the batter between the prepared cupcake liners, about 2/3 full. Bake until a toothpick inserted in center comes out clean, about 15 to 19 minutes. Transfer to a wire rack and cool completely., Use a serrated knife to cut the cookies in half crosswise to make the wings. Cut the jelly beans in half crosswise with a small paring knife to make the spots for the wings. Place the pink melting wafers and the vegetable shortening in a microwaveable bowl. Microwave, stirring frequently, until smooth, about 1 minute. Working on 1 cookie at a time, grasp the pointed end of a cookie half and dip it in the melted candy to coat. (Don't worry if this leaves a fingerprint in one end of the coated cookie.) Allow the candy to drip off and scrape the bottom of the cookie against the bowl to remove any excess. Transfer the coated cookie to a sheet of wax paper. Repeat with the other cookie half, grasping it by the same end as the first half. While the candy is still wet, add 4 cut jelly bean pieces, cut side down, to each wing as the spots. Repeat with the remaining cookies, candy and jelly beans. Refrigerate the wings for a few minutes to harden the candy., Spread the top of a cupcake with some chocolate frosting and make smooth. Place a pair of cookie wings on top of the cupcake, placing them so the ends with the fingerprints are touching. Repeat with the remaining cupcakes and wings., Place the mini sandwich cookies on a sheet of wax paper. Melt the dark cocoa candy melts in the microwave until smooth, about 30 seconds. Spoon the candy into a ziplock bag. Snip a small corner from the bag. Pipe 2 dots of melted candy near one edge of a cookie. Add a black licorice pastel to each dot of melted candy to make the antennae. Repeat with the remaining cookies and licorice pastels. Refrigerate until set, about 5 minutes., Pipe a dot of the cocoa candy melts on top of the wings where they meet (the fingerprints) and attach the cookie head. Pipe eyes with the white and black icing and a red mouth.",
+                            DirectionsJson = "[\"Preheat the oven to 350\\u00B0F. Place paper cupcake liners in 24 cupcake cups. Prepare the cake mix according to package directions substituting the buttermilk for the water called for on the box. Divide the batter between the prepared cupcake liners, about 2/3 full. Bake until a toothpick inserted in center comes out clean, about 15 to 19 minutes. Transfer to a wire rack and cool completely., Use a serrated knife to cut the cookies in half crosswise to make the wings. Cut the jelly beans in half crosswise with a small paring knife to make the spots for the wings. Place the pink melting wafers and the vegetable shortening in a microwaveable bowl. Microwave, stirring frequently, until smooth, about 1 minute. Working on 1 cookie at a time, grasp the pointed end of a cookie half and dip it in the melted candy to coat. (Don\\u0027t worry if this leaves a fingerprint in one end of the coated cookie.) Allow the candy to drip off and scrape the bottom of the cookie against the bowl to remove any excess. Transfer the coated cookie to a sheet of wax paper. Repeat with the other cookie half, grasping it by the same end as the first half. While the candy is still wet, add 4 cut jelly bean pieces, cut side down, to each wing as the spots. Repeat with the remaining cookies, candy and jelly beans. Refrigerate the wings for a few minutes to harden the candy., Spread the top of a cupcake with some chocolate frosting and make smooth. Place a pair of cookie wings on top of the cupcake, placing them so the ends with the fingerprints are touching. Repeat with the remaining cupcakes and wings., Place the mini sandwich cookies on a sheet of wax paper. Melt the dark cocoa candy melts in the microwave until smooth, about 30 seconds. Spoon the candy into a ziplock bag. Snip a small corner from the bag. Pipe 2 dots of melted candy near one edge of a cookie. Add a black licorice pastel to each dot of melted candy to make the antennae. Repeat with the remaining cookies and licorice pastels. Refrigerate until set, about 5 minutes., Pipe a dot of the cocoa candy melts on top of the wings where they meet (the fingerprints) and attach the cookie head. Pipe eyes with the white and black icing and a red mouth.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/ea0613fb-a4a9-4334-92dd-d691cadb6428",
-                            IngredientsSerialized = "1 box (16.5 ounces) strawberry supreme cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 1 cup Very Cherry Jelly Belly® jelly beans, 24 round butter cookies, 2 1/2 inch round, 1 bag (10 ounces) pink candy melting wafers, 1 tablespoon vegetable shortening, 1 can (16 ounces) chocolate frosting, 24 mini chocolate sandwich cookies, 1 tube (4.25 ounces each) red, white and black decorating icing, 1/2 cup dark cocoa candy melts, 48 Licorice Pastels (your choice of color, shown in black)",
+                            IngredientsJson = "[\"1 box (16.5 ounces) strawberry supreme cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 1 cup Very Cherry Jelly Belly\\u00AE jelly beans, 24 round butter cookies, 2 1/2 inch round, 1 bag (10 ounces) pink candy melting wafers, 1 tablespoon vegetable shortening, 1 can (16 ounces) chocolate frosting, 24 mini chocolate sandwich cookies, 1 tube (4.25 ounces each) red, white and black decorating icing, 1/2 cup dark cocoa candy melts, 48 Licorice Pastels (your choice of color, shown in black)\"]",
                             MakingAmount = "24 cupcakes",
                             Name = "JELLY BELLY LOVE BUGS",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 4,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Small cakes packed with delicious flavor! Make these for birthday parties, brunches, showers, and other celebrations. Decorate with your favorite Jelly Belly jelly beans on top!",
-                            DirectionsSerialized = "Preheat oven to 350°F. Line a jelly roll pan (11 1/2 by 17 1/2 inches) with wax paper. Coat the pan and wax paper with vegetable cooking spray. Prepare the cake mix according to package directions, substituting the buttermilk for the water in the recipe. Add 6 drops of the neon pink food coloring to the batter and stir until blended. Pour the batter into the prepared pan and smooth top. Bake until a toothpick inserted in center comes out clean, 17 to 20 minutes. Transfer to a wire rack to cool 10 minutes. Invert the cake onto the rack and cool completely., Tint 1/2 cup of the vanilla frosting pink with the food coloring and spoon it into a ziplock bag. Spoon 1 cup of the vanilla frosting into a glass measuring cup and cover with plastic wrap to prevent drying., Cut the cake in half crosswise to make two 8 3/4 by 11 1/2-inch rectangles. Line a cookie sheet with wax paper. Transfer one cake layer to the wax paper. Spread a thin layer of the strained strawberry jam on top of the cake. Spread the remaining vanilla frosting on top of the jam. Place the other cake layer on top, pressing down to secure. Place a sheet of wax paper on top of the cake. Place another cookie sheet on top of the wax paper covered cake. Place several filled food cans evenly spaced on top of the cookie sheet to help weigh down the cake and press the layers together. Transfer the assembly to the refrigerator to set, at least 3 hours or overnight., Remove the cookie sheet, wax paper and cans from the pressed cake. Place the cake on a wire rack set over a wax paper lined cookie sheet. Heat the vanilla frosting in the microwave, stirring every 5 seconds until the texture of slightly whipped cream, about 20 seconds. Pour the frosting over the pressed cake to completely cover the top. Return to the refrigerator for 15 minutes for the frosting to set., Trim edges to make even. Cut the cake crosswise into 1 inch wide strips making sure to clean the knife after each cut. Cut each strip crosswise into 1 inch pieces, keeping the knife clean after each cut. Transfer each 1-inch square piece to a paper liner. Snip a very small corner from the bag with the pink frosting. Using a back and forth motion, pipe zig zag lines on top of each petit four. Arrange 1 to 3 Jelly Belly beans on top of each piece.",
+                            DirectionsJson = "[\"Preheat oven to 350\\u00B0F. Line a jelly roll pan (11 1/2 by 17 1/2 inches) with wax paper. Coat the pan and wax paper with vegetable cooking spray. Prepare the cake mix according to package directions, substituting the buttermilk for the water in the recipe. Add 6 drops of the neon pink food coloring to the batter and stir until blended. Pour the batter into the prepared pan and smooth top. Bake until a toothpick inserted in center comes out clean, 17 to 20 minutes. Transfer to a wire rack to cool 10 minutes. Invert the cake onto the rack and cool completely., Tint 1/2 cup of the vanilla frosting pink with the food coloring and spoon it into a ziplock bag. Spoon 1 cup of the vanilla frosting into a glass measuring cup and cover with plastic wrap to prevent drying., Cut the cake in half crosswise to make two 8 3/4 by 11 1/2-inch rectangles. Line a cookie sheet with wax paper. Transfer one cake layer to the wax paper. Spread a thin layer of the strained strawberry jam on top of the cake. Spread the remaining vanilla frosting on top of the jam. Place the other cake layer on top, pressing down to secure. Place a sheet of wax paper on top of the cake. Place another cookie sheet on top of the wax paper covered cake. Place several filled food cans evenly spaced on top of the cookie sheet to help weigh down the cake and press the layers together. Transfer the assembly to the refrigerator to set, at least 3 hours or overnight., Remove the cookie sheet, wax paper and cans from the pressed cake. Place the cake on a wire rack set over a wax paper lined cookie sheet. Heat the vanilla frosting in the microwave, stirring every 5 seconds until the texture of slightly whipped cream, about 20 seconds. Pour the frosting over the pressed cake to completely cover the top. Return to the refrigerator for 15 minutes for the frosting to set., Trim edges to make even. Cut the cake crosswise into 1 inch wide strips making sure to clean the knife after each cut. Cut each strip crosswise into 1 inch pieces, keeping the knife clean after each cut. Transfer each 1-inch square piece to a paper liner. Snip a very small corner from the bag with the pink frosting. Using a back and forth motion, pipe zig zag lines on top of each petit four. Arrange 1 to 3 Jelly Belly beans on top of each piece.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/e3b09054-b486-43dc-b782-d2390438acca",
-                            IngredientsSerialized = "1 box (16.5 ounces) French vanilla cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, Neon pink food coloring, 1 can (16 ounces) plus 1 cup vanilla frosting, 1/2 cup low sugar strawberry jam, strained, 1 cup Jelly Belly Jewel Valentine Mix (That's Jewel Bubble Gum, Jewel Cream Soda and Jewel Very Cherry), Pink mini paper liners",
+                            IngredientsJson = "[\"1 box (16.5 ounces) French vanilla cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, Neon pink food coloring, 1 can (16 ounces) plus 1 cup vanilla frosting, 1/2 cup low sugar strawberry jam, strained, 1 cup Jelly Belly Jewel Valentine Mix (That\\u0027s Jewel Bubble Gum, Jewel Cream Soda and Jewel Very Cherry), Pink mini paper liners\"]",
                             MakingAmount = "80 pieces",
                             Name = "JELLY BELLY PETIT FOURS",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 5,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Gather the family and hop to making Easter memories when everyone joins in to decorate Easter Bunny Cookies. Any seasonally shaped cookie will work here – chicks, eggs, carrots, lambs, etc. Have fun with our Easter Bunny Cookies. They're the perfect Easter treat to share with your family. There's no doubt your kids will love them!",
-                            DirectionsSerialized = "Mix together some royal icing with pink food coloring until desired shade is reached. Transfer to a small squirt bottle with a thick tip. Leaving a ¼-inch border, outline bunny portion of a cookie and draw a jagged edge where the bunny meets the egg. Draw several zigzags across entire surface of outlined area. Use a spatula to spread evenly, and then shake cookie gently to settle icing. If there are any air bubbles, use a toothpick to pop them., Using a sharp paring knife, cut one blue Jelly Belly jelly bean in half crosswise. Place the halves, cut side down, on cookie to resemble eyes. Add a pink one to resemble a nose. While the icing is still wet, transfer cookie to a paper plate and sprinkle bunny generously with sanding sugar. Working over the paper plate, shake off any excess sugar and reserve for remaining cookies. Using a toothpick, remove any remaining grains of sugar along the edge where bunny meets egg. Let dry at least 15 minutes before proceeding., Mix together some royal icing with yellow food coloring until desired shade is reached. Transfer to a small squirt bottle with a thick tip. Leaving a ¼-inch border, outline egg portion. Draw several zigzags across entire surface of outlined area. Use a spatula to spread evenly, and then shake cookie gently to settle icing. If there are any air bubbles, use a toothpick to pop them., Following shape of egg, use tweezers to add Jelly Belly jelly beans closely together to fill, forming a mosaic pattern. You'll want to work fairly quickly, as the icing will begin to dry. Repeat process with remaining cookies. Let cookies dry completely before packaging, about 8 hours.",
+                            DirectionsJson = "[\"Mix together some royal icing with pink food coloring until desired shade is reached. Transfer to a small squirt bottle with a thick tip. Leaving a \\u00BC-inch border, outline bunny portion of a cookie and draw a jagged edge where the bunny meets the egg. Draw several zigzags across entire surface of outlined area. Use a spatula to spread evenly, and then shake cookie gently to settle icing. If there are any air bubbles, use a toothpick to pop them., Using a sharp paring knife, cut one blue Jelly Belly jelly bean in half crosswise. Place the halves, cut side down, on cookie to resemble eyes. Add a pink one to resemble a nose. While the icing is still wet, transfer cookie to a paper plate and sprinkle bunny generously with sanding sugar. Working over the paper plate, shake off any excess sugar and reserve for remaining cookies. Using a toothpick, remove any remaining grains of sugar along the edge where bunny meets egg. Let dry at least 15 minutes before proceeding., Mix together some royal icing with yellow food coloring until desired shade is reached. Transfer to a small squirt bottle with a thick tip. Leaving a \\u00BC-inch border, outline egg portion. Draw several zigzags across entire surface of outlined area. Use a spatula to spread evenly, and then shake cookie gently to settle icing. If there are any air bubbles, use a toothpick to pop them., Following shape of egg, use tweezers to add Jelly Belly jelly beans closely together to fill, forming a mosaic pattern. You\\u0027ll want to work fairly quickly, as the icing will begin to dry. Repeat process with remaining cookies. Let cookies dry completely before packaging, about 8 hours.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/0502f6e2-1175-482b-bb02-b33786a75702",
-                            IngredientsSerialized = "Royal Icing, Rose pink and lemon or golden-yellow gel paste food coloring, 8 sugar cookie cutouts, White sanding sugar, Kids Mix Jelly Belly jelly beans",
+                            IngredientsJson = "[\"Royal Icing, Rose pink and lemon or golden-yellow gel paste food coloring, 8 sugar cookie cutouts, White sanding sugar, Kids Mix Jelly Belly jelly beans\"]",
                             MakingAmount = "8 cookies",
                             Name = "EASTER BUNNY COOKIES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 6,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Dazzle your friends and family with these charming Bunny Cupcakes!",
-                            DirectionsSerialized = "Preheat the oven to 350°F. Line 24 muffin cups with white paper liners. Prepare cake mix according to package directions, substituting the buttermilk for the water in the recipe. Divide the batter between the prepared cups, about 2/3 full, and bake until golden about 15 to 18 minutes. Transfer to a wire rack and cool completely. Refrigerate cupcakes until ready to decorate., To make the bunny ears, cut 1/4 inch from each short end of a marshmallow and dip the cut sides of the end pieces into the desired sugar color to coat. (When you cut, discard the small remaining piece in the center of each marshmallow.) Repeat with 23 marshmallows and the sugars to make 24 pairs of colored bunny ears. For the head, insert a pretzel stick into a rounded side of a whole marshmallow., Line a cookie sheet with wax paper. Arrange 2 like colored sugared marshmallow ears, lengthwise, side by side, and the head marshmallow, on its side below the ears (The pretzel stick will be at the bottom, on the opposite side from the ears)., Place the white candy melts in a recloseable bag. Microwave the bag, stopping to massage every 5 seconds, until smooth, about 1 minute. Snip a small corner from the bag. Pipe two dots of melted candy on the top side of the marshmallow head to attach the sugar coated mini marshmallow ears. For the nose, pipe a small dot of candy to the front side of the marshmallow head and attach a Jelly Belly bean that matches the ear color. For the tail, pipe a dot of melted candy on the wax paper and arrange 4 Jelly Belly beans of the same color together on the dot. Refrigerate until set, about 5 minutes., Place the coconut in a medium bowl. Spread the top of a chilled cupcake with a mound of vanilla frosting and make smooth. Roll the top of the cupcake in the coconut to coat. Repeat with the remaining cupcakes., To assemble, insert the pretzel end of the head close to one edge of the frosted cupcake. Pipe eyes with the chocolate icing. Add the tail with a dot of frosting to secure. Press 4 Jelly Belly beans into the side of the cupcake as the feet using matching colored beans. Repeat with the remaining cupcakes and candies.",
+                            DirectionsJson = "[\"Preheat the oven to 350\\u00B0F. Line 24 muffin cups with white paper liners. Prepare cake mix according to package directions, substituting the buttermilk for the water in the recipe. Divide the batter between the prepared cups, about 2/3 full, and bake until golden about 15 to 18 minutes. Transfer to a wire rack and cool completely. Refrigerate cupcakes until ready to decorate., To make the bunny ears, cut 1/4 inch from each short end of a marshmallow and dip the cut sides of the end pieces into the desired sugar color to coat. (When you cut, discard the small remaining piece in the center of each marshmallow.) Repeat with 23 marshmallows and the sugars to make 24 pairs of colored bunny ears. For the head, insert a pretzel stick into a rounded side of a whole marshmallow., Line a cookie sheet with wax paper. Arrange 2 like colored sugared marshmallow ears, lengthwise, side by side, and the head marshmallow, on its side below the ears (The pretzel stick will be at the bottom, on the opposite side from the ears)., Place the white candy melts in a recloseable bag. Microwave the bag, stopping to massage every 5 seconds, until smooth, about 1 minute. Snip a small corner from the bag. Pipe two dots of melted candy on the top side of the marshmallow head to attach the sugar coated mini marshmallow ears. For the nose, pipe a small dot of candy to the front side of the marshmallow head and attach a Jelly Belly bean that matches the ear color. For the tail, pipe a dot of melted candy on the wax paper and arrange 4 Jelly Belly beans of the same color together on the dot. Refrigerate until set, about 5 minutes., Place the coconut in a medium bowl. Spread the top of a chilled cupcake with a mound of vanilla frosting and make smooth. Roll the top of the cupcake in the coconut to coat. Repeat with the remaining cupcakes., To assemble, insert the pretzel end of the head close to one edge of the frosted cupcake. Pipe eyes with the chocolate icing. Add the tail with a dot of frosting to secure. Press 4 Jelly Belly beans into the side of the cupcake as the feet using matching colored beans. Repeat with the remaining cupcakes and candies.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/5f52ad3f-bb2b-4ad7-ba59-4d72bfbfd859",
-                            IngredientsSerialized = "1 box (16.5 ounces) vanilla cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 1/4 tsp coconut extract, 1 can (16 ounces) vanilla frosting, 1 1/4 cups desiccated coconut or finely chopped shredded coconut, 1 1/2 cup Jewel Spring Mix Jelly Belly® jelly beans, 1/2 cup white chocolate melting wafers, 3 tbsps each bright pink, light pink, orange, green and light blue decorating sugar, 48 marshmallows, 24 thin pretzel sticks, 1 tube (4.25 ounces) chocolate decorating icing",
+                            IngredientsJson = "[\"1 box (16.5 ounces) vanilla cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 1/4 tsp coconut extract, 1 can (16 ounces) vanilla frosting, 1 1/4 cups desiccated coconut or finely chopped shredded coconut, 1 1/2 cup Jewel Spring Mix Jelly Belly\\u00AE jelly beans, 1/2 cup white chocolate melting wafers, 3 tbsps each bright pink, light pink, orange, green and light blue decorating sugar, 48 marshmallows, 24 thin pretzel sticks, 1 tube (4.25 ounces) chocolate decorating icing\"]",
                             MakingAmount = "24 Cupcakes",
                             Name = "JELLY BELLY BUNNY CUPCAKES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 7,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "15 minutes",
                             Description = "Use egg-shaped cookie cutters to create these festive Easter egg petit fours.",
-                            DirectionsSerialized = "Preheat oven to 375°F. Line 15- x 10-inch baking pan with parchment paper. Spray with cooking spray., Using electric mixer, beat eggs on high speed for 2 to 3 minutes or until thickened and pale yellow; gradually beat in sugar. Add 1/3 cup water and vanilla; beat on low speed for 1 minute., Gradually add flour, baking powder and salt, beating until batter is smooth, scraping down sides of bowl., Spread batter evenly in prepared baking pan. Bake for 12 to 15 minutes or until toothpick inserted into center comes out clean. Let cool in pan for 10 minutes. Transfer to rack; let cool completely., Cut cake in half to create two thin layers. Place one layer on waxed paper-lined baking sheet and spread jam evenly over top; place second layer on top, trimming edges if necessary. Freeze for 2 hours., Using egg-shaped cutter, cut cake into 16 egg shapes. Reserve scraps for another use (such as snacking)., Melt white chocolate and coconut oil in heatproof bowl set over saucepan of barely simmering water. Remove from heat., Arrange petit fours, 2 inches apart, on rack set over parchment paper-lined baking sheet., Divide melted chocolate mixture into three bowls; tint with desired colors of food coloring. Pour each colored chocolate mixture over 5 or 6 petit fours, shaking tray to ensure coating covers petit fours entirely. Refrigerate until firm and set. If necessary, repeating this step can create a smoother layer., Decorate by pressing Jelly Belly® Spring Mix jelly beans into tops of cakes in desired pattern.",
+                            DirectionsJson = "[\"Preheat oven to 375\\u00B0F. Line 15- x 10-inch baking pan with parchment paper. Spray with cooking spray., Using electric mixer, beat eggs on high speed for 2 to 3 minutes or until thickened and pale yellow; gradually beat in sugar. Add 1/3 cup water and vanilla; beat on low speed for 1 minute., Gradually add flour, baking powder and salt, beating until batter is smooth, scraping down sides of bowl., Spread batter evenly in prepared baking pan. Bake for 12 to 15 minutes or until toothpick inserted into center comes out clean. Let cool in pan for 10 minutes. Transfer to rack; let cool completely., Cut cake in half to create two thin layers. Place one layer on waxed paper-lined baking sheet and spread jam evenly over top; place second layer on top, trimming edges if necessary. Freeze for 2 hours., Using egg-shaped cutter, cut cake into 16 egg shapes. Reserve scraps for another use (such as snacking)., Melt white chocolate and coconut oil in heatproof bowl set over saucepan of barely simmering water. Remove from heat., Arrange petit fours, 2 inches apart, on rack set over parchment paper-lined baking sheet., Divide melted chocolate mixture into three bowls; tint with desired colors of food coloring. Pour each colored chocolate mixture over 5 or 6 petit fours, shaking tray to ensure coating covers petit fours entirely. Refrigerate until firm and set. If necessary, repeating this step can create a smoother layer., Decorate by pressing Jelly Belly\\u00AE Spring Mix jelly beans into tops of cakes in desired pattern.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/0458d976-32df-4ef9-8c82-1e10873aea9f",
-                            IngredientsSerialized = "3 eggs, 1 cup granulated sugar, 1 tsp vanilla, 3/4 cup all-purpose flour, sifted, 1 tsp baking powder, 1/4 tsp salt, 1/2 cup seedless raspberry jam, 16 oz. chopped white chocolate, 2 tbsp coconut oil, Food coloring (pastel colors, such as rose, violet and teal), 1 cup Jelly Belly® Spring Mix jelly beans",
+                            IngredientsJson = "[\"3 eggs, 1 cup granulated sugar, 1 tsp vanilla, 3/4 cup all-purpose flour, sifted, 1 tsp baking powder, 1/4 tsp salt, 1/2 cup seedless raspberry jam, 16 oz. chopped white chocolate, 2 tbsp coconut oil, Food coloring (pastel colors, such as rose, violet and teal), 1 cup Jelly Belly\\u00AE Spring Mix jelly beans\"]",
                             MakingAmount = "16 Petit fours",
                             Name = "JELLY BELLY EASTER PETIT FOURS",
                             PrepTime = "20 minutes plus 2 hours freezing time",
-                            TipsSerialized = "If desired, use other fillings, such as red currant jelly, prepared lemon curd or buttercream icing between layers., If you don't want to press the Jelly Belly beans into the top of the petit fours, use royal icing to secure them. You can even decorate the sides this way.",
+                            TipsJson = "[\"If desired, use other fillings, such as red currant jelly, prepared lemon curd or buttercream icing between layers., If you don\\u0027t want to press the Jelly Belly beans into the top of the petit fours, use royal icing to secure them. You can even decorate the sides this way.\"]",
                             TotalTime = "2 hours, 40 minutes"
                         },
                         new
                         {
                             RecipeId = 8,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Celebrate spring with this gorgeous cake, the perfect finishing touch for parties, bridal showers and other festive occasions.",
-                            DirectionsSerialized = "Preheat oven to 350°F. Grease and line 9 X 13-inch cake pan with parchment paper. Prepare cake mix according to package directions, substituting buttermilk for water. Pour batter into prepared pan. Bake 24 to 27 minutes or until golden and toothpick inserted in center comes out clean. Transfer to wire rack and cool 10 minutes. Invert and cool completely. When cool, refrigerate cake for at least 1 hour., Spoon 1/4 cup of the vanilla frosting and the chocolate frosting into separate pastry or recloseable bags. Press out the excess air from the bags and set aside. Tint remaining vanilla frosting light blue with food coloring., Place chilled cake on foil-covered piece of cardboard cut to fit, and transfer to a wire rack over a sheet pan. Spread very thin layer of light blue frosting over top and sides of cake to make smooth. Spoon remaining light blue frosting into a microwaveable glass measuring cup. Microwave frosting, stirring every 5 seconds until frosting is the texture of slightly whipped cream, about 20 to 30 seconds. Pour frosting over cake to cover completely, using small spatula to spread frosting evenly on sides of the cake, to cover. Transfer cake to refrigerator to set, about 30 minutes., Snip a small (scant 1/4 inch) corner from bag with the milk chocolate frosting. Place chilled cake onto serving platter. Pipe overlapping lines of milk chocolate frosting, starting from one corner diagonally across cake as main branch. (It may be helpful to use a toothpick to lightly score the branch into the blue frosting first and then pipe the chocolate frosting following the score marks.) Pipe more lines of frosting to thicken the main branch. Next pipe shorter lines of frosting for smaller branches. (Follow your instincts to create a graceful branching pattern.) For flowers, arrange 5 Jewel Bubble Gum Jelly Belly beans so that the short ends are touching in clusters all over the branches on the cake. Using small knife, cut Jewel Cream Soda Jelly Belly beans in half crosswise. Snip small corner from bag with vanilla frosting. Pipe dots of vanilla frosting in center of flower clusters and press half jelly bean, cut side down, into frosting.",
+                            DirectionsJson = "[\"Preheat oven to 350\\u00B0F. Grease and line 9 X 13-inch cake pan with parchment paper. Prepare cake mix according to package directions, substituting buttermilk for water. Pour batter into prepared pan. Bake 24 to 27 minutes or until golden and toothpick inserted in center comes out clean. Transfer to wire rack and cool 10 minutes. Invert and cool completely. When cool, refrigerate cake for at least 1 hour., Spoon 1/4 cup of the vanilla frosting and the chocolate frosting into separate pastry or recloseable bags. Press out the excess air from the bags and set aside. Tint remaining vanilla frosting light blue with food coloring., Place chilled cake on foil-covered piece of cardboard cut to fit, and transfer to a wire rack over a sheet pan. Spread very thin layer of light blue frosting over top and sides of cake to make smooth. Spoon remaining light blue frosting into a microwaveable glass measuring cup. Microwave frosting, stirring every 5 seconds until frosting is the texture of slightly whipped cream, about 20 to 30 seconds. Pour frosting over cake to cover completely, using small spatula to spread frosting evenly on sides of the cake, to cover. Transfer cake to refrigerator to set, about 30 minutes., Snip a small (scant 1/4 inch) corner from bag with the milk chocolate frosting. Place chilled cake onto serving platter. Pipe overlapping lines of milk chocolate frosting, starting from one corner diagonally across cake as main branch. (It may be helpful to use a toothpick to lightly score the branch into the blue frosting first and then pipe the chocolate frosting following the score marks.) Pipe more lines of frosting to thicken the main branch. Next pipe shorter lines of frosting for smaller branches. (Follow your instincts to create a graceful branching pattern.) For flowers, arrange 5 Jewel Bubble Gum Jelly Belly beans so that the short ends are touching in clusters all over the branches on the cake. Using small knife, cut Jewel Cream Soda Jelly Belly beans in half crosswise. Snip small corner from bag with vanilla frosting. Pipe dots of vanilla frosting in center of flower clusters and press half jelly bean, cut side down, into frosting.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/de71768b-90e4-45c7-a568-a8aea708bfb2",
-                            IngredientsSerialized = "1 box (16.5 ounces) strawberry supreme cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 1 can (16 ounces) + 1 cup vanilla frosting, Neon/bright blue food coloring, 1 cup milk chocolate frosting, 3/4 cup Jewel Bubble Gum Jelly Belly jelly beans, 1/4 cup Jewel Cream Soda Jelly Belly jelly beans",
+                            IngredientsJson = "[\"1 box (16.5 ounces) strawberry supreme cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 1 can (16 ounces) \\u002B 1 cup vanilla frosting, Neon/bright blue food coloring, 1 cup milk chocolate frosting, 3/4 cup Jewel Bubble Gum Jelly Belly jelly beans, 1/4 cup Jewel Cream Soda Jelly Belly jelly beans\"]",
                             MakingAmount = "16 servings",
                             Name = "CHERRY BLOSSOM CAKE",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 9,
-                            Additions1Serialized = "Parchment paper, Flower-shaped cookie cutter, Lollipop sticks, Resealable bag, Styrofoam, Terra cotta pot or serving bowl",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"Parchment paper, Flower-shaped cookie cutter, Lollipop sticks, Resealable bag, Styrofoam, Terra cotta pot or serving bowl\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Let your kitchen blossom with flower cookies-on-a-stick. Collect a dozen and make a bouquet centerpiece in a terra cotta pot. These colorful cookies are fun and easy to make, and are topped with some of your favorite Jelly Belly Confections like Jelly Belly Chewy Fish, and of course lots of Jelly Belly jelly beans! Flower Cookie Pops are perfect for spring brunch, Mother's Day, bridal showers, baby showers and get-well gifts.",
-                            DirectionsSerialized = "Preheat oven to 350°F. Line 2 cookie sheets with parchment paper. Knead the sugar cookie dough with the flour on a work surface until smooth. Divide the dough in half., Roll out half on a lightly floured surface to a scant ¼ inch thickness. Use 2 to 3 inch flower shape cookie cutters and cut out as many shapes as possible. Transfer the shapes to the prepared pans on either long edge. Insert a lollipop stick into the dough about half way into the cut out., Bake until cookies are golden about 10 to 12 minutes. Transfer to a wire rack and cool completely. Repeat with the remaining dough and lollipop sticks., Combine the powdered sugar and egg white powder in a medium bowl. Add 1 tablespoon water and mix well. Add more water, 1 teaspoon at a time, until mixture is thick. Spoon the mixture into a re-sealable bag., Snip a very small corner from the bag, about 1/8 inch. Pipe dots of frosting on cookies and attach the Jelly Belly beans. For the center of the cookies, cut some of the Jelly Belly beans in half crosswise and add, cut side down. Continue with the remaining Jelly Belly beans and cookies. Let cookies dry at least 2 hours., Place a piece of Styrofoam into a clean planter or serving bowl. Fill planter with green Jelly Belly beans. Insert the cookie pops into the planter, pushing the sticks into the Styrofoam to secure at different heights. Add a few green Jelly Belly Chewy Fish as the leaves.",
+                            DirectionsJson = "[\"Preheat oven to 350\\u00B0F. Line 2 cookie sheets with parchment paper. Knead the sugar cookie dough with the flour on a work surface until smooth. Divide the dough in half., Roll out half on a lightly floured surface to a scant \\u00BC inch thickness. Use 2 to 3 inch flower shape cookie cutters and cut out as many shapes as possible. Transfer the shapes to the prepared pans on either long edge. Insert a lollipop stick into the dough about half way into the cut out., Bake until cookies are golden about 10 to 12 minutes. Transfer to a wire rack and cool completely. Repeat with the remaining dough and lollipop sticks., Combine the powdered sugar and egg white powder in a medium bowl. Add 1 tablespoon water and mix well. Add more water, 1 teaspoon at a time, until mixture is thick. Spoon the mixture into a re-sealable bag., Snip a very small corner from the bag, about 1/8 inch. Pipe dots of frosting on cookies and attach the Jelly Belly beans. For the center of the cookies, cut some of the Jelly Belly beans in half crosswise and add, cut side down. Continue with the remaining Jelly Belly beans and cookies. Let cookies dry at least 2 hours., Place a piece of Styrofoam into a clean planter or serving bowl. Fill planter with green Jelly Belly beans. Insert the cookie pops into the planter, pushing the sticks into the Styrofoam to secure at different heights. Add a few green Jelly Belly Chewy Fish as the leaves.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/efb8f79b-dac0-4e3a-9267-39a30b847785",
-                            IngredientsSerialized = "1 roll of refrigerated sugar cookie dough, ¾ cup all-purpose flour, 1 ½ cups confectioners' sugar, 1 tablespoon egg white powder, 1 to 2 tablespoons water, Assorted Jelly Belly jelly beans, Green Jelly Belly Chewy Fish",
+                            IngredientsJson = "[\"1 roll of refrigerated sugar cookie dough, \\u00BE cup all-purpose flour, 1 \\u00BD cups confectioners\\u0027 sugar, 1 tablespoon egg white powder, 1 to 2 tablespoons water, Assorted Jelly Belly jelly beans, Green Jelly Belly Chewy Fish\"]",
                             MakingAmount = "",
                             Name = "JELLY BELLY FLOWER COOKIE POPS",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 10,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "These delightful treats decorated with your favorite Jelly Belly jelly beans are bound to bring smiles.",
-                            DirectionsSerialized = "Preheat oven to 350°F. Line 24 muffin cups with white paper liners., Prepare cake mix according to package directions substituting buttermilk for water on packaging directions., Divide batter between prepared pans and fill each muffin cup about 2/3 full., Bake 15 to 18 minutes or until golden and toothpick inserted in center comes out clean., Transfer to wire rack to cool. Once cool, freeze cupcakes at least 30 minutes to chill., For sheep heads, remove filling from sandwich cookies. Cut each cookie crosswise with serrated knife to make 24 2-inch pieces. Line cookie sheet with wax paper. Microwave candy melts in small bowl, stirring every 5 seconds, until smooth, about 1 minute. Coat 2-inch cookie pieces in melted candy, allowing excess to drip back into bowl. Transfer to prepared cookie sheet. While candy is still wet, arrange dark or brown Jelly Belly bean of your choice to either side of flat cut end of the cookie as ears. Repeat with remaining cookies. Transfer to refrigerator to set, about 5 minutes., Spoon 2 tablespoons of vanilla frosting into pastry or recloseable bag. Divide remaining frosting between five small bowls. Tint each bowl a different pastel color with food coloring (recommended: blue, pink, orange, yellow and green). Cover bowls of frosting with plastic wrap to prevent drying., Spread tinted frosting of your choice on top of chilled cupcake to mound slightly. Place coated cookie near one edge of cupcake, round side out. Place like-colored Jelly Belly beans all over the cupcake to cover. Reheat candy melts and dip short end of the darker Jelly Belly bean into candy and press along side of cupcake as legs to match ears. Repeat with 3 more Jelly Belly beans to finish legs. Make 23 more cupcakes using other tinted frostings and beans., Trim little top curl from mini chips. Snip a small corner from the bag with the vanilla frosting. Pipe small dots of vanilla frosting for eyes on the head cookie and press trimmed end of mini chips into dots of frosting. Use chocolate frosting to pipe nostrils on the cookies.",
+                            DirectionsJson = "[\"Preheat oven to 350\\u00B0F. Line 24 muffin cups with white paper liners., Prepare cake mix according to package directions substituting buttermilk for water on packaging directions., Divide batter between prepared pans and fill each muffin cup about 2/3 full., Bake 15 to 18 minutes or until golden and toothpick inserted in center comes out clean., Transfer to wire rack to cool. Once cool, freeze cupcakes at least 30 minutes to chill., For sheep heads, remove filling from sandwich cookies. Cut each cookie crosswise with serrated knife to make 24 2-inch pieces. Line cookie sheet with wax paper. Microwave candy melts in small bowl, stirring every 5 seconds, until smooth, about 1 minute. Coat 2-inch cookie pieces in melted candy, allowing excess to drip back into bowl. Transfer to prepared cookie sheet. While candy is still wet, arrange dark or brown Jelly Belly bean of your choice to either side of flat cut end of the cookie as ears. Repeat with remaining cookies. Transfer to refrigerator to set, about 5 minutes., Spoon 2 tablespoons of vanilla frosting into pastry or recloseable bag. Divide remaining frosting between five small bowls. Tint each bowl a different pastel color with food coloring (recommended: blue, pink, orange, yellow and green). Cover bowls of frosting with plastic wrap to prevent drying., Spread tinted frosting of your choice on top of chilled cupcake to mound slightly. Place coated cookie near one edge of cupcake, round side out. Place like-colored Jelly Belly beans all over the cupcake to cover. Reheat candy melts and dip short end of the darker Jelly Belly bean into candy and press along side of cupcake as legs to match ears. Repeat with 3 more Jelly Belly beans to finish legs. Make 23 more cupcakes using other tinted frostings and beans., Trim little top curl from mini chips. Snip a small corner from the bag with the vanilla frosting. Pipe small dots of vanilla frosting for eyes on the head cookie and press trimmed end of mini chips into dots of frosting. Use chocolate frosting to pipe nostrils on the cookies.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/a4d0255b-5585-4d3b-bbef-f33dbe9f47db",
-                            IngredientsSerialized = "1 box (16.5 ounces) French vanilla cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 6 creme filled oval cookies, 1 cup dark cocoa candy melts, 1 can + 1 cup premade vanilla frosting, Neon pink, blue, green, red and yellow food coloring, 4 cups Jelly Belly Spring Mix beans, or 3/4 cup each Cotton Candy, Berry Blue, Lemon, Lemon Lime and Tangerine Jelly Belly jelly beans, 3/4 cup Cappuccino, Chocolate Pudding or Root Beer Jelly Belly jelly beans, 48 mini chocolate chips, 1 tube (approx. 4 ounces) chocolate decorating icing",
+                            IngredientsJson = "[\"1 box (16.5 ounces) French vanilla cake mix, 3 large eggs, 1 cup buttermilk, 1/3 cup vegetable oil, 6 creme filled oval cookies, 1 cup dark cocoa candy melts, 1 can \\u002B 1 cup premade vanilla frosting, Neon pink, blue, green, red and yellow food coloring, 4 cups Jelly Belly Spring Mix beans, or 3/4 cup each Cotton Candy, Berry Blue, Lemon, Lemon Lime and Tangerine Jelly Belly jelly beans, 3/4 cup Cappuccino, Chocolate Pudding or Root Beer Jelly Belly jelly beans, 48 mini chocolate chips, 1 tube (approx. 4 ounces) chocolate decorating icing\"]",
                             MakingAmount = "24 cupcakes",
                             Name = "JELLY BELLY SHEEP CUPCAKES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 11,
-                            Additions1Serialized = "Decorative cones: 7-inch square card stock, Double-sided tape, Styrofoam or floral foam, Tray or box, 5-inch skewers",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"Decorative cones: 7-inch square card stock, Double-sided tape, Styrofoam or floral foam, Tray or box, 5-inch skewers\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "For anyone who loves Candy Corn, these are a must try! They will make great centerpieces for a harvest themed party.",
-                            DirectionsSerialized = "Place popped popcorn in large bowl and set aside., In separate microwave-safe bowl, combine caramel squares and cream. Heat on medium-high power in microwave for about one minute; stop after 20 seconds to avoid over boiling and to stir. Repeat until caramel is melted., Gradually pour hot mixture over popcorn, stirring with large spoon. Gently toss the popcorn for even coating. Add Candy Corn and continue stirring until well blended., Serve in decorative cones (instructions below) or form into balls and wrap in plastic wrap., DECORATIVE CONE DIRECTIONS: Cut 7-inch square card stock and roll into desired cone shape. Leave small hole at the bottom of cone and secure shape with double-sided tape., Place Styrofoam or floral foam in tray or box. Height of foam should be about ½-inch shorter than sides of tray or box. Insert 5-inch skewers into foam approximately 3-inches apart. Fill tray with Candy Corn to cover foam., Place cones on skewers, holding cone upright and fill with Candy Corn Caramel Corn.",
+                            DirectionsJson = "[\"Place popped popcorn in large bowl and set aside., In separate microwave-safe bowl, combine caramel squares and cream. Heat on medium-high power in microwave for about one minute; stop after 20 seconds to avoid over boiling and to stir. Repeat until caramel is melted., Gradually pour hot mixture over popcorn, stirring with large spoon. Gently toss the popcorn for even coating. Add Candy Corn and continue stirring until well blended., Serve in decorative cones (instructions below) or form into balls and wrap in plastic wrap., DECORATIVE CONE DIRECTIONS: Cut 7-inch square card stock and roll into desired cone shape. Leave small hole at the bottom of cone and secure shape with double-sided tape., Place Styrofoam or floral foam in tray or box. Height of foam should be about \\u00BD-inch shorter than sides of tray or box. Insert 5-inch skewers into foam approximately 3-inches apart. Fill tray with Candy Corn to cover foam., Place cones on skewers, holding cone upright and fill with Candy Corn Caramel Corn.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/37d983aa-eacf-4a99-83c6-0d95bb69c0f9",
-                            IngredientsSerialized = "3 cups plain popped popcorn, 1 cup soft caramel square candies, unwrapped, 3 tablespoons cream, 1 cup (8 oz) Candy Corn",
+                            IngredientsJson = "[\"3 cups plain popped popcorn, 1 cup soft caramel square candies, unwrapped, 3 tablespoons cream, 1 cup (8 oz) Candy Corn\"]",
                             MakingAmount = "8 Cupcakes",
                             Name = "CANDY CORN CARAMEL CORN",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 12,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Spooky creatures have never been this tasty! Jelly Belly jelly beans and Confections make these cupcakes perfect for Halloween, or any time you want a scary treat.",
-                            DirectionsSerialized = "Spoon ¼ cup of the chocolate frosting into a small zipper bag. Press out the excess air and seal. Snip a small corner (1/8 inch) from the bag. Pipe a dot of frosting on the flat side of the Mint Cremes and attach a Licorice Pastel to make the monster eyes., Working on 1 cupcake at a time, spread some of the chocolate frosting on top of a cupcake, mounding slightly. Arrange like-colored Jelly Belly jelly beans all around the outer edge of the cupcake lengthwise from center to outer edge. Place another row of jelly beans, slightly overlapping the first row. Continue adding rows of Jelly Belly jelly beans until it is covered. Remove 4 of the jelly beans along the outer edge and in their place add 4 Sour Neon Inchworms as legs. Add a dot of chocolate frosting to secure if necessary. Pipe dots of frosting and attach the Mint Creme eyes and red jelly bean nose on top of the cupcake. Repeat with the other cupcakes, jelly beans and frosting.",
+                            DirectionsJson = "[\"Spoon \\u00BC cup of the chocolate frosting into a small zipper bag. Press out the excess air and seal. Snip a small corner (1/8 inch) from the bag. Pipe a dot of frosting on the flat side of the Mint Cremes and attach a Licorice Pastel to make the monster eyes., Working on 1 cupcake at a time, spread some of the chocolate frosting on top of a cupcake, mounding slightly. Arrange like-colored Jelly Belly jelly beans all around the outer edge of the cupcake lengthwise from center to outer edge. Place another row of jelly beans, slightly overlapping the first row. Continue adding rows of Jelly Belly jelly beans until it is covered. Remove 4 of the jelly beans along the outer edge and in their place add 4 Sour Neon Inchworms as legs. Add a dot of chocolate frosting to secure if necessary. Pipe dots of frosting and attach the Mint Creme eyes and red jelly bean nose on top of the cupcake. Repeat with the other cupcakes, jelly beans and frosting.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/fb3a5e7a-6c72-4924-98ce-14fdc8031549",
-                            IngredientsSerialized = "4 jumbo cupcakes, baked in orange paper liners, 12 standard cupcakes, baked in orange paper liners, 1 can chocolate frosting, 32 Mint Cremes, 32 Licorice Pastels, 6 cups (about 3 lbs) Jelly Belly jelly beans in flavors: Watermelon, Juicy Pear, Island Punch, 64 Sour Neon Inchworms, 16 Very Cherry Jelly Belly jelly beans",
+                            IngredientsJson = "[\"4 jumbo cupcakes, baked in orange paper liners, 12 standard cupcakes, baked in orange paper liners, 1 can chocolate frosting, 32 Mint Cremes, 32 Licorice Pastels, 6 cups (about 3 lbs) Jelly Belly jelly beans in flavors: Watermelon, Juicy Pear, Island Punch, 64 Sour Neon Inchworms, 16 Very Cherry Jelly Belly jelly beans\"]",
                             MakingAmount = "16 Cupcakes",
                             Name = "CREEPY CRITTER CUPCAKES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 13,
-                            Additions1Serialized = "Lollipop sticks, Non-stick wax paper",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"Lollipop sticks, Non-stick wax paper\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Harvest Caramel Apples are great for any festive Holiday dessert or treat! These are great to make with the kids.",
-                            DirectionsSerialized = "Insert lollipop sticks into stems of Granny Smith apples; place in refrigerator 30 minutes., Line tray with non-stick waxed paper, spray lightly with cooking spray., Unwrap caramels, set aside., In large saucepan, add 2 tbsp water and caramels, stirring constantly on medium-low heat until caramels are melted (add remaining ½ tbsp of water if necessary). Once melted, remove caramel from heat., Working quickly, dry apples if necessary, and dip in caramel or spoon caramel over apples to coat. Turn apples upside down for a minute to coat and remove excess caramel from bottom before placing on greased waxed paper. Press Jelly Belly jelly beans into caramel to create patterns or designs., Refrigerate about an hour to set. Remove from refrigerator and let stand 10-15 minutes before serving. Keep refrigerated.",
+                            DirectionsJson = "[\"Insert lollipop sticks into stems of Granny Smith apples; place in refrigerator 30 minutes., Line tray with non-stick waxed paper, spray lightly with cooking spray., Unwrap caramels, set aside., In large saucepan, add 2 tbsp water and caramels, stirring constantly on medium-low heat until caramels are melted (add remaining \\u00BD tbsp of water if necessary). Once melted, remove caramel from heat., Working quickly, dry apples if necessary, and dip in caramel or spoon caramel over apples to coat. Turn apples upside down for a minute to coat and remove excess caramel from bottom before placing on greased waxed paper. Press Jelly Belly jelly beans into caramel to create patterns or designs., Refrigerate about an hour to set. Remove from refrigerator and let stand 10-15 minutes before serving. Keep refrigerated.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/fa0af7f5-9b24-45af-b16b-7cba50c96de6",
-                            IngredientsSerialized = "5-6 Granny Smith apples, 1 lb individually wrapped soft caramels (about one large package), 2-2 ½ tablespoons water, Jelly Belly jelly beans in your favorite flavors",
+                            IngredientsJson = "[\"5-6 Granny Smith apples, 1 lb individually wrapped soft caramels (about one large package), 2-2 \\u00BD tablespoons water, Jelly Belly jelly beans in your favorite flavors\"]",
                             MakingAmount = "Up to 6 Harvest Caramel Apples",
                             Name = "HARVEST CARAMEL APPLES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 14,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "A-maize your crowd with this crafty centerpiece inspired by the dried harvest corn decorations that grace doorways each fall. The kernels are gourmet jelly beans in beautiful autumn shades. Sheets of toasted phyllo dough form the tawny corn husks.",
-                            DirectionsSerialized = "Preheat the oven to 350°F. Line a cookie sheet with crumpled foil. Cut the phyllo sheets crosswise into 3-inch-wide strips, tapering both ends. Drape the stacked husks on the prepared pan, shaping them over the crumpled foil to make curves. Spray lightly with vegetable cooking spray. Bake until the phyllo is golden brown, 4 to 5 minutes. Transfer to a wire rack and allow to cool completely. The husks can be made up to 1 day in advance and kept in an airtight container., Tint the vanilla frosting pale beige with the cocoa powder., Working with 3 cupcakes at a time, spread some of the pale beige frosting on top. Arrange about 5 straight rows of jelly beans, side by side and close together, on each cupcake. Try to select flavors that go well together, such as toasted marshmallow, banana, cappuccino, and chocolate pudding. Repeat with the remaining cupcakes, frosting, and jelly beans., For each ear of corn, place 3 cupcakes end to end on a serving platter, aligning the rows of jelly beans. Arrange the phyllo husks on either side of the corn.",
+                            DirectionsJson = "[\"Preheat the oven to 350\\u00B0F. Line a cookie sheet with crumpled foil. Cut the phyllo sheets crosswise into 3-inch-wide strips, tapering both ends. Drape the stacked husks on the prepared pan, shaping them over the crumpled foil to make curves. Spray lightly with vegetable cooking spray. Bake until the phyllo is golden brown, 4 to 5 minutes. Transfer to a wire rack and allow to cool completely. The husks can be made up to 1 day in advance and kept in an airtight container., Tint the vanilla frosting pale beige with the cocoa powder., Working with 3 cupcakes at a time, spread some of the pale beige frosting on top. Arrange about 5 straight rows of jelly beans, side by side and close together, on each cupcake. Try to select flavors that go well together, such as toasted marshmallow, banana, cappuccino, and chocolate pudding. Repeat with the remaining cupcakes, frosting, and jelly beans., For each ear of corn, place 3 cupcakes end to end on a serving platter, aligning the rows of jelly beans. Arrange the phyllo husks on either side of the corn.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/fc34ef0c-a521-447a-bcb8-711431386e30",
-                            IngredientsSerialized = "24 vanilla cupcakes baked in white paper liners, 3 sheets of phyllo dough, thawed, Vegetable cooking spray, 1 can (16 oz) vanilla frosting, 3 ¼ teaspoon unsweetened cocoa powder, About 4 cups assorted Jelly Belly jelly beans in colors: Yellow, Brown, Cream, Orange, Red",
+                            IngredientsJson = "[\"24 vanilla cupcakes baked in white paper liners, 3 sheets of phyllo dough, thawed, Vegetable cooking spray, 1 can (16 oz) vanilla frosting, 3 \\u00BC teaspoon unsweetened cocoa powder, About 4 cups assorted Jelly Belly jelly beans in colors: Yellow, Brown, Cream, Orange, Red\"]",
                             MakingAmount = "8 'ears of corn' with 24 cupcakes",
                             Name = "HARVEST CORN CUPCAKES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 15,
-                            Additions1Serialized = "DECORATION: 3 to 4 drops green food coloring, 3/4 cup prepared white frosting, 1 cup Jelly Belly® jelly beans",
-                            Additions2Serialized = "ASSEMBLY: Using parchment paper as handles, remove brownies from pan and transfer to cutting board. Peel off parchment paper. Cut into Christmas tree shapes by first cutting into 3 rows. Then cut each row into 5 triangles, reserving any smaller pieces for another use., Stir food coloring into frosting until blended; spoon into small resealable plastic bag (snip corner of bag) or pastry bag with tip., Squeeze bag to pipe frosting over brownies to resemble garland., Decorate with Jelly Belly jelly beans as Christmas lights and insert a pretzel stick into bottom of triangle as the tree trunk. Cover and store in airtight container for up to 2 days.",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"DECORATION: 3 to 4 drops green food coloring, 3/4 cup prepared white frosting, 1 cup Jelly Belly\\u00AE jelly beans\"]",
+                            Additions2Json = "[\"ASSEMBLY: Using parchment paper as handles, remove brownies from pan and transfer to cutting board. Peel off parchment paper. Cut into Christmas tree shapes by first cutting into 3 rows. Then cut each row into 5 triangles, reserving any smaller pieces for another use., Stir food coloring into frosting until blended; spoon into small resealable plastic bag (snip corner of bag) or pastry bag with tip., Squeeze bag to pipe frosting over brownies to resemble garland., Decorate with Jelly Belly jelly beans as Christmas lights and insert a pretzel stick into bottom of triangle as the tree trunk. Cover and store in airtight container for up to 2 days.\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "25 minutes",
                             Description = "Kids will love decorating these fun and festive holiday treats. Use your favorite box mix, homemade recipe, or try our recipe.",
-                            DirectionsSerialized = "Preheat oven to 350°F. Grease 9-inch square pan with butter. Line bottom and sides with parchment paper, leaving 2-inch overhang; set aside., Place chocolate and butter in heatproof bowl set over barely simmering water; heat, stirring occasionally, until melted and smooth. Remove from heat and stir in sugar. Let cool slightly. Whisk together flour, cocoa, baking powder and salt; set aside., Stir eggs into chocolate mixture, one at a time, until well combined. Stir in vanilla, then stir in flour mixture until combined. Scrape into prepared pan; smooth top., Bake for 20 to 25 minutes or until only a few moist crumbs cling to toothpick when inserted in center. Let cool completely in pan on rack.",
+                            DirectionsJson = "[\"Preheat oven to 350\\u00B0F. Grease 9-inch square pan with butter. Line bottom and sides with parchment paper, leaving 2-inch overhang; set aside., Place chocolate and butter in heatproof bowl set over barely simmering water; heat, stirring occasionally, until melted and smooth. Remove from heat and stir in sugar. Let cool slightly. Whisk together flour, cocoa, baking powder and salt; set aside., Stir eggs into chocolate mixture, one at a time, until well combined. Stir in vanilla, then stir in flour mixture until combined. Scrape into prepared pan; smooth top., Bake for 20 to 25 minutes or until only a few moist crumbs cling to toothpick when inserted in center. Let cool completely in pan on rack.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/f267e54e-4549-4862-955e-48b365f69f52",
-                            IngredientsSerialized = "BROWNIES: 8 oz dark chocolate, finely chopped, 3/4 cup unsalted butter, cubed, 1 cup granulated sugar, 1/2 cup all-purpose flour, 3 tbsp cocoa powder, 1/2 tsp baking powder, 1/2 tsp salt, 3 eggs, at room temperature, 1 tsp vanilla",
+                            IngredientsJson = "[\"BROWNIES: 8 oz dark chocolate, finely chopped, 3/4 cup unsalted butter, cubed, 1 cup granulated sugar, 1/2 cup all-purpose flour, 3 tbsp cocoa powder, 1/2 tsp baking powder, 1/2 tsp salt, 3 eggs, at room temperature, 1 tsp vanilla\"]",
                             MakingAmount = "15 Christmas Tree Brownies",
                             Name = "CHRISTMAS TREE BROWNIES",
                             PrepTime = "10 minutes",
-                            TipsSerialized = "Use leftover brownie pieces to make brownie and jelly bean ice cream sundaes., Make brownies ahead and freeze in airtight container for up to 1 month., For a quick alternative, use prepared brownie mix and ready-to-use colored icing in tubes.",
+                            TipsJson = "[\"Use leftover brownie pieces to make brownie and jelly bean ice cream sundaes.\",\"Make brownies ahead and freeze in airtight container for up to 1 month.\",\"For a quick alternative, use prepared brownie mix and ready-to-use colored icing in tubes.\"]",
                             TotalTime = "45 minutes"
                         },
                         new
                         {
                             RecipeId = 16,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "20-30 minutes",
                             Description = "We've placed a new spin on the ice cream cone and added a Christmas twist! These cute cake pop cones contain a sweet jelly bean filling.",
-                            DirectionsSerialized = "Make the cake mix as directed on the box. Cool completely and then crumble the cake., Add a small amount of premade frosting to the crumbled cake, roll into small balls, and chill to form the cake pop., Fill the mini ice cream cones with Jelly Belly jelly beans. Fill until the jelly beans are just below the rim of the cone., Melt the candy melts., Dip the cake pop into the melted chocolate until the bottom of the cake pop is fully covered. Place the cake pop on top of the cone and let it set., Once the cake pop has dried onto the cone, hold the cone at the base and dip the rest of the cake pop into the melted chocolate. Cover the cake pop completely and let it set., Optional: Drizzle additional chocolate on top of the cake pop and place more Jelly Belly jelly beans in the melted chocolate as a topping., Enjoy!",
+                            DirectionsJson = "[\"Make the cake mix as directed on the box. Cool completely and then crumble the cake., Add a small amount of premade frosting to the crumbled cake, roll into small balls, and chill to form the cake pop., Fill the mini ice cream cones with Jelly Belly jelly beans. Fill until the jelly beans are just below the rim of the cone., Melt the candy melts., Dip the cake pop into the melted chocolate until the bottom of the cake pop is fully covered. Place the cake pop on top of the cone and let it set., Once the cake pop has dried onto the cone, hold the cone at the base and dip the rest of the cake pop into the melted chocolate. Cover the cake pop completely and let it set., Optional: Drizzle additional chocolate on top of the cake pop and place more Jelly Belly jelly beans in the melted chocolate as a topping., Enjoy!\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/8dcc632a-c1de-4993-bbf7-e7b7a0ca9abe",
-                            IngredientsSerialized = "Mini ice cream cones, Cake mix, Premade frosting, Candy melts, Jelly Belly Christmas Mix",
+                            IngredientsJson = "[\"Mini ice cream cones, Cake mix, Premade frosting, Candy melts, Jelly Belly Christmas Mix\"]",
                             MakingAmount = "30 Servings",
                             Name = "JELLY BELLY CHRISTMAS CAKE POP CONES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = "50 minutes"
                         },
                         new
                         {
                             RecipeId = 17,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Get crafty this Christmas by creating your own wreath using Jelly Belly jelly beans! It's the perfect way to add a sweet touch to your holiday decorations.",
-                            DirectionsSerialized = "Cut your ribbon to the desired length. Use hot glue to attach the ribbon to the foam wreath form. This will be used to hang the wreath once it is complete., Sort the jelly beans into piles by color and decide on the design or pattern you would like to use for your wreath., Apply the jelly beans to the foam wreath form using the edible glue. Apply jelly beans to the front, inside, and outside of the wreath form but it is recommended to leave the back bare so the wreath can hang flat., Once the glue has dried, hang your wreath and enjoy your sweet new décor!",
+                            DirectionsJson = "[\"Cut your ribbon to the desired length. Use hot glue to attach the ribbon to the foam wreath form. This will be used to hang the wreath once it is complete., Sort the jelly beans into piles by color and decide on the design or pattern you would like to use for your wreath., Apply the jelly beans to the foam wreath form using the edible glue. Apply jelly beans to the front, inside, and outside of the wreath form but it is recommended to leave the back bare so the wreath can hang flat., Once the glue has dried, hang your wreath and enjoy your sweet new d\\u00E9cor!\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/952c5382-8f76-4844-ac1d-46f0def99bba",
-                            IngredientsSerialized = "Foam wreath form, Scissors, Ribbon, Edible glue, Jelly Belly jelly beans",
+                            IngredientsJson = "[\"Foam wreath form, Scissors, Ribbon, Edible glue, Jelly Belly jelly beans\"]",
                             MakingAmount = "",
                             Name = "JELLY BELLY MINI JELLY BEAN WREATH",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = "1.5- 2 hours"
                         },
                         new
                         {
                             RecipeId = 18,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "15 minutes",
                             Description = "Cupcakes topped with a waffle cone tree with Jelly Belly jelly bean Christmas lights.",
-                            DirectionsSerialized = "Bake cupcakes according to package and let fully cool., Fill a piping bag with white frosting and snip a hole in the tip., Pipe a white frosting ring on top of the cupcake., Add a waffle cone on top of frosted cupcake., Fill a piping bag with green frosting, then snip a small triangle at the tip., Carefully pipe green frosting around the outside of cone to make a Christmas tree., Add Jelly Belly 49 Flavors jelly beans to resemble Christmas lights as desired., Top with a decorative star., Enjoy!",
+                            DirectionsJson = "[\"Bake cupcakes according to package and let fully cool., Fill a piping bag with white frosting and snip a hole in the tip., Pipe a white frosting ring on top of the cupcake., Add a waffle cone on top of frosted cupcake., Fill a piping bag with green frosting, then snip a small triangle at the tip., Carefully pipe green frosting around the outside of cone to make a Christmas tree., Add Jelly Belly 49 Flavors jelly beans to resemble Christmas lights as desired., Top with a decorative star., Enjoy!\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/1661864c-ea39-498b-858d-8bb73ff72a7c",
-                            IngredientsSerialized = "Box cake mix, 1 container of green prepackaged frosting, 1 container of white prepackaged frosting, 12 waffle cones, 2 piping bags, Jelly Belly 49-Flavor Mix Jelly Beans",
+                            IngredientsJson = "[\"Box cake mix, 1 container of green prepackaged frosting, 1 container of white prepackaged frosting, 12 waffle cones, 2 piping bags, Jelly Belly 49-Flavor Mix Jelly Beans\"]",
                             MakingAmount = "12 Servings",
                             Name = "JELLY BELLY CHRISTMAS TREE CUPCAKES",
                             PrepTime = "45 minutes",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = "60 minutes"
                         },
                         new
                         {
                             RecipeId = 19,
-                            Additions1Serialized = "Decorative ribbon",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"Decorative ribbon\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Create your snow globe with Jelly Belly jelly beans! They make a sweet gift or Christmas décor piece.",
-                            DirectionsSerialized = "Remove the top from the jar, Scoop in Jelly Belly jelly beans until the bottom of the jar is completely covered leaving enough room for the height of your chosen décor items., Arrange your decorative items on top of the jelly beans., Place the lid back on the jar and finish with a decorate ribbon.",
+                            DirectionsJson = "[\"Remove the top from the jar, Scoop in Jelly Belly jelly beans until the bottom of the jar is completely covered leaving enough room for the height of your chosen d\\u00E9cor items., Arrange your decorative items on top of the jelly beans., Place the lid back on the jar and finish with a decorate ribbon.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/bcb6a212-3e40-496e-8825-d5c3cd5a9507",
-                            IngredientsSerialized = "Jar or container with removable lid, Small Christmas decorative items, Jelly Belly French Vanilla jelly beans or Jelly Belly coconut jelly beans",
+                            IngredientsJson = "[\"Jar or container with removable lid, Small Christmas decorative items, Jelly Belly French Vanilla jelly beans or Jelly Belly coconut jelly beans\"]",
                             MakingAmount = "",
                             Name = "JELLY BELLY DIY SNOW GLOBE",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 20,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "0 minutes",
                             Description = "This sweet treat is fit for any reindeer or elf! It also packs nicely into a jar to add to any gift basket.",
-                            DirectionsSerialized = "Add rolled oats, pretzels, popcorn, sprinkles, and jelly beans into a large bowl., Drizzle melted white chocolate on top of mixture and stir until the chocolate coats the ingredients., Spread out the chocolate-covered mixture onto a baking pan and allow it to set., Once it has dried, add additional jelly beans to the top., Break the mixture apart into smaller pieces., Place the smaller pieces into a jar or container for a sweet gift or snack on Christmas Day!",
+                            DirectionsJson = "[\"Add rolled oats, pretzels, popcorn, sprinkles, and jelly beans into a large bowl., Drizzle melted white chocolate on top of mixture and stir until the chocolate coats the ingredients., Spread out the chocolate-covered mixture onto a baking pan and allow it to set., Once it has dried, add additional jelly beans to the top., Break the mixture apart into smaller pieces., Place the smaller pieces into a jar or container for a sweet gift or snack on Christmas Day!\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/5aaa2aff-3805-4398-989b-c47e88e1a508",
-                            IngredientsSerialized = "Rolled oats, Pretzels, Popcorn, White chocolate, Sprinkles (optional), Jelly Belly Christmas Mix",
+                            IngredientsJson = "[\"Rolled oats, Pretzels, Popcorn, White chocolate, Sprinkles (optional), Jelly Belly Christmas Mix\"]",
                             MakingAmount = "12 Servings",
                             Name = "JELLY BELLY REINDEER FOOD",
                             PrepTime = "20 minutes",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = "20 minutes"
                         },
                         new
                         {
                             RecipeId = 21,
-                            Additions1Serialized = "SUPPLIES:, Martini glasses, Lollipop sticks",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"SUPPLIES:, Martini glasses, Lollipop sticks\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Toast to a fabulous year with this easy no-bake 'mock-tail' recipe. These cupcakes (yes, cupcakes!) are a whimsical way to celebrate with friends and family. Fun for a 21st birthday, 30th birthday bash, or any classy and fun affair.",
-                            DirectionsSerialized = "Lightly brush the rim of four 8 ounce martini glasses with the corn syrup. Dip the rims of 2 of the glasses in the chopped coconut and 2 glasses in the coarse sugar; set aside., Spoon 2 tablespoons vanilla frosting into a small zipper bag. Press out the excess air and seal. Divide the remaining vanilla frosting into 3 bowls. Tint one bowl pink, one light blue and one light green with the food coloring. Cover the frosting with plastic wrap to prevent drying., Place the pound cake on a clean work surface, flat side down. Slice horizontally into thirds to make 3 thin layers. Use a 4-inch round cookie cutter, cut out 6 circles of the pound cake. Take the scraps of cake and cut into ½-inch pieces., Working with one color of frosting at a time, heat the frosting in the microwave, stirring frequently, until the frosting is the texture of lightly whipped cream. Spoon about 2 tablespoons of the melted frosting into each martini glass; blue in the coconut rimmed glasses, pink in the sugar rimmed glasses, green in the plain glasses, and swirl the frosting to coat the inside of the glasses. Let frosting sit for a few minutes to set, and then working with one glass at a time, add some of the chopped cake to fill the bottom of one glass. Top with a cake circle, pressing down to make sure the cake is lower than the rim of the glass. Pour the remaining same color melted frosting on top of the cake in the glass to cover. Repeat with the remaining tinted frostings and cake in the other glasses., Garnish the pink glasses with the pink jelly beans along the inside edge of the glass. Arrange the green Jordan Almonds in the shape of a flower using a red jelly bean as the center of the flower. Wrap the gummi worm around the lollipop stick securing at the top with a dot of frosting and a red jelly bean. Insert into the glass as the stirrer., Garnish the green glasses with a row of green jelly beans along the inside edge of the glass. Add a few Champagne Bubbles in the center with a few green Jelly Belly beans and some more sugar. Cut the yellow Sunkist Fruit Gem in half crosswise. Snip a very small corner from the bag with the vanilla frosting. Pipe lines on top of the cut Fruit Gem to look like a lemon slice. Add the candy lemon slice to the side of the glass., Garnish the blue glasses with a row of the blue jelly beans along the inside edge of the glass.",
+                            DirectionsJson = "[\"Lightly brush the rim of four 8 ounce martini glasses with the corn syrup. Dip the rims of 2 of the glasses in the chopped coconut and 2 glasses in the coarse sugar; set aside., Spoon 2 tablespoons vanilla frosting into a small zipper bag. Press out the excess air and seal. Divide the remaining vanilla frosting into 3 bowls. Tint one bowl pink, one light blue and one light green with the food coloring. Cover the frosting with plastic wrap to prevent drying., Place the pound cake on a clean work surface, flat side down. Slice horizontally into thirds to make 3 thin layers. Use a 4-inch round cookie cutter, cut out 6 circles of the pound cake. Take the scraps of cake and cut into \\u00BD-inch pieces., Working with one color of frosting at a time, heat the frosting in the microwave, stirring frequently, until the frosting is the texture of lightly whipped cream. Spoon about 2 tablespoons of the melted frosting into each martini glass; blue in the coconut rimmed glasses, pink in the sugar rimmed glasses, green in the plain glasses, and swirl the frosting to coat the inside of the glasses. Let frosting sit for a few minutes to set, and then working with one glass at a time, add some of the chopped cake to fill the bottom of one glass. Top with a cake circle, pressing down to make sure the cake is lower than the rim of the glass. Pour the remaining same color melted frosting on top of the cake in the glass to cover. Repeat with the remaining tinted frostings and cake in the other glasses., Garnish the pink glasses with the pink jelly beans along the inside edge of the glass. Arrange the green Jordan Almonds in the shape of a flower using a red jelly bean as the center of the flower. Wrap the gummi worm around the lollipop stick securing at the top with a dot of frosting and a red jelly bean. Insert into the glass as the stirrer., Garnish the green glasses with a row of green jelly beans along the inside edge of the glass. Add a few Champagne Bubbles in the center with a few green Jelly Belly beans and some more sugar. Cut the yellow Sunkist Fruit Gem in half crosswise. Snip a very small corner from the bag with the vanilla frosting. Pipe lines on top of the cut Fruit Gem to look like a lemon slice. Add the candy lemon slice to the side of the glass., Garnish the blue glasses with a row of the blue jelly beans along the inside edge of the glass.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/8d1d165c-d29d-4899-81de-ff1afc23ef71",
-                            IngredientsSerialized = "1 tablespoon light corn syrup, ¼ cup finely chopped coconut, ¼ cup white coarse decorating sugar, 1 can (16 oz) vanilla frosting, Assorted food coloring, 1 frozen pound cake (16 oz), thawed, ½ cup each (about 4 oz) Jelly Belly jelly beans in flavors: Berry Blue, Sunkist® Lime, Strawberry Cheesecake, 4 Red Apple Jelly Belly jelly beans, 10 green Jordan Almonds, 2 green and 1 yellow Sunkist® Fruit Gems, 4 white Jelly Belly Licorice Pastels, ¼ cup Jelly Belly Champagne Bubbles, 2 red gummi worms",
+                            IngredientsJson = "[\"1 tablespoon light corn syrup, \\u00BC cup finely chopped coconut, \\u00BC cup white coarse decorating sugar, 1 can (16 oz) vanilla frosting, Assorted food coloring, 1 frozen pound cake (16 oz), thawed, \\u00BD cup each (about 4 oz) Jelly Belly jelly beans in flavors: Berry Blue, Sunkist\\u00AE Lime, Strawberry Cheesecake, 4 Red Apple Jelly Belly jelly beans, 10 green Jordan Almonds, 2 green and 1 yellow Sunkist\\u00AE Fruit Gems, 4 white Jelly Belly Licorice Pastels, \\u00BC cup Jelly Belly Champagne Bubbles, 2 red gummi worms\"]",
                             MakingAmount = "6 Cupcakes",
                             Name = "CHEERS TO YOU CUPCAKES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = "60 minutes"
                         },
                         new
                         {
                             RecipeId = 22,
-                            Additions1Serialized = "Wax paper, Scissors, Popcorn box (for presentation)",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"Wax paper, Scissors, Popcorn box (for presentation)\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Celebrate the 'big screen' with this clever recipe featuring our blockbuster flavor, Buttered Popcorn. The cupcakes feature 'popcorn kernels' made from the famous savory jelly bean. It's a luscious twist on a night at the movies, perfect for a Hollywood themed party or movie marathons.",
-                            DirectionsSerialized = "Combine the powdered sugar and egg white powder in a medium bowl. Add 1 tablespoon water and mix well. Add more water, 1 teaspoon at a time, until mixture is thick. Spoon mixture into a re-sealable bag; set aside., Line 2 sheet pans with wax paper. Reserve ¾ cup of the Jelly Belly beans in a small bowl. Use a sharp pair of scissors and cut the remaining Jelly Belly beans in half lengthwise. Arrange 3 half pieces of Jelly Belly beans on the wax paper lined sheet pans into a star burst having the 3 short ends come together., Snip a very small corner, (⅛ inch), from the bag with the confectioners' sugar frosting and pipe a small dot of frosting in the center of the jelly bean arrangement. Place a whole jelly bean in the center, short end down, to look like a piece of popped corn. Continue with the remaining frosting and whole jelly beans. Let candies dry at least 1 hour., Tint the vanilla frosting with the yellow food coloring to make a pale yellow color. Spread frosting on top of the cupcakes. Gently remove the dry popcorn jelly bean arrangements from the wax paper and place 4 to 5 pieces on top of each cupcake., Place the cupcakes in a popcorn box to look like they are spilling out of the box.",
+                            DirectionsJson = "[\"Combine the powdered sugar and egg white powder in a medium bowl. Add 1 tablespoon water and mix well. Add more water, 1 teaspoon at a time, until mixture is thick. Spoon mixture into a re-sealable bag; set aside., Line 2 sheet pans with wax paper. Reserve \\u00BE cup of the Jelly Belly beans in a small bowl. Use a sharp pair of scissors and cut the remaining Jelly Belly beans in half lengthwise. Arrange 3 half pieces of Jelly Belly beans on the wax paper lined sheet pans into a star burst having the 3 short ends come together., Snip a very small corner, (\\u215B inch), from the bag with the confectioners\\u0027 sugar frosting and pipe a small dot of frosting in the center of the jelly bean arrangement. Place a whole jelly bean in the center, short end down, to look like a piece of popped corn. Continue with the remaining frosting and whole jelly beans. Let candies dry at least 1 hour., Tint the vanilla frosting with the yellow food coloring to make a pale yellow color. Spread frosting on top of the cupcakes. Gently remove the dry popcorn jelly bean arrangements from the wax paper and place 4 to 5 pieces on top of each cupcake., Place the cupcakes in a popcorn box to look like they are spilling out of the box.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/6f3c2da4-d763-43f4-92d4-23f0eadffc83",
-                            IngredientsSerialized = "24 mini vanilla cupcakes, unfrosted, 1 ½ cups confectioners' sugar, 1 tablespoon egg white powder, 1 to 2 tablespoons water, 3 cups Buttered Popcorn Jelly Belly jelly beans, 1 can (16 oz) vanilla frosting, Yellow food coloring",
+                            IngredientsJson = "[\"24 mini vanilla cupcakes, unfrosted, 1 \\u00BD cups confectioners\\u0027 sugar, 1 tablespoon egg white powder, 1 to 2 tablespoons water, 3 cups Buttered Popcorn Jelly Belly jelly beans, 1 can (16 oz) vanilla frosting, Yellow food coloring\"]",
                             MakingAmount = "24 cupcakes",
                             Name = "MOVIE POPCORN CUPCAKES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 23,
-                            Additions1Serialized = "SUPPLIES:, Lollipop sticks, Styrofoam, Small vase or pot",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"SUPPLIES:, Lollipop sticks, Styrofoam, Small vase or pot\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Here's a sweet way to bring the stars down to earth. Perfect for a space-themed party or birthday celebration, these cookie pops are decorated with Jelly Belly jelly beans to add sparkle to each star-shaped cookie. A patriotic and yummy sugar cookie treat that's as fun as watching fireworks!",
-                            DirectionsSerialized = "Preheat oven to 350°F. Line 2 cookie sheets with parchment paper., Knead the flour into the sugar cookie dough on a work surface until smooth. Roll out the cookie dough to a scant ¼-inch thickness. Cut out as many star shapes as possible, 4 and 5 inch, using cookie cutters. Transfer the shapes to the prepared pans. Insert a lollipop stick about halfway into the cookie dough. Repeat with the remaining dough and sticks to make about 11 cookie pops., Bake until lightly golden and firm, about 10 to 13 minutes. Transfer to a wire rack until cooled completely., Combine the confectioner's sugar and egg white powder in a mixing bowl. Add 6 tablespoons warm water and beat with an electric mixer until smooth. Divide the frosting evenly into 3 bowls. Tint one bowl red, one blue, and leave the remaining bowl white. Keep the frosting covered with plastic wrap to prevent drying., Working on one cookie at a time, spread a thin layer of desired colored frosting to cover the top of the cookie. Arrange the Jelly Belly jelly beans in desired pattern on top of the cookie. Transfer the cookie to a wire rack. Repeat with the remaining cookies, frosting and Jelly Belly beans. Allow cookies to dry at least 2 hours., When ready to serve, fill a small vase or small pot with Styrofoam and then cover with Champagne Bubbles. Press cookie pops into Styrofoam to look like shooting stars.",
+                            DirectionsJson = "[\"Preheat oven to 350\\u00B0F. Line 2 cookie sheets with parchment paper., Knead the flour into the sugar cookie dough on a work surface until smooth. Roll out the cookie dough to a scant \\u00BC-inch thickness. Cut out as many star shapes as possible, 4 and 5 inch, using cookie cutters. Transfer the shapes to the prepared pans. Insert a lollipop stick about halfway into the cookie dough. Repeat with the remaining dough and sticks to make about 11 cookie pops., Bake until lightly golden and firm, about 10 to 13 minutes. Transfer to a wire rack until cooled completely., Combine the confectioner\\u0027s sugar and egg white powder in a mixing bowl. Add 6 tablespoons warm water and beat with an electric mixer until smooth. Divide the frosting evenly into 3 bowls. Tint one bowl red, one blue, and leave the remaining bowl white. Keep the frosting covered with plastic wrap to prevent drying., Working on one cookie at a time, spread a thin layer of desired colored frosting to cover the top of the cookie. Arrange the Jelly Belly jelly beans in desired pattern on top of the cookie. Transfer the cookie to a wire rack. Repeat with the remaining cookies, frosting and Jelly Belly beans. Allow cookies to dry at least 2 hours., When ready to serve, fill a small vase or small pot with Styrofoam and then cover with Champagne Bubbles. Press cookie pops into Styrofoam to look like shooting stars.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/db7b6027-5137-433f-ba5d-fe84f20ffeb4",
-                            IngredientsSerialized = "1 roll (16.5 oz) refrigerated sugar cookie dough, ¾ cup flour, 1 box (16 oz) confectioner's sugar, 3 tablespoons egg white powder, Red and blue paste food coloring, 1 cup each (about 8 oz) Jelly Belly jelly beans in flavors: Blueberry, Coconut, Very Cherry, 1 cup (about 8 oz) Champagne Bubbles",
+                            IngredientsJson = "[\"1 roll (16.5 oz) refrigerated sugar cookie dough, \\u00BE cup flour, 1 box (16 oz) confectioner\\u0027s sugar, 3 tablespoons egg white powder, Red and blue paste food coloring, 1 cup each (about 8 oz) Jelly Belly jelly beans in flavors: Blueberry, Coconut, Very Cherry, 1 cup (about 8 oz) Champagne Bubbles\"]",
                             MakingAmount = "About 11 cookie pops",
                             Name = "SHOOTING STAR COOKIE POPS",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 24,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Decorate these bake-sale cupcakes with Very Cherry or Blueberry Jelly Belly beans for a 'pie-rific' twist on a classic cupcake. These charming cupcakes mimic the look of little pies and are sure to be a hit at any bake sale or country-themed party.",
-                            DirectionsSerialized = "Tint the vanilla frosting with 3 to 4 drops of the yellow food coloring and the cocoa powder to make a light brown for the piecrust. Spread some of the frosting on top of a cupcake, leaving the ¼ inch of the cupcake edge exposed. For the filling, arrange about 25 like-colored jelly beans close together on top of the cupcake. Repeat with the remaining cupcakes and like-colored jelly beans., Spoon the remaining light brown frosting into a ziplock bag, press out the excess air, and seal. Snip a small (⅛ inch) corner from the bag. For the lattice rust, pipe 4 or 5 lines across the top of a cupcake, about ½ inch apart. Pipe 4 or 5 more lines, on the diagonal. Pipe a beaded edge around top of cupcake. Repeat with the remaining cupcakes and frosting., Arrange the cupcakes on a wire rack and make bake-sale tags to display the cupcakes.",
+                            DirectionsJson = "[\"Tint the vanilla frosting with 3 to 4 drops of the yellow food coloring and the cocoa powder to make a light brown for the piecrust. Spread some of the frosting on top of a cupcake, leaving the \\u00BC inch of the cupcake edge exposed. For the filling, arrange about 25 like-colored jelly beans close together on top of the cupcake. Repeat with the remaining cupcakes and like-colored jelly beans., Spoon the remaining light brown frosting into a ziplock bag, press out the excess air, and seal. Snip a small (\\u215B inch) corner from the bag. For the lattice rust, pipe 4 or 5 lines across the top of a cupcake, about \\u00BD inch apart. Pipe 4 or 5 more lines, on the diagonal. Pipe a beaded edge around top of cupcake. Repeat with the remaining cupcakes and frosting., Arrange the cupcakes on a wire rack and make bake-sale tags to display the cupcakes.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/24790b00-4a79-403c-bc9c-2d46ed9548ab",
-                            IngredientsSerialized = "24 vanilla cupcakes baked in silver foil liners, 2 cans (16 oz each) vanilla frosting, Yellow food coloring, 1 teaspoon unsweetened cocoa powder, 1 cup each (about 8 oz) Very Cherry and Blueberry Jelly Belly jelly beans",
+                            IngredientsJson = "[\"24 vanilla cupcakes baked in silver foil liners, 2 cans (16 oz each) vanilla frosting, Yellow food coloring, 1 teaspoon unsweetened cocoa powder, 1 cup each (about 8 oz) Very Cherry and Blueberry Jelly Belly jelly beans\"]",
                             MakingAmount = "24 cupcakes",
                             Name = "BAKE-SALE PIES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 25,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Make this salty and sweet snack for your guests for any party situation, sleepover, or impromptu hangout. Featuring popcorn, ground cinnamon, dried berries, and a mix of Jelly Belly jelly beans, this recipe is a crowd-pleaser that you'll find yourself making again and again.",
-                            DirectionsSerialized = "In a small bowl, combine sugar and cinnamon. In a large bowl, combine popcorn, cereal, and cranberries., Spray popcorn mixture lightly for 4 to 5 seconds with cooking spray; quickly toss with sugar mixture. Stir in Jelly Belly beans and pretzels. Store in covered container., Stir well before serving. For a fun hostess gift, spoon into clear container and finish with a pretty ribbon.",
+                            DirectionsJson = "[\"In a small bowl, combine sugar and cinnamon. In a large bowl, combine popcorn, cereal, and cranberries., Spray popcorn mixture lightly for 4 to 5 seconds with cooking spray; quickly toss with sugar mixture. Stir in Jelly Belly beans and pretzels. Store in covered container., Stir well before serving. For a fun hostess gift, spoon into clear container and finish with a pretty ribbon.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/2750044e-baa0-492d-9470-f3649757bb29",
-                            IngredientsSerialized = "1 tablespoon sugar, 1 tablespoon ground cinnamon, 2 cups prepared air-popped popcorn, 1 cup bite-size crispy wheat squares, ½ cup dried cranberries, cherries or raisins, 2 ½ cups assorted Jelly Belly jelly beans, 2 cups fat-free mini pretzels, Nonstick cooking spray, butter flavor",
+                            IngredientsJson = "[\"1 tablespoon sugar, 1 tablespoon ground cinnamon, 2 cups prepared air-popped popcorn, 1 cup bite-size crispy wheat squares, \\u00BD cup dried cranberries, cherries or raisins, 2 \\u00BD cups assorted Jelly Belly jelly beans, 2 cups fat-free mini pretzels, Nonstick cooking spray, butter flavor\"]",
                             MakingAmount = "",
                             Name = "MOVIE NIGHT SNACK MIX",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 26,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Entertain party guests with this sweet and colorful DIY activity. Pre-bake butterfly sugar cookies and allow guests to decorate their own cookie with frosting and Jelly Belly jelly beans. Ideal for birthday parties, springtime fêtes, bridal or baby showers, and tea parties.",
-                            DirectionsSerialized = "Pre-bake butterfly sugar cookies in advance., Set up a decorating station for guests with bowls of frosting and assorted Jelly Belly jelly beans in the listed flavors., Invite guests to decorate their own butterfly cookies using the frosting and jelly beans.",
+                            DirectionsJson = "[\"Pre-bake butterfly sugar cookies in advance., Set up a decorating station for guests with bowls of frosting and assorted Jelly Belly jelly beans in the listed flavors., Invite guests to decorate their own butterfly cookies using the frosting and jelly beans.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/57640bd8-981a-4cca-b786-a76e81c7e3d1",
-                            IngredientsSerialized = "Butterfly-shaped sugar cookies, Frosting, Jelly Belly jelly beans in the following flavors: Champagne, Cotton Candy, 7UP®, Sunkist® Orange, Ginger Ale, Jewel Grape Soda, Jewel Blueberry, Jewel Berry Blue, Jewel Cream Soda, Jewel Bubble Gum",
+                            IngredientsJson = "[\"Butterfly-shaped sugar cookies, Frosting, Jelly Belly jelly beans in the following flavors: Champagne, Cotton Candy, 7UP\\u00AE, Sunkist\\u00AE Orange, Ginger Ale, Jewel Grape Soda, Jewel Blueberry, Jewel Berry Blue, Jewel Cream Soda, Jewel Bubble Gum\"]",
                             MakingAmount = "",
                             Name = "BUTTERFLY COOKIES",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         },
                         new
                         {
                             RecipeId = 27,
-                            Additions1Serialized = "",
-                            Additions2Serialized = "",
-                            Additions3Serialized = "",
+                            Additions1Json = "[\"\"]",
+                            Additions2Json = "[\"\"]",
+                            Additions3Json = "[\"\"]",
                             CookTime = "",
                             Description = "Dress up a classic round cake with a stylish selection of Jelly Belly jelly beans. With more than 100 different flavors in a kaleidoscope of colors, Jelly Belly jelly beans allow you to create a fuss-free ombré cake for your next party. Simply pre-order a frosted cake and then add your jelly beans one by one around the sides and top of the cake.",
-                            DirectionsSerialized = "Pre-order or prepare a frosted round cake., Arrange the Jelly Belly jelly beans around the sides and top of the cake, creating an ombré effect by gradually transitioning from one color/flavor to the next.",
+                            DirectionsJson = "[\"Pre-order or prepare a frosted round cake., Arrange the Jelly Belly jelly beans around the sides and top of the cake, creating an ombr\\u00E9 effect by gradually transitioning from one color/flavor to the next.\"]",
                             ImageUrl = "https://cdn-tp1.mozu.com/9046-m1/cms/files/6ce2d764-f152-471d-ad9f-325228fce35b",
-                            IngredientsSerialized = "Pre-frosted round cake, Jelly Belly jelly beans in the following flavors: Sunkist® Pink Grapefruit, Jewel Orange, Sunkist® Tangerine, Sunkist® Orange, Orange Sherbet, Jewel Very Cherry, Cotton Candy, Strawberry Cheesecake, Bubble Gum, Jewel Bubble Gum",
+                            IngredientsJson = "[\"Pre-frosted round cake, Jelly Belly jelly beans in the following flavors: Sunkist\\u00AE Pink Grapefruit, Jewel Orange, Sunkist\\u00AE Tangerine, Sunkist\\u00AE Orange, Orange Sherbet, Jewel Very Cherry, Cotton Candy, Strawberry Cheesecake, Bubble Gum, Jewel Bubble Gum\"]",
                             MakingAmount = "",
                             Name = "OMBRÉ CAKE",
                             PrepTime = "",
-                            TipsSerialized = "",
+                            TipsJson = "[\"\"]",
                             TotalTime = ""
                         });
                 });
