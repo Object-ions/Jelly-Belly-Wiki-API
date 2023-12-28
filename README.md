@@ -193,38 +193,38 @@ To find detailed information about the parameters such as `groupName`, `flavorNa
 
 **Base URL**: `https://localhost:5001/api/beans`
 
-- `groupName`: [https://localhost:5001/api/beans?groupName=Jelly Belly Official Flavors](https://localhost:5001/api/beans?groupName=Jelly Belly Official Flavors)
-- `flavorName`: [https://localhost:5001/api/beans?flavorName=7Up](https://localhost:5001/api/beans?flavorName=7Up)
-- `colorGroup`: [https://localhost:5001/api/beans?colorGroup=khaki](https://localhost:5001/api/beans?colorGroup=khaki)
-- `glutenFree`: [https://localhost:5001/api/beans?glutenFree=true](https://localhost:5001/api/beans?glutenFree=true)
-- `sugarFree`: [https://localhost:5001/api/beans?sugarFree=false](https://localhost:5001/api/beans?sugarFree=false)
-- `seasonal`: [https://localhost:5001/api/beans?seasonal=true](https://localhost:5001/api/beans?seasonal=true)
-- `kosher`: [https://localhost:5001/api/beans?kosher=true](https://localhost:5001/api/beans?kosher=true)
-- `pageIndex` and `pageSize`: [https://localhost:5001/api/beans?pageIndex=1&pageSize=10](https://localhost:5001/api/beans?pageIndex=1&pageSize=10)
+- `groupName`: `https://localhost:5001/api/beans?groupName=Jelly%20Belly%20Official%20Flavors`
+- `flavorName`: `https://localhost:5001/api/beans?flavorName=7Up`
+- `colorGroup`: `https://localhost:5001/api/beans?colorGroup=khaki`
+- `glutenFree`: `https://localhost:5001/api/beans?glutenFree=true`
+- `sugarFree`: `https://localhost:5001/api/beans?sugarFree=false`
+- `seasonal`: `https://localhost:5001/api/beans?seasonal=true`
+- `kosher`: `https://localhost:5001/api/beans?kosher=true`
+- `pageIndex` and `pageSize`: `https://localhost:5001/api/beans?pageIndex=1&pageSize=10`
 
 ### Facts
 
 **Base URL**: `https://localhost:5001/api/facts`
 
-- `title`: [https://localhost:5001/api/facts?title=Popularity of Flavors](https://localhost:5001/api/facts?title=Popularity of Flavors)
+- `title`: `https://localhost:5001/api/facts?title=Popularity%20of%20Flavors`
 
 ### Combinations
 
 **Base URL**: `https://localhost:5001/api/combinations`
 
-- `name`: [https://localhost:5001/api/combinations?name=Cherry Turnover](https://localhost:5001/api/combinations?name=Cherry Turnover)
+- `name`: `https://localhost:5001/api/combinations?name=Cherry%20Turnover`
 
 ### Recipes
 
 **Base URL**: `https://localhost:5001/api/recipes`
 
-- `name`: [https://localhost:5001/api/recipes?name=OMBRÉ CAKE](https://localhost:5001/api/recipes?name=OMBRÉ CAKE)
+- `name`: `https://localhost:5001/api/recipes?name=OMBRÉ%20CAKE`
 
 ### Milestones
 
 **Base URL**: `https://localhost:5001/api/mileStones`
 
-- `year`: [https://localhost:5001/api/mileStones?year=1869](https://localhost:5001/api/mileStones?year=1869)
+- `year`: `https://localhost:5001/api/mileStones?year=1869`
 
 **Note**: When searching with phrases that include spaces, the URL will automatically replace spaces with "%20". You can search with spaces between words.
 
@@ -262,15 +262,26 @@ https://localhost:5001/api/Beans?flavorName=7up
           "Jelly Belly Official Flavors",
           "Soda Pop Shoppe® Flavors"
         ],
-        "groupNameSerialized": "Jelly Belly Official Flavors, Soda Pop Shoppe® Flavors",
+        "ingredients": [
+          "Sugar",
+          "Corn Syrup",
+          "Modified Food Starch",
+          "Contains 2% Or Less Of The Following:",
+          "Citric Acid",
+          "Sodium Lactate",
+          "Natural & Artificial Flavor",
+          "Color Added",
+          "Yellow 5",
+          "Blue 1",
+          "Beeswax",
+          "Carnauba Wax",
+          "Confectioner'S Glaze"
+        ],
         "flavorName": "7Up",
         "description": "The Refreshing And Crisp Flavor Of Lemon Lime Soda.",
         "colorGroup": "khaki",
         "backgroundColor": "#CEDC91",
         "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/ab692677-5471-4863-91a8-659363ae4cc4",
-        "ingredients": [
-          "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Citric Acid, Sodium Lactate, Natural & Artificial Flavor, Color Added, Yellow 5, Blue 1, Beeswax, Carnauba Wax, Confectioner'S Glaze"
-        ],
         "glutenFree": false,
         "sugarFree": false,
         "seasonal": false,
@@ -301,13 +312,7 @@ To retrieve the second page of beans with 10 beans per page, use the following r
 
 ## [Known Bugs](#known-bugs)
 
-### Description:
-
-Currently, there is a notable bug in the API concerning the structure of arrays. The expected behavior is to receive an array of strings. However, the API is returning an array containing a single element (at index 0) where the items are concatenated into a single string, separated by commas (,).
-
-### Temporary Workaround:
-
-In the user interface (UI), we have implemented a JavaScript-based solution to address this issue. This script manipulates the data received from the API to transform it back into the intended format, which is an array of individual strings. This approach ensures that the data is displayed correctly in the UI, despite the existing bug in the API.
+- No bugs known
 
 ## [Ongoing Development](#ongoing-development)
 
