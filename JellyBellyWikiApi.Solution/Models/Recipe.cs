@@ -1,5 +1,6 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json;
+using System.Linq;
 using System.Text.Json.Serialization;
 
 namespace JellyBellyWikiApi.Models
@@ -15,65 +16,70 @@ namespace JellyBellyWikiApi.Models
         public string MakingAmount { get; set; }
         public string ImageUrl { get; set; }
 
-        // JSON properties are hidden from API responses and used for DB storage
+        // Ingredients
         [JsonIgnore]
-        public string IngredientsJson 
-        { 
-            get => JsonSerializer.Serialize(Ingredients);
-            set => Ingredients = value == null ? null : JsonSerializer.Deserialize<string[]>(value);
-        }
+        public string IngredientsSerialized { get; set; }
 
         [NotMapped]
-        public string[] Ingredients { get; set; }
-
-        [JsonIgnore]
-        public string Additions1Json 
-        { 
-            get => JsonSerializer.Serialize(Additions1);
-            set => Additions1 = value == null ? null : JsonSerializer.Deserialize<string[]>(value);
+        public string[] Ingredients 
+        {
+            get => string.IsNullOrEmpty(IngredientsSerialized) ? Array.Empty<string>() : IngredientsSerialized.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+            set => IngredientsSerialized = string.Join(", ", value);
         }
 
-        [NotMapped]
-        public string[] Additions1 { get; set; }
-
+        // Additions1
         [JsonIgnore]
-        public string Additions2Json 
-        { 
-            get => JsonSerializer.Serialize(Additions2);
-            set => Additions2 = value == null ? null : JsonSerializer.Deserialize<string[]>(value);
+        public string Additions1Serialized { get; set; }
+
+        [NotMapped]
+        public string[] Additions1 
+        {
+            get => string.IsNullOrEmpty(Additions1Serialized) ? Array.Empty<string>() : Additions1Serialized.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+            set => Additions1Serialized = string.Join(", ", value);
         }
 
-        [NotMapped]
-        public string[] Additions2 { get; set; }
-
+        // Additions2
         [JsonIgnore]
-        public string Additions3Json 
-        { 
-            get => JsonSerializer.Serialize(Additions3);
-            set => Additions3 = value == null ? null : JsonSerializer.Deserialize<string[]>(value);
+        public string Additions2Serialized { get; set; }
+
+        [NotMapped]
+        public string[] Additions2 
+        {
+            get => string.IsNullOrEmpty(Additions2Serialized) ? Array.Empty<string>() : Additions2Serialized.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+            set => Additions2Serialized = string.Join(", ", value);
         }
 
-        [NotMapped]
-        public string[] Additions3 { get; set; }
-
+        // Additions3
         [JsonIgnore]
-        public string DirectionsJson 
-        { 
-            get => JsonSerializer.Serialize(Directions);
-            set => Directions = value == null ? null : JsonSerializer.Deserialize<string[]>(value);
+        public string Additions3Serialized { get; set; }
+
+        [NotMapped]
+        public string[] Additions3 
+        {
+            get => string.IsNullOrEmpty(Additions3Serialized) ? Array.Empty<string>() : Additions3Serialized.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+            set => Additions3Serialized = string.Join(", ", value);
         }
 
-        [NotMapped]
-        public string[] Directions { get; set; }
-
+        // Directions
         [JsonIgnore]
-        public string TipsJson 
-        { 
-            get => JsonSerializer.Serialize(Tips);
-            set => Tips = value == null ? null : JsonSerializer.Deserialize<string[]>(value);
+        public string DirectionsSerialized { get; set; }
+
+        [NotMapped]
+        public string[] Directions 
+        {
+            get => string.IsNullOrEmpty(DirectionsSerialized) ? Array.Empty<string>() : DirectionsSerialized.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+            set => DirectionsSerialized = string.Join(", ", value);
         }
 
+        // Tips
+        [JsonIgnore]
+        public string TipsSerialized { get; set; }
+
         [NotMapped]
-        public string[] Tips { get; set; }
+        public string[] Tips 
+        {
+            get => string.IsNullOrEmpty(TipsSerialized) ? Array.Empty<string>() : TipsSerialized.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+            set => TipsSerialized = string.Join(", ", value);
+        }
     }
 }
