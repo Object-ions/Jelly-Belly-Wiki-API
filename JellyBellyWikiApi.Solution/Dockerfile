@@ -5,14 +5,14 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 
 # Copy the project file(s) and restore dependencies
-COPY JellyBellyWikiApi.Solution/*.csproj ./JellyBellyWikiApi.Solution/
-RUN dotnet restore JellyBellyWikiApi.Solution/*.csproj
+COPY *.csproj ./
+RUN dotnet restore
 
 # Copy the remaining source code
-COPY JellyBellyWikiApi.Solution/ ./JellyBellyWikiApi.Solution/
+COPY . .
 
 # Build the application
-RUN dotnet publish JellyBellyWikiApi.Solution/ -c Release -o out
+RUN dotnet publish -c Release -o out
 
 # Create the runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
