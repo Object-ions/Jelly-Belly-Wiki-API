@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace JellyBellyWikiApi.Migrations
 {
-    public partial class CleanMigrations : Migration
+    public partial class NewDatabaseHostedOnTiDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

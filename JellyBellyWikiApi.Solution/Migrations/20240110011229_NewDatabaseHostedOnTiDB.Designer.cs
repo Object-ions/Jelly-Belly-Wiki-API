@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JellyBellyWikiApi.Migrations
 {
     [DbContext(typeof(JellyBellyWikiApiContext))]
-    [Migration("20231228005913_CleanMigrations")]
-    partial class CleanMigrations
+    [Migration("20240110011229_NewDatabaseHostedOnTiDB")]
+    partial class NewDatabaseHostedOnTiDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
