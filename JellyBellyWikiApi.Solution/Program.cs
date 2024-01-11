@@ -30,20 +30,22 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
-else 
-{
+// }
+// else 
+// {
   app.UseHttpsRedirection();
-}
+// }
 
 app.UseCors();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+ app.MapFallbackToController("Get", "Home");
 
 app.Run();
