@@ -2,33 +2,25 @@
 
 ### By Moses Atia Poston.
 
-## [Live version of the UI](#live)
-
-[Jelly Belly Wiki - UI](https://jelly-belly-wiki.netlify.app/)
-[Jelly Belly Wiki - API](https://jellybellywikiapi.onrender.com/)
-
-- The UI deployed on Netlify.com
-- The API deployed on Render.com
-- The database deployed on TiDB.com
-
 ## Table of Contents
 
 1. [Description](#project-description)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Setup/Installation Requirements](#setupinstallation-requirements)
-5. [Endpoints](#endpoints)
-6. [API Endpoints with Query Options and Examples](#api-endpoints-with-query-options-and-examples)
-7. [Request URL and Server Response](#request-url-and-server-response)
-8. [Pagination Info](#pagination-info)
-9. [Known Bugs](#known-bugs)
-10. [Ongoing Development](#ongoing-development)
-11. [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
-    - A. [Content Origin](#content-origin)
-    - B. [Disclaimer](#disclaimer)
-    - C. [Consumer Advice](#consumer-advice)
-12. [License](#license)
-13. [contact](#contact)
+1. [Live Versions](#live)
+1. [Features](#features)
+1. [Technologies Used](#technologies-used)
+1. [Setup/Installation Requirements](#setupinstallation-requirements)
+1. [Endpoints](#endpoints)
+1. [API Endpoints with Query Options and Examples](#api-endpoints-with-query-options-and-examples)
+1. [Request URL and Server Response](#request-url-and-server-response)
+1. [Pagination Info](#pagination-info)
+1. [Known Bugs](#known-bugs)
+1. [Ongoing Development](#ongoing-development)
+1. [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
+   - A. [Content Origin](#content-origin)
+   - B. [Disclaimer](#disclaimer)
+   - C. [Consumer Advice](#consumer-advice)
+1. [License](#license)
+1. [contact](#contact)
 
 ## [Project Description](#project-description)
 
@@ -39,6 +31,15 @@ This project is divided into three main segments, each with its own repository:
 1. [Jelly Belly Wiki API Data Collection](https://github.com/Object-ions/Jelly-Belly-Wiki-API-Data-Collection): This repository contains scripts and supporting files for data collection using Python, BeautifulSoup, and ChromeDriver. It details the methodology used for creatively gathering data step by step until it was ready to be seeded into the C# API.
 2. [Jelly Belly Wiki API](#) (this repo): The heart of the project, this repository holds the C# and EF Core .Net API with MySql migrations. It serves as the core database of the project. Detailed instructions on how to use this API are available in the repository, similar to the API Documentation provided in the UI.
 3. [Jelly Belly Wiki Client](https://github.com/Object-ions/Jelly_Belly_Wiki_Client):: The User Interface makes full use of the API's database, showcasing one approach to design by utilizing all the endpoints and their various options.
+
+## [Live versions](#live)
+
+- [Jelly Belly Wiki - UI](https://jelly-belly-wiki.netlify.app/)
+- [Jelly Belly Wiki - API](https://jellybellywikiapi.onrender.com/)
+
+* The UI deployed on Netlify.com
+* The API deployed on Render.com
+* The database deployed on TiDB.com
 
 ## [Features](#features)
 
