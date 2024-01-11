@@ -2,6 +2,15 @@
 
 ### By Moses Atia Poston.
 
+## [Live version of the UI](#live)
+
+[Jelly Belly Wiki - UI](https://jelly-belly-wiki.netlify.app/)
+[Jelly Belly Wiki - API](https://jellybellywikiapi.onrender.com/)
+
+- The UI deployed on Netlify.com
+- The API deployed on Render.com
+- The database deployed on TiDB.com
+
 ## Table of Contents
 
 1. [Description](#project-description)
